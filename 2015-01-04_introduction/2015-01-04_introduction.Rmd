@@ -1,0 +1,109 @@
+---
+title: "Introduction"
+output: html_document
+---
+
+# Welcome!
+
+Hello and welcome to to my new blog! My goal with this blog is to talk about things that I found odd or difficult during my time as PhD student. As such I won't be going into the details of the math behind particular models, but instead focusing on how best to analyze your data set with the correct statistics and how to interpret the results you get. All analyses will be conducted in R, but many of the core principles apply to other statistical programming languages as well. Topics will range from simple aspects of classical staticals that are commonly misunderstood by reserachers, to advanced models that are only recently becoming the norm is scientific papers. Comments and questions are of course welcome.
+
+# Introduction 
+
+The first topic I wanted to discuss is what happens when you add an interaction to a linear model or "Why You Should Always Plot Your Data First". In the rush to get a p-value less than 0.05 I often found myself running analyses before actually looking at my data. This can lead to several problems including, not knowing if your data has a normal distribution, not noticing outliers, or not knowing what an interaction really means (and in turn how to interpret your main effects). This last one is what I'll be focusing on today.
+
+**TAKE AWAY FROM TODAY'S POST**
+
+* Plot your data before beginning analyses.
+
+* When interpreting linear models with interactions, be sure to bear in mind the baselines of all of the variables in the model.
+
+* Relevel variables to better understand interactions.
+
+# Model #1: Effect of previous response
+
+The data I'll be analyzing come from the package languageR. The package contains several data sets from language research. The one for today's example are from the 'lexdec' data set, which provides lexical decision latencies (or how long it took a person to decide if a string of characters on a screen was a word or not) for 79 English nouns. In addition to the languageR package I'll also be using the ggplot2 package for plotting the results.
+
+```{r}
+library(languageR)
+library(ggplot2)
+```
+
+A common goal for these types of experiments is to see which factors affect how quickly a person provides their response, in this case word or non-word. To start off with we'll see if the whether how the participant answered the previous item (PrevCorrect: correct, incorrect) affects their speed on the current item (RT log transformed). To do this we will build a simple linear model to see if PrevCorrect predicts RT.
+
+``` {r}
+lexdec_prevcor.lm = lm(RT ~ PrevCorrect, data = lexdec)
+summary(lexdec_prevcor.lm)
+```
+
+The model shows us that indeed there does appear to be an effect, such that participants are slower (longer RT) if they got the previous item incorrect. If we plot this effect we see that the difference is there, although it seems very small.
+
+```{r, echo=FALSE}
+lexdec_prevcor.fig = ggplot(lexdec, aes(x = PrevCorrect, y = RT)) +
+  geom_boxplot(aes(fill = PrevCorrect)) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position="top", legend.key=element_blank())
+lexdec_prevcor.fig
+```
+
+When previous response accounted for some of variance in RTs, it's possible that other variables had an effect as well. Next, we'll see if sex (female, male) had any effect. For now we'll simply add the variable to the model as another main effect, not as an interaction.
+
+``` {r}
+lexdec_prevcor_sex.lm = lm(RT ~ PrevCorrect + Sex, data = lexdec)
+summary(lexdec_prevcor_sex.lm)
+```
+
+The model finds that indeed sex does account for some of the variance, such that men have slower responses than women. Also, our effect of previous response still holds. If we plot the sex difference we can see that the effect is there, but like the previous response effect very small.
+
+```{r, echo=FALSE}
+lexdec_sex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
+  geom_boxplot(aes(fill = Sex)) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position="top", legend.key=element_blank())
+lexdec_sex.fig
+```
+
+Okay, we've now found two significant effects, but what happens if we add an interaction the model? The model below includes individual predictors and the interaction of those predictors.
+
+``` {r}
+lexdec_prevcorXsex.lm = lm(RT ~ PrevCorrect * Sex, data = lexdec)
+summary(lexdec_prevcorXsex.lm)
+```
+
+As you can see there is indeed a significant interaction, but we've also lost the significant effects for the individual predictors. And now we've come to the pitfall that many have come to before. The reason for the apparent disappearance of our effect is because the results for the variables themselves are no longer based on the entire data set, but instead based on a subset of the data set dictated by the other variable. R by default codes variables alphabetically, in this case for PrevCorrect the default is "correct" and for Sex it is "F". So, the effect of PrevCorrect in the model is only the data from females, since F is the baseline for sex. All this model is telling us is that there is no effect of previous response for females, not for the data overall. To better show what I mean we can relevel what is the baseline level for a variable. Below I've releveled Sex to have "M" as the baseline. As you can see PrevCorrect is significant again.
+
+``` {r}
+lexdec_prevcorXsex_resex.lm = lm(RT ~ PrevCorrect * relevel(Sex, "M"), data = lexdec)
+summary(lexdec_prevcorXsex_resex.lm)
+```
+
+The same applies to the sudden lack of a sex effect. The model with the interaction tells us that there is no effect of sex for the data where the previous response was correct. However, if we relevel PrevCorrect to "incorrect" we see that the sex effect returns.
+
+``` {r}
+lexdec_prevcorXsex_reprevcor.lm = lm(RT ~ relevel(PrevCorrect, "incorrect") * Sex, data = lexdec)
+summary(lexdec_prevcorXsex_reprevcor.lm)
+```
+
+What does all of this mean in the end? Well the first two models showed us that there is a main effect of both previous response and sex in the data set. However, in the model with the interaction, where now PrevCorrect and Sex were only on subsets of the data, we found out that the effect of previous item was limited to males, and the sex effect was limited to items where the previous response was incorrect, thus the significant interaction. An even easier way to see this all from the beginning would have been to plot the interaction as down below, where the effects (and lack there of) are clearly apparent.
+
+```{r, echo=FALSE}
+lexdec_prevcorXsex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
+  geom_boxplot(aes(fill = PrevCorrect)) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position="top", legend.key=element_blank())
+lexdec_prevcorXsex.fig
+```
