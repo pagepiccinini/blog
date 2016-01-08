@@ -19,7 +19,7 @@ The first topic I wanted to discuss is what happens when you add an interaction 
 
 * Relevel variables to better understand interactions.
 
-# Model #1: Effect of previous response
+# Model #1: Model with one variable
 
 The data I'll be analyzing come from the package languageR. The package contains several data sets from language research. The one for today's example are from the 'lexdec' data set, which provides lexical decision latencies (or how long it took a person to decide if a string of characters on a screen is a word or not) for 79 English nouns. In addition to the languageR package I'll also be using the ggplot2 package for plotting the results.
 
@@ -50,7 +50,7 @@ lexdec_prevcor.fig = ggplot(lexdec, aes(x = PrevCorrect, y = RT)) +
 lexdec_prevcor.fig
 ```
 
-# Model #2: Effect of previous response and sex
+# Model #2: Model with two variables
 
 While previous response accounted for some of variance in RTs, it's possible that other variables are predictive as well. Next, we'll see if sex of the participant (female, male) had any effect. For now we'll simply add the variable to the model as another main effect, not as an interaction.
 
@@ -74,9 +74,9 @@ lexdec_sex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
 lexdec_sex.fig
 ```
 
-# Model #3: Interaction of previous response and sex
+# Model #3: Model with two variables and an interaction
 
-Okay, we've now found two significant effects, but what happens if we add an interaction the model? The model below includes our two varaibles and the interaction of those variables.
+Okay, we've now found two significant effects, but what happens if we add an interaction the model? The model below includes our two variables and the interaction of those variables.
 
 ``` {r}
 lexdec_prevcorXsex.lm = lm(RT ~ PrevCorrect * Sex, data = lexdec)
