@@ -11,13 +11,14 @@ In the last post we looked at linear regressions and particularly what happens w
 
 * ANOVAs can be used to look at main effects when an interaction is in the model.
 
-* When running an ANOVA on participants or items it is standard practice to get means for each participant or item first.
+* When running an ANOVA with multiple measurements for each participant it is standard practice to get means for each participant first.
 
-* ANOVAs cannot take into account variability within participant or item if the data is averaged.
+* ANOVAs can take into account within-participant variables.
+
 
 # Model #1: ANOVA with two variables and an interaction
 
-To start we'll use the same data as in the previous post, but now running an ANOVA instead of a simple linear model. As a reminder, this is reaction times for a lexical decision experiment. Previously we looked at the effect of previous response (correct, incorrect) and sex of participant (female, male) on response times. In addition to using the languageR and ggplot2 packages, I'll also be using dplyr for some data manipulation. We'll start be replotting the figure of our interaction, since you should always plot your data before analyzing it.
+To start we'll use the same data as in the previous post, but now running an analysis of variance (ANOVA) instead of a simple linear model. As a reminder, this is reaction times log transformed for a lexical decision experiment. Previously we looked at the effect of previous response (correct, incorrect) and sex of participant (female, male) on response times. In addition to using the languageR and ggplot2 packages, I'll also be using dplyr for some data manipulation and gridExtra for figure displaying. We'll start by replotting the figure of our interaction, since you should always plot your data before analyzing it.
 
 ```{r, warning = FALSE, message=FALSE}
 library(languageR)
@@ -39,14 +40,14 @@ lexdec_prevcorXsex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
 lexdec_prevcorXsex.fig
 ```
 
-To build the ANOVA we'll use the 'aov' call, but other than that the syntax is the same as our 'lm' call.
+To build the ANOVA we'll use the 'aov' call, but other than that the syntax is the same as our previous 'lm' call.
 
 ```{r}
 lexdec_prevcorXsex.aov = aov(RT ~ PrevCorrect * Sex, data = lexdec)
 summary(lexdec_prevcorXsex.aov)
 ```
 
-The ANOVA above finds a significant effect of previous response, sex, and a significant interaction of previous response and sex. Recall that for the linear model we lost our significant main effects due to the interaction adding baselines for each variable. The ANOVA recenters each variable for us, such that there is no baseline for main effects. As a result, the ANOVA gives us the results of the 2.917main effects for each variable, and the interaction.
+The ANOVA above finds a significant effect of previous response, sex, and a significant interaction of previous response and sex. Recall that for the linear model we lost our significant main effects due to the interaction adding baselines for each variable. The ANOVA recenters each variable for us, such that there is no baseline for main effects. As a result, the ANOVA gives us the results of the main effects for each variable, and the interaction.
 
 To confirm this look at our linear models again. You'll see that the p-values for the main effects in the first model without the interaction are roughly equivalent to the p-values for the main effects in the ANOVA, and the p-value for the interaction in the second model is roughly the same as in the ANOVA. Note though that in the linear model p-values are based on t-values, while in the ANOVA they are based on F-values.
 
@@ -60,11 +61,12 @@ lexdec_prevcorXsex.lm = lm(RT ~ PrevCorrect * Sex, data = lexdec)
 coef(summary(lexdec_prevcorXsex.lm))
 ```
 
+
 # Model #2: ANOVA by participant
 
-It looks like ANOVAs are the way to go to be able to interpret main effects and interactions. However, there is some key variability that we haven't been accounting for. Each participant has multiple trials, and a given participant may behave differently from another participant. Right now though our model treats two trials from the same participant just like two trials from two unique participants. To account for this variability researchers often conduct an ANOVA by-participant (or by-subject) in which the mean of the depenent variable (here reaction times) is found for each participant for each variable in the analysis. The ANOVA is then run on these means, instead of the original raw data.
+It looks like ANOVAs are the way to go to be able to interpret main effects and interactions. However, there is some key variability that we haven't been accounting for. Each participant has multiple data points, and a given participant may behave differently from another participant. Right now though our model treats two data points from the same participant just like two data points from two unique participants. To account for this variability researchers often conduct an ANOVA by-participant (or by-subject) in which the mean of the dependent variable (here reaction times) is found for each participant for each variable in the analysis. The ANOVA is then run on these means, instead of the original raw data.
 
-To show how this is done I've summarized the data with means for each participant for each level of previous response (correct, incorrect). You can see the first few rows below. Note that there are two rows for each participant, since no participant was 100% correct or incorrect. Furthermore, each participant also has only one sex assigned to them, so both rows for a given participant has the same value for sex. I've named this summary column 'RT_Mean'.
+To show how this is done I've summarized the data with means for each participant for each level of previous response (correct, incorrect) and sex (female, male). You can see the first few rows below. Note that there are two rows for each participant, one for each level of previous response since no participant was 100% correct or incorrect. Furthermore, each participant also has only one sex assigned to them, so both rows for a given participant has the same value for sex. I've named this summary column 'RT_Mean'.
 
 ```{r, echo=FALSE}
 lexdec_byparticipant = lexdec %>%
@@ -77,7 +79,7 @@ lexdec_byparticipant = lexdec %>%
 head(lexdec_byparticipant)
 ```
 
-Here's a boxplot of what our two variables look like, now plotting the means for each participant. Comparing to the boxplot with all the raw data, you'll notice it's a bit different, but not dramatically so. Particuarly there are fewer outliers the effect of previous responses seems larger for both sexes. 
+Here's a boxplot of what our two variables look like, now plotting the means for each participant. Comparing to the boxplot with all the raw data, you'll notice it's a bit different, but not dramatically so. Particularly there are fewer outliers and the effect of previous responses seems larger for both sexes. 
 
 ```{r, echo=FALSE, fig.align='center'}
 lexdec_byparticipant_prevcorXsex.fig = ggplot(lexdec_byparticipant, aes(x = Sex, y = RT_Mean)) +
@@ -95,7 +97,7 @@ lexdec_byparticipant_prevcorXsex.fig = ggplot(lexdec_byparticipant, aes(x = Sex,
 lexdec_prevcorXsex_UPDATED.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
   geom_boxplot(aes(fill = PrevCorrect)) +
   scale_fill_brewer(palette = "Dark2") +
-  ggtitle("All Raw Data") +
+  ggtitle("Raw Data") +
   labs(fill = "") +
   theme_bw() +
   theme(text=element_text(size=18), title=element_text(size=18),
@@ -107,70 +109,31 @@ lexdec_prevcorXsex_UPDATED.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
 grid.arrange(lexdec_byparticipant_prevcorXsex.fig, lexdec_prevcorXsex_UPDATED.fig, ncol=2, widths=c(2, 2))
 ```
 
-Now we can run our same ANOVA as from before, however with far fewer data points due to the summarizing. As a result none of our effects are significant as can be seen in the output of the ANOVA. Despite the fact that the effect of the intearction looks larger in the boxplot the reduction in power (from 1659 data points to 42 data points) makes the effect go away.
+Now we can run our same ANOVA as from before, however with far fewer data points due to the summarizing. As a result none of our effects are significant as can be seen in the output of the ANOVA. Despite the fact that the effect of the interaction looks larger in the boxplot the reduction in power (from 1659 data points to 42 data points) makes the effect go away.
 
 ```{r}
 lexdec_byparticipant_prevcorXsex.aov = aov(RT_Mean ~ PrevCorrect * Sex, data = lexdec_byparticipant)
 summary(lexdec_byparticipant_prevcorXsex.aov)
 ```
 
-However, this ANOVA is still failing to account for some variance. The ANOVA above does not account for the fact that the previous response variable is within-participant, as each participant has previous responses that are correct and incorrect. To deal with this we can add an error term to our model, basically telling the ANOVA to compare the previous reponse levels within participant instead over the whole dataset. As you can see previous reponse is now signifincat in our new model.
+
+# Model #3: ANOVA with within-participant variable
+
+Our current ANOVA is still failing to account for some variance. The ANOVA above does not control for the fact that the previous response variable is within-participant, as each participant has previous responses that are correct and incorrect. Sex is a between-participant variable since each participant is only one sex. If you are ever in doubt about whether a variable is within-participant or between-participant 'xtabs' is a useful call; it summarizes the number of data points you have within a given cell. If you see any 0s in the output you know it is a between-participant variable because you don't have any data points for that cell. For example, below there are no 0s for the comparison of participant with previous response but there are for the comparison of participant with sex.
+
+```{r}
+head(xtabs(~Subject+PrevCorrect, lexdec_byparticipant))
+head(xtabs(~Subject+Sex, lexdec_byparticipant))
+```
+
+To deal with this we can add an error term of participant by previous response to our model, basically telling the ANOVA to compare the previous response levels within participant instead of across participants. We now get two types of information in the output. First are the between-participant variables, specifically sex. Similar to the first model there is no effect of sex. In the second part of the output are any analyses that include the within-participant variable, previous response. As you can see previous response is now significant in our new model, although the interaction continues to not be significant.
 
 ```{r}
 lexdec_byparticipant_prevcorXsex.aov = aov(RT_Mean ~ PrevCorrect * Sex + Error(Subject/PrevCorrect), data = lexdec_byparticipant)
 summary(lexdec_byparticipant_prevcorXsex.aov)
 ```
 
-# Model #3: ANOVA by item
-
-With our current model we account for the variablity across participants, but we don't account for any varaibitily by items. Just as two data points from the same participant cannot be treated the same as two data points from two unique participants, two data points from the same stimulus cannot be treated the same as two data points from two unique stimuli. To account for this we can run a by-items ANOVA. Our summariziing procedure is the same as for the by-participants ANOVA, only now we'll get means for each item, in this case the word presented to participants.
-
-```{r, echo=FALSE}
-lexdec_byitem = lexdec %>%
-  group_by(Word, PrevCorrect, Sex) %>%
-  summarise(RT_Mean = mean(RT)) %>%
-  ungroup()
-```
-
-```{r}
-head(lexdec_byitem)
-tail(lexdec_byitem)
-```
-
-As you can see above, this time we get two means for each sex for a given word. However, previous reponse is a little more complicated, as for some words there both previous responses occured (correc, incorrect), but for some words only one. For example for the word 'almond' there are four rows (correct - F, correct - M, incorrect - F, incorrect - M), but for 'woodpecker' there are only three rows (correct - F, correct - M, incorrect - F).
-
-So, sex is a within-item varaible and previous response is at least not systmeatically a within-item variable. If you are ever in doubt about whether a variable is within or between participant or item an easy trick is to run an 'xtabs' call like the ones below. If you see any 0s then you can't call it a within-participant or -item variable. For example below we see that there are always 14 females and 7 males for every word, but there are sometimes 0s for incorrect previous responses.
-
-```{r}
-head(xtabs(~Word+Sex, lexdec))
-head(xtabs(~Word+PrevCorrect, lexdec))
-```
-
-Again we can plot our new summarized data against the original raw data. Again, the summarized data looks different from the raw data.
-
-```{r, echo=FALSE, fig.align='center'}
-lexdec_byitem_prevcorXsex.fig = ggplot(lexdec_byitem, aes(x = Sex, y = RT_Mean)) +
-  geom_boxplot(aes(fill = PrevCorrect)) +
-  scale_fill_brewer(palette = "Dark2") +
-  ggtitle("Means by Item") +
-  labs(fill = "") +
-  theme_bw() +
-  theme(text=element_text(size=18), title=element_text(size=18),
-        panel.border = element_blank(),
-        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        axis.line = element_line(colour = "black"),
-        legend.position="top", legend.key=element_blank())
-
-grid.arrange(lexdec_byitem_prevcorXsex.fig, lexdec_prevcorXsex_UPDATED.fig, ncol=2, widths=c(2, 2))
-```
-
-We can now run our same ANOVA as before but our error term will be for item instead of participant. Also, we'll only tell the model that sex is a within-item variable since previous response is not systematically within-item. This output is a little more complicated than the by-participant output. 
-
-```{r}
-lexdec_byitem_prevcorXsex.aov = aov(RT_Mean ~  Sex + Error(Word/Sex), data = lexdec_byitem)
-summary(lexdec_byitem_prevcorXsex.aov)
-```
-
-# Problems
 
 # Conclusion
+
+Today we've found that ANOVAs can be a useful way to look at both main effects and interactions. We were also able to account for variance between participants and say which variables were within-participant. However, by averaging participants' data we lost a lot of power, and some of our effects went away. Also the design was unbalanced for various reasons, including some participants having more or fewer correct or incorrect previous responses than other participants, which is lost by averaging. In Part 3 we'll look at linear mixed effects models which can take care of these issues and more!
