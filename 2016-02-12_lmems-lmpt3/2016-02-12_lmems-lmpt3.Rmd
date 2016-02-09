@@ -1,0 +1,97 @@
+---
+title: "LMEMs and Linear Models Part 3"
+output: html_document
+---
+
+# Introduction
+
+In the third and final part of my series on linear models, we'll be talking about linear mixed effect models (LMEMs). LMEMs are a powerful tool for many reasons, not all of which we can get into in a single blog post. The internet has ample information about the different aspects of LMEMs and I highly reccomend reading more about them if you think they will be useful for your specific data set. For this post we'll be focusing on their benefit regarding power, including variance from multiple sources, and how to correct our previous baseline issue. 
+
+**TAKE AWAY POINTS FROM THIS POST**
+
+* LMEMs are a way to include random variance (such as participants) without losing power.
+
+
+# Model #1: LMEM with a random effect for participant
+
+Once again we'll be using the same data as in the previous two posts. As a reminder, this is reaction times log transformed for a lexical decision experiment. Previously we looked at the effect of previous response (correct, incorrect) and sex of participant (female, male) on response times, and included previous response as a within participant variable. The packages for this post include languageR (for the data), ggplot2 (for plotting), and dplyr (for data manipulation). As always, we'll start by replotting the figure of our interaction, since you should always plot your data before analyzing it.
+
+```{r, warning = FALSE, message=FALSE}
+library(languageR)
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+```
+
+```{r, echo=FALSE, fig.align='center'}
+lexdec_prevcorXsex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
+  geom_boxplot(aes(fill = PrevCorrect)) +
+  scale_fill_brewer(palette = "Dark2") +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position="top", legend.key=element_blank())
+lexdec_prevcorXsex.fig
+```
+
+To build an LMEM we'll be using the 'lmer' (for Linear Mixed Effects Regression) call from the lme4 package. The first half of the syntax is the same as our original linear model and our ANOVA. To account for the varaince by specific participants though we all '+ (1|Subject)'. This adds a 'random intercept' to the model, that accounts for variance across different participants. 
+
+```{r, message=FALSE}
+library(lme4)
+lexdec_prevcorXsex_participantintercept.lmer = lmer(RT ~ PrevCorrect * Sex + (1|Subject), REML = F, data = lexdec)
+summary(lexdec_prevcorXsex_participantintercept.lmer)
+```
+
+P-values are a little tricky to interpret in linear mixed effects model (and thus something to be left for another day), but the t-value can serve as a rough initial guide, t-values of 2 or above are likely significant.
+
+
+# Model #2
+
+```{r}
+lexdec_prevcorXsex_participantslope.lmer = lmer(RT ~ PrevCorrect * Sex + (1+PrevCorrect|Subject), REML = F, data = lexdec)
+summary(lexdec_prevcorXsex_participantslope.lmer)
+```
+
+# Model #3
+
+```{r, echo=FALSE}
+lexdec_contrast = lexdec %>%
+  mutate(PrevCorrectContrast = ifelse(PrevCorrect == "correct", -0.5, 0.5)) %>%
+  mutate(SexContrast = ifelse(Sex == "F", -0.5, 0.5))
+```
+
+```{r}
+lexdec_prevcorXsex_participantslope_contrast.lmer = lmer(RT ~ PrevCorrectContrast * SexContrast + (1+PrevCorrectContrast|Subject), data = lexdec_contrast)
+summary(lexdec_prevcorXsex_participantslope_contrast.lmer)
+```
+
+# Linear Model Summary
+
+```{r, echo=FALSE}
+lexdec_prevcorXsex.lm = lm(RT ~ PrevCorrect * Sex, data = lexdec)
+
+lexdec_byparticipant = lexdec %>%
+  group_by(Subject, PrevCorrect, Sex) %>%
+  summarise(RT_Mean = mean(RT)) %>%
+  ungroup()
+lexdec_byparticipant_prevcorXsex.aov = aov(RT_Mean ~ PrevCorrect * Sex + Error(Subject/PrevCorrect), data = lexdec_byparticipant)
+```
+
+
+```{r}
+coef(summary(lexdec_prevcorXsex.lm))
+```
+
+```{r}
+summary(lexdec_byparticipant_prevcorXsex.aov)
+```
+
+
+```{r}
+coef(summary(lexdec_prevcorXsex_participantslope_contrast.lmer))
+```
+
+# Conclusion
+
