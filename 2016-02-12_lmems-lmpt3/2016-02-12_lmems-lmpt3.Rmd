@@ -5,11 +5,15 @@ output: html_document
 
 # Introduction
 
-In the third and final part of my series on linear models, we'll be talking about linear mixed effect models (LMEMs). LMEMs are a powerful tool for many reasons, not all of which we can get into in a single blog post. The internet has ample information about the different aspects of LMEMs and I highly reccomend reading more about them if you think they will be useful for your specific data set. For this post we'll be focusing on their benefit regarding power, including variance from multiple sources, and how to correct our previous baseline issue. 
+In the third and final part of my series on linear models, we'll be talking about linear mixed effect models (LMEMs). LMEMs are a powerful tool for many reasons, not all of which we can get into in a single blog post. The internet has ample information about the different aspects of LMEMs and I highly recommend reading more about them if you think they will be useful for your specific data set. For this post we'll be focusing on their benefit regarding power, how to correct our previous baseline issue, and accounting for variance across and within participants. 
 
 **TAKE AWAY POINTS FROM THIS POST**
 
 * LMEMs are a way to include random variance (such as participants) without losing power.
+
+* Contrast coding allows you to get ANOVA results with no baseline.
+
+* Random slopes can be used to account for variance from within-participant variables.
 
 
 # Model #1: LMEM with a random effect for participant
@@ -20,7 +24,6 @@ Once again we'll be using the same data as in the previous two posts. As a remin
 library(languageR)
 library(ggplot2)
 library(dplyr)
-library(gridExtra)
 ```
 
 ```{r, echo=FALSE, fig.align='center'}
@@ -36,7 +39,7 @@ lexdec_prevcorXsex.fig = ggplot(lexdec, aes(x = Sex, y = RT)) +
 lexdec_prevcorXsex.fig
 ```
 
-To build an LMEM we'll be using the 'lmer' (for Linear Mixed Effects Regression) call from the lme4 package. The first half of the syntax is the same as our original linear model and our ANOVA. To account for the varaince by specific participants though we all '+ (1|Subject)'. This adds a 'random intercept' to the model, that accounts for variance across different participants. 
+To build an LMEM we'll be using the 'lmer' (for Linear Mixed Effects Regression) call from the lme4 package. The first half of the syntax is the same as our original linear model and our ANOVA. To account for the variance by specific participants though we add '+ (1|Subject)'. This adds a 'random effect' specifically a 'random intercept' to the model, that accounts for variance across different participants. 
 
 ```{r, message=FALSE}
 library(lme4)
@@ -44,17 +47,22 @@ lexdec_prevcorXsex_participantintercept.lmer = lmer(RT ~ PrevCorrect * Sex + (1|
 summary(lexdec_prevcorXsex_participantintercept.lmer)
 ```
 
-P-values are a little tricky to interpret in linear mixed effects model (and thus something to be left for another day), but the t-value can serve as a rough initial guide, t-values of 2 or above are likely significant.
+P-values are a little tricky to interpret in linear mixed effects model (and thus something to be left for another day), but the t-value can serve as a rough initial guide, t-values with an absolute value of 2 or above are likely significant at a threshold of p < 0.05.
 
+Based on these results then, it looks like neither of our main effects are significant nor is our interaction. However, just as linear models had the issue of a baseline when an interaction is present, so do linear mixed effects models, they are still linear models so the same issue applies. Also like linear models we can use 'relevel' to change our baseline. Below is our same model but changing the baseline of previous correct to "incorrect" and sex to "M".
 
-# Model #2
-
-```{r}
-lexdec_prevcorXsex_participantslope.lmer = lmer(RT ~ PrevCorrect * Sex + (1+PrevCorrect|Subject), REML = F, data = lexdec)
-summary(lexdec_prevcorXsex_participantslope.lmer)
+```{r, message=FALSE}
+library(lme4)
+lexdec_prevcorXsex_participantintercept.lmer = lmer(RT ~ relevel(PrevCorrect, "incorrect") * relevel(Sex, "M") + (1|Subject), REML = F, data = lexdec)
+summary(lexdec_prevcorXsex_participantintercept.lmer)
 ```
 
-# Model #3
+All of our effects continue to not be significant, but the t-value for previous response is closer to 2 (1.92) than in the initial coding (1.59).
+
+
+# Model #2: LMEM with (ANOVA style) contrast coding
+
+Similar to how we were able to get around our baseline effect with an ANOVA, we can also get rid of baselines in LMEMs via contrast coding. I won't go into the specific details of how to do this, but if you're interested in having ANOVA like coding for an LMEM look for a tutorial on contrast coding. The result below is a model like our ANOVA, with no baselines, but instead of taking means for each participant, we get to continue to use all of their responses.
 
 ```{r, echo=FALSE}
 lexdec_contrast = lexdec %>%
@@ -63,11 +71,28 @@ lexdec_contrast = lexdec %>%
 ```
 
 ```{r}
-lexdec_prevcorXsex_participantslope_contrast.lmer = lmer(RT ~ PrevCorrectContrast * SexContrast + (1+PrevCorrectContrast|Subject), data = lexdec_contrast)
+lexdec_prevcorXsex_participantintercept_contrast.lmer = lmer(RT ~ PrevCorrectContrast * SexContrast + (1|Subject), data = lexdec_contrast)
+summary(lexdec_prevcorXsex_participantintercept_contrast.lmer)
+```
+
+Now our previous response variable is likely significant (t-value of 2.49), but our other effects continue to not be significant.
+
+
+# Model #3: LMEM with a random slope of participant by previous response
+
+The final thing we have yet to take into account that our ANOVA controlled for was the within-participant effect of previous response. In an LMEM we can account for this by updating our random effects structure. Currently participant is included only as a random intercept '(1|Subject)', what we want is a random slope by previous response, which is coded as '(1+PrevCorrect|Subject)'. With this code the model now accounts for both the general variance across participants (the random intercept) and the variance within a given participant by previous response (the random slope). Note, in the code below the variable in the slope is 'PrevCorrectContrast' since we previously contrast coded 'PrevCorrect'.
+
+```{r}
+lexdec_prevcorXsex_participantslope_contrast.lmer = lmer(RT ~ PrevCorrectContrast * SexContrast + (1+PrevCorrectContrast|Subject), REML = F, data = lexdec_contrast)
 summary(lexdec_prevcorXsex_participantslope_contrast.lmer)
 ```
 
+The effects on the model is minimal, as our effect of previous response continues to be significant (t = 2.50) and our other effects continue to not be significant.
+
+
 # Linear Model Summary
+
+To summarize this theory on linear models let's look at the final models we ran in each post.
 
 ```{r, echo=FALSE}
 lexdec_prevcorXsex.lm = lm(RT ~ PrevCorrect * Sex, data = lexdec)
@@ -93,5 +118,8 @@ summary(lexdec_byparticipant_prevcorXsex.aov)
 coef(summary(lexdec_prevcorXsex_participantslope_contrast.lmer))
 ```
 
+Overall we see that the ANOVA and LMEM are pretty similar, showing a significant effect only for previous response, while the initial linear model included a significant interaction of previous response and sex. From this we can conclude that incorporating participant specific variance in the model is important to understand which effects are real. The lack of a significant interaction in our LMEM showed us that the disappearance of the effect in the ANOVA was *not* simple due to a lack of power. 
+
 # Conclusion
 
+I hope you enjoyed this three part series on linear models. We only briefly went over linear mixed effects models, but they are a very powerful for inferential statistics and have been fully adopted by several disciplines. In addition to allow you to use all data points, instead of averaging and losing power, they also can handle a more complex random effects structure (for example, including both participant and item as a random effect) and can be used when you have a binary dependent variable (for example, correct incorrect accuracy). 
