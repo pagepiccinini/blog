@@ -16,9 +16,18 @@ I am an unapologetic lover of boxplots, and as such I also am an unapologetic ha
 * Barplots are the worst way. Don't use them.
 
 
-# The Data
+# Data
 
-For today's post I've created two sets of make data, both of them have the same mean (XX) and the same standard deviation (XX), but as we'll see they are very different 
+For today's post I've created two sets of make data, both of them have the same mean (XX) and the same standard deviation (XX), but as we'll see they are very different in terms of their distributions.
+
+
+# Plots
+
+## Histrogram
+
+## Boxplot
+
+## Barplot
 
 
 # Conclusion
