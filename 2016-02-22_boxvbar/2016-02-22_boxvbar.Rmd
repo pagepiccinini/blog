@@ -5,7 +5,7 @@ output: html_document
 
 # Introduction
 
-I am an unapologetic lover of boxplots, and as such I also am an unapologetic hater of barplots. Yet, about 90% of the time I'm asked to help someone make a figure in R, or more specificially in ggplot2, I'm asked for a barplot. So, this blog post is dedicated to why I think whenever possible you should use a boxplot over a barplot. If I've convinced you there's a handy summary provided at the end of the post that you can print out and distribute to any current barplot users.
+I am an unapologetic lover of boxplots, and as such I also am an unapologetic hater of barplots. Yet, about 90% of the time I'm asked to help someone make a figure in R, or more specifically in ggplot2, I'm asked for a barplot. So, this blog post is dedicated to why I think whenever possible you should use a boxplot over a barplot. If I've convinced you there's a handy summary provided at the end of the post that you can print out and distribute to any current barplot users.
 
 **TAKE AWAY POINTS FROM THIS POST**
 
@@ -18,21 +18,105 @@ I am an unapologetic lover of boxplots, and as such I also am an unapologetic ha
 
 # Data
 
-For today's post I've created two sets of make data, both of them have the same mean (XX) and the same standard deviation (XX), but as we'll see they are very different in terms of their distributions.
+For today's post I've created two sets of fake data, both of them have the same mean (100) and the same standard deviation (20), but as we'll see they are very different in terms of their distributions.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(RColorBrewer)
+
+data_log = log(rep(1:400)) * 20
+data_normal = rnorm(400, mean = mean(data_log), sd = sd(data_log))
+
+data_log_cat = rep("log", 400)
+data_normal_cat = rep("normal", 400)
+
+data_normal.df = data.frame(type = data_normal_cat, values = data_normal)
+data_log.df = data.frame(type = data_log_cat, values = data_log)
+
+data.df = rbind(data_normal.df, data_log.df)
+```
 
 
 # Plots
 
 ## Histrogram
 
+First we'll make some histograms to show that the two data sets have clearly different distributions. The first data set has a normal distribution, but the second is logarithmic.
+
+```{r, echo=F, fig.align='center'}
+cols = brewer.pal(5, "PRGn")
+col_log = cols[1]
+col_normal = cols[5]
+
+data.hist = ggplot(data.df, aes(x = values, fill = type)) + 
+  geom_histogram(bins = 40) +
+  facet_wrap(~ type) +
+  scale_fill_manual(values = c(col_normal, col_log)) +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position = "none", legend.key = element_blank(), legend.title = element_blank(),
+        strip.background = element_rect(color="white", fill="white"))
+
+data.hist
+```
+
 ## Boxplot
 
+This difference can be seen in the boxplots too, although to a lesser extent than than the histograms. The box for the normal distribution has roughly evenly sized quartiles are either sides of the median, and only a couple outliers. Conversely the logarithmic data has a long left-skewed distribution, as can be seen by all of the low value outliers.
+
+```{r, echo=FALSE, fig.align='center'}
+data.boxplot = ggplot(data.df, aes(x = type, y = values)) +
+  geom_boxplot(aes(fill = type)) +
+  ylim(0, 170) +
+  scale_fill_manual(values = c(col_normal, col_log)) +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position = "none", legend.key = element_blank(), legend.title = element_blank(),
+        strip.background = element_rect(color="white", fill="white"))
+
+data.boxplot
+```
+
 ## Barplot
+
+Turning to our barplots we see that they are identical! Since both data sets have the same mean and standard deviation barplots completely lose the difference between the two data sets. This can be a problem if for example you wanted to run a statistical test to test for differences between these two groups. One, it's a problem because many statistical tests require a normal distribution of the data, and a barplot will not warn you that part of your data is non-normal Two, if you run a test only looking at means you won't know that the two groups are clearly different, just not in regards to mean and standard deviation but instead distribution.
+
+```{r, echo=FALSE, fig.align='center'}
+data_bar = data.df %>%
+  group_by(type) %>%
+  summarise(mean = mean(values),
+            sd = sd(values)) %>%
+  ungroup() %>%
+  mutate(sd_min = mean - sd) %>%
+  mutate(sd_max = mean + sd)
+
+data.barplot = ggplot(data_bar, aes(x = type, y = mean)) +
+  geom_bar(stat = "identity", aes(fill = type)) +
+  geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
+  coord_cartesian(ylim=c(0,170)) +
+  scale_fill_manual(values = c(col_normal, col_log)) +
+  theme_bw() +
+  theme(text=element_text(size=18), title=element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position = "none", legend.key = element_blank(), legend.title = element_blank(),
+        strip.background = element_rect(color="white", fill="white"))
+
+data.barplot
+```
 
 
 # Conclusion
 
-Don't use barplots.
+Hopefully after this post you see that whenever plotting data with a distribution boxplots are preferred over barplots. If you want to spread the word feel free to distribute [this handy summary](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa.jpg). Happy (hopefully boxplot) plotting!
 
 
 
