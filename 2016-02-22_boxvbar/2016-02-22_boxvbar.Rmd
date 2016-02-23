@@ -5,7 +5,7 @@ output: html_document
 
 # Introduction
 
-I am an unapologetic lover of boxplots, and as such I also am an unapologetic hater of barplots. Yet, about 90% of the time I'm asked to help someone make a figure in R, or more specifically in ggplot2, I'm asked for a barplot. So, this blog post is dedicated to why I think whenever possible you should use a boxplot over a barplot. If I've convinced you there's a handy summary provided at the end of the post that you can print out and distribute to any current barplot users.
+I am an unapologetic lover of boxplots, and as such I also am an unapologetic hater of barplots. Yet, about 90% of the time I'm asked to help someone make a figure in R, or more specifically in ggplot2, I'm asked for a barplot. So, this blog post is dedicated to why I think whenever possible you should use a boxplot over a barplot. If I've convinced you, there's a handy summary provided at the end of the post that you can print out and distribute to any current barplot users.
 
 **TAKE AWAY POINTS FROM THIS POST**
 
@@ -86,7 +86,7 @@ data.boxplot
 
 ## Barplot
 
-Turning to our barplots we see that they are identical! Since both data sets have the same mean and standard deviation barplots completely lose the difference between the two data sets. This can be a problem if for example you wanted to run a statistical test to test for differences between these two groups. One, it's a problem because many statistical tests require a normal distribution of the data, and a barplot will not warn you that part of your data is non-normal Two, if you run a test only looking at means you won't know that the two groups are clearly different, just not in regards to mean and standard deviation but instead distribution.
+Turning to our barplots we see that they are identical! Since both data sets have the same mean and standard deviation barplots completely lose the difference between the two data sets. This can be a problem if for example you wanted to run a statistical test to test for differences between these two groups. One, it's a problem because many statistical tests require a normal distribution of the data, and a barplot will not warn you that part of your data is non-normal. Two, if you run a test only looking at means you won't know that the two groups are different in regards to distributions.
 
 ```{r, echo=FALSE, fig.align='center'}
 data_bar = data.df %>%
@@ -102,6 +102,7 @@ data.barplot = ggplot(data_bar, aes(x = type, y = mean)) +
   geom_errorbar(aes(ymin = sd_min, ymax = sd_max), width = 0.25, lwd=1) +
   coord_cartesian(ylim=c(0,170)) +
   scale_fill_manual(values = c(col_normal, col_log)) +
+  ylab("values") +
   theme_bw() +
   theme(text=element_text(size=18), title=element_text(size=18),
         panel.border = element_blank(),
@@ -116,7 +117,7 @@ data.barplot
 
 # Conclusion
 
-Hopefully after this post you see that whenever plotting data with a distribution boxplots are preferred over barplots. If you want to spread the word feel free to distribute [this handy summary](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa.jpg). Happy (hopefully boxplot) plotting!
+Hopefully after this post you see that whenever plotting data with a distribution boxplots are preferred over barplots. If you want to spread the word feel free to distribute [this handy summary](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa1.jpg). Happy (hopefully boxplot) plotting!
 
 
 
