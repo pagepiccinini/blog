@@ -9,7 +9,7 @@ library(DT)
 
 # Introduction
 
-R has many ways to code variables (e.g. factor, numeric, character). One method to recode categorical variables that has recently become more popular is 'contrast coding'. Contrast coding allows for recentering of categorical variables such that the intercept of a model is not the mean of one level of a category, but instead the mean of all data points in the data set. This can also be useful when running models with an interaction of two variables, as it gets rid of the problem of baselines when trying to interpret model results (see blog post on Linear Models Part 1 for more details). This post today will focus on what happens when a categorical variable has three levels and when contrast coding doesn't directly match the default coding system.
+R has many ways to code variables (e.g. factor, numeric, character). One method to recode categorical variables that has recently become more popular is 'contrast coding'. Contrast coding allows for recentering of categorical variables such that the intercept of a model is not the mean of one level of a category, but instead the mean of all data points in the data set. This can also be useful when running models with an interaction of two variables, as it gets rid of the problem of baselines when trying to interpret model results (see blog post on Linear Models Part 1 for more details). Today's post will focus on what happens when a categorical variable has three levels and when contrast coding doesn't directly match the default coding system.
 
 
 # Data
@@ -43,20 +43,9 @@ mean_threelevel = mean(data_threelevel$score)
 ```
 
 
-```{r}
-mean_A
-mean_B
-mean_C
-mean_AB
+# Two-level Variable
 
-mean_twolevel
-mean_threelevel
-```
-
-
-# Two Level Variable
-
-To see the power of contrast coding we can first compare a model with dummy coding (the default method of coding) and a model with contrast coding when the variable ('group') only has two levels ('A' and 'B'). A summary of the data is provided below.
+To see the power of contrast coding we'll compare a model with dummy coding (the default method of coding in R for factors) to a model with contrast coding when 'group' only has two levels ('A' and 'B'). A summary of the data is provided below.
 
 ```{r, echo=FALSE}
 means_twolevel = group_by(data_twolevel, group) %>%
@@ -67,7 +56,7 @@ means_twolevel = group_by(data_twolevel, group) %>%
 kable(means_twolevel)
 ```
 
-With dummy coding the default of a level is coded as 0 and the non-default level coded as 1. Since R codes variables alphabetically 'A' is our default (or 0) and 'B' is our non-default (or 1). As a result the intercept (when x is 0) is the value of the default level, here the value of 'A'. The first model below uses dummy coding. As can be seen the intercept is `r mean_A`, the same value as the mean for level 'A'. The estimate for 'group' is the same as the difference between group 'A' and group 'B' (`r mean_B - mean_A`).
+With dummy coding the default of a level is coded as 0 and the non-default level is coded as 1. Since R codes variables alphabetically 'A' is our default (or 0) and 'B' is our non-default (or 1). As a result the intercept (when x is 0) is the value of the default level, here the mean of 'A'. The first model below uses dummy coding. As you can see, the intercept is `r mean_A`, the same value as the mean of level 'A'. The estimate for 'group' is the difference between group 'A' and group 'B' (`r mean_B - mean_A`).
 
 ```{r}
 ab_dummy.lm = lm(score ~ group, data_twolevel)
@@ -77,14 +66,14 @@ ab_dummy.lm = lm(score ~ group, data_twolevel)
 kable(coef(summary(ab_dummy.lm)))
 ```
 
-With contrast coding we can recode the number values for our levels so that 0 is right in between each level, instead of being equal to a level. The code below does this by making a new column where 'A' is equal to -0.5 and 'B' to 0.5. Note, here I did this by making a new numeric column. Other tutorials on contrast coding often use the 'contrasts()' call, both methods produce the same results in the model.
+With contrast coding we can recode the number values for our levels so that 0 is in between each level, instead of being equal to a level. The code below does this by making a new column where 'A' is equal to -0.5 and 'B' to 0.5. Note, here I did this by making a new numeric column. Other tutorials on contrast coding often use the 'contrasts()' call, both methods produce the same results in the model.
 
 ```{r}
 data_twolevel_contrast = data_twolevel %>%
   mutate(contrast_AvB = ifelse(group == "A", -0.5, 0.5))
 ```
 
-Now the model below is the same as the first model only using contrast coding. The estimate for 'group' (here 'contrast\_AvB') is the same as for the model with dummy coding, but the intercept is the mean of 'A' **and** 'B' together (`r mean_twolevel`), not just 'A'.
+The model below is the same as the first model, but using contrast coding. The estimate for 'group' (here 'contrast\_AvB') is the same as for the model with dummy coding, but the intercept is the mean of 'A' *and* 'B' together (`r mean_twolevel`), not just the mean of 'A'.
 
 ```{r}
 ab_contrast.lm = lm(score ~ contrast_AvB, data_twolevel_contrast)
@@ -95,9 +84,9 @@ kable(coef(summary(ab_contrast.lm)))
 ```
 
 
-# Three Level Variable
+# Three-level Variable
 
-Where this gets more complicated is when trying to recreate dummy coding estimates with contrast coding. First, here is a summary of our full data set with three levels for 'group'.
+Where this gets more complicated is when trying to recreate dummy coding estimates with contrast coding when you have a variable with three levels. First, here is a summary of our full data set with three levels for 'group'.
 
 ```{r, echo=FALSE}
 means_threelevel = group_by(data_threelevel, group) %>%
@@ -108,7 +97,7 @@ means_threelevel = group_by(data_threelevel, group) %>%
 kable(means_threelevel)
 ```
 
-As for the two-level data set, the first model here is the dummy coded. The intercept continues to be the same as for the model with only 'A' and 'B', since it is still the mean for 'A' (`r mean_A`). Similarly the estimate for 'A' versus 'B' is the same as the other model (`r mean_B - mean_A`). This model also includes the estimate for 'A' versus 'C', which is the difference of the means for 'A' and 'C' (`r mean_C - mean_A`).
+As for the two-level data set, the first model here uses dummy coding. The intercept continues to be the same as for the model with only 'A' and 'B', since it is still the mean of 'A' (`r mean_A`). Similarly the estimate for 'A' versus 'B' is the same as the other model (`r mean_B - mean_A`). This model also includes the estimate for 'A' versus 'C', which is the difference of the means of 'A' and 'C' (`r mean_C - mean_A`).
 
 ```{r}
 ab_ac_dummy.lm = lm(score ~ group, data_threelevel)
@@ -136,9 +125,9 @@ kable(coef(summary(ab_ac_contrast.lm)))
 ```
 
 
-# Three Level Variable Updated
+# Three-level Variable Updated
 
-To get our desired estimates we need to do contrast coding where we collapse together two levels and compare them (together) to the remaining level. In this case both 'A' and 'B' get set to -0.5 and 'C' to 0.5. Note, other tutorials with contrast coding say that in this case 'A' and 'B' should be set to -0.25 so that the sum of the matrix is 0 ('A' vs. 'B': -0.5, 0.5, 0; 'A' and 'B' vs. 'C': -0.25, -0.25, 0.5). Both of these methods produce correct results in one sense and incorrect results in another. To show the differences we'll make a column for both types of coding.
+To get our desired estimates we need to do contrast coding where we collapse together two levels and compare them (together) to the remaining level. To create this new column we'll set both 'A' and 'B' to -0.5 and 'C' to 0.5. Other tutorials with contrast coding say that in this case 'A' and 'B' should be set to -0.25 so that the sum of the matrix is 0 ('A' vs. 'B': -0.5, 0.5, 0; 'A' and 'B' vs. 'C': -0.25, -0.25, 0.5). Both of these methods produce desired results in one sense and undesired results in another. To show the differences we'll make a column for both types of coding.
 
 ```{r}
 data_threelevel_contrast_updated = data_threelevel_contrast %>%
@@ -148,7 +137,7 @@ data_threelevel_contrast_updated = data_threelevel_contrast %>%
 
 ## Coding Method #1
 
-Now we can make a new model that compares 'A' versus 'B' and then 'A' and 'B' versus 'C'. We get our correct coefficient for 'A' versus 'B' that we got in both of dummy coded models and our two level contrast coded model (`r mean_B - mean_A`). Our coefficient for the second variable is correctly the mean of 'A' and 'B' minus the mean of 'C' (`r mean_C  - mean_AB`).
+Now we can make a new model that compares 'A' versus 'B' and then 'A' and 'B' versus 'C'. We get our correct coefficient for 'A' versus 'B' that we got in both of our dummy coded models and our two-level contrast coded model (`r mean_B - mean_A`). Our coefficient for the second variable is correctly the mean of 'A' and 'B' minus the mean of 'C' (`r mean_C  - mean_AB`).
 
 ```{r}
 ab_abc_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC1, data_threelevel_contrast_updated)
@@ -158,11 +147,11 @@ ab_abc_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC1, data_threelevel_c
 kable(coef(summary(ab_abc_contrast.lm)))
 ```
 
-However, one thing is still incorrect, our intercept. It should be the mean of the full data set (`r mean_threelevel`), but instead it's a different number. Further examination shows that it is actually  the mean of 'A', 'B', and 'C' twice (`r mean(c(mean_A, mean_B, mean_C, mean_C))`). NEEDS WORK.
+However, one thing is still incorrect, our intercept. It should be the mean of the full data set (`r mean_threelevel`), but instead it's a different number. Further examination shows that it is actually  the mean of 'A', 'B', and 'C' twice (`r mean(c(mean_A, mean_B, mean_C, mean_C))`), or $\frac{A mean + B mean + C mean + C mean}{4}$. Another way to think of this is the estimate is actually the average of the mean of 'A' minus the mean of 'C', and then the mean of 'B' minus the mean of 'C', $\frac{(C mean - A mean) + (C mean - B mean)}{2}$. As a result, it makes sense that the mean of 'C' would be represented twice in the computation of the intercept.
 
 ## Coding Method #2
 
-We can also build the model where we used the coding where 'A' and 'B' was set to -0.25. In this model the estimate is now correctly the mean of the full data set (`r mean_threelevel`), and the estimate of 'A' versus 'B' variable is correctly the mean of 'A' minus the mean of 'B' (`r mean_B - mean_A`). However, the estimate for 'A' and 'B' versus 'C' is is not the mean of 'A' and 'B' minus the mean of 'C'. It is actually the intercept minus the mean value for 'A' minus the mean value for 'B' plus the mean value for 'C' (`r mean_threelevel - mean_B - mean_A + mean_C `). NEEDS WORK. You may have noticed that this is the same value we got for (what we thought was) 'A' vs. 'C' in the original three level contrast coded model.
+We can also build the model where we used the coding where 'A' and 'B' were set to -0.25. In this model the estimate is now correctly the mean of the full data set (`r mean_threelevel`), and the estimate of 'A' versus 'B' variable is correctly the mean of 'A' minus the mean of 'B' (`r mean_B - mean_A`).
 
 ```{r}
 ab_abc2_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC2, data_threelevel_contrast_updated)
@@ -172,12 +161,14 @@ ab_abc2_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC2, data_threelevel_
 kable(coef(summary(ab_abc2_contrast.lm)))
 ```
 
-It's worth noting that the t-value and p-value for 'A' and 'B' versus 'C' is the same in both versions of our updated contrast coded models, while this is not the case for the intercept. In the end then it is probably preferred to have the correct intercept and an incorrect estimate for one of the variables. So, it is probably better to do the version where 'A' and 'B' are set to -0.25.
+However, the estimate for 'A' and 'B' versus 'C' is not the mean of 'A' and 'B' minus the mean of 'C'. It is actually the grand mean of the data minus the mean of 'A' minus the mean of 'B' plus the mean value for 'C' (`r mean_threelevel - mean_A - mean_B + mean_C `), or full $data set mean - A mean - B mean + C mean$. We can also rewrite this equation as $\frac{-2 * A mean}{3} + \frac{-2 * B mean}{3} + \frac{4 * C mean}{3}$. Both levels 'A' and 'B' were set to -0.25, which divided by the mean of the other possible coding (0.5) equals $\frac{-2}{3}$, the multiplier or 'A' and 'B', $\frac{-0.25}{(0.25 + 0.5)/2}$. Conversely the $\frac{4}{3}$, the multiplier for 'C', is $\frac{0.5}{(0.25 + 0.5)/2}$.
+
+You may have noticed that this is the same value we got for (what we thought was) 'A' vs. 'C' in the original three-level contrast coded model. It's also worth noting that the t-value and p-value for 'A' and 'B' versus 'C' is the same in both versions of our updated contrast coded models, while this is not the case for the intercept. In the end then it is probably preferred to have the correct intercept and an (slightly) incorrect estimate for one of the variables if you are using the models for significance testing. So, it is better to use the version where 'A' and 'B' are set to -0.25.
 
 
 # Conclusion
 
-In conclusion, contrast coding is a way to reset the intercept to be the full data set, not just a single level of a variable. For variables with only two levels this produces the same estimates (just different intercepts) as dummy coding. However, when a variable has three levels it becomes more difficult to replicate the estimates from dummy coding. The closest method appears to be to maintain one contrast and for the second comparison collapse together two levels and compare it to the third. Here I leave as an open question, is it possible replicate the dummy coded model with three levels using contrast coding?
+In conclusion, contrast coding is a way to reset the intercept to the mean of the full data set, not just a single level of a variable. For variables with only two levels this produces the same estimates (just different intercepts) as dummy coding. However, when a variable has three levels it becomes more difficult to replicate the estimates from dummy coding. The closest method appears to be to maintain one contrast and for the second comparison collapse together two levels and compare it to the third level. Here I leave as an open question, is it possible replicate the dummy coded model with three levels using contrast coding?
 
 
 

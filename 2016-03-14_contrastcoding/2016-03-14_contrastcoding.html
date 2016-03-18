@@ -114,7 +114,7 @@ $(document).ready(function () {
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>R has many ways to code variables (e.g. factor, numeric, character). One method to recode categorical variables that has recently become more popular is ‘contrast coding’. Contrast coding allows for recentering of categorical variables such that the intercept of a model is not the mean of one level of a category, but instead the mean of all data points in the data set. This can also be useful when running models with an interaction of two variables, as it gets rid of the problem of baselines when trying to interpret model results (see blog post on Linear Models Part 1 for more details). This post today will focus on what happens when a categorical variable has three levels and when contrast coding doesn’t directly match the default coding system.</p>
+<p>R has many ways to code variables (e.g. factor, numeric, character). One method to recode categorical variables that has recently become more popular is ‘contrast coding’. Contrast coding allows for recentering of categorical variables such that the intercept of a model is not the mean of one level of a category, but instead the mean of all data points in the data set. This can also be useful when running models with an interaction of two variables, as it gets rid of the problem of baselines when trying to interpret model results (see blog post on Linear Models Part 1 for more details). Today’s post will focus on what happens when a categorical variable has three levels and when contrast coding doesn’t directly match the default coding system.</p>
 </div>
 <div id="data" class="section level1">
 <h1>Data</h1>
@@ -127,22 +127,10 @@ data_threelevel = data_frame(group = c(rep(&quot;A&quot;, 10), rep(&quot;B&quot;
 data_twolevel = data_threelevel %&gt;%
   filter(group != &quot;C&quot;) %&gt;%
   mutate(group = factor(group))</code></pre>
-<pre class="r"><code>mean_A</code></pre>
-<pre><code>## [1] 42.33021</code></pre>
-<pre class="r"><code>mean_B</code></pre>
-<pre><code>## [1] 49.33359</code></pre>
-<pre class="r"><code>mean_C</code></pre>
-<pre><code>## [1] 63.71514</code></pre>
-<pre class="r"><code>mean_AB</code></pre>
-<pre><code>## [1] 45.8319</code></pre>
-<pre class="r"><code>mean_twolevel</code></pre>
-<pre><code>## [1] 45.8319</code></pre>
-<pre class="r"><code>mean_threelevel</code></pre>
-<pre><code>## [1] 51.79298</code></pre>
 </div>
 <div id="two-level-variable" class="section level1">
-<h1>Two Level Variable</h1>
-<p>To see the power of contrast coding we can first compare a model with dummy coding (the default method of coding) and a model with contrast coding when the variable (‘group’) only has two levels (‘A’ and ‘B’). A summary of the data is provided below.</p>
+<h1>Two-level Variable</h1>
+<p>To see the power of contrast coding we’ll compare a model with dummy coding (the default method of coding in R for factors) to a model with contrast coding when ‘group’ only has two levels (‘A’ and ‘B’). A summary of the data is provided below.</p>
 <table>
 <thead>
 <tr class="header">
@@ -154,17 +142,17 @@ data_twolevel = data_threelevel %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">42.33021</td>
-<td align="right">4.185381</td>
+<td align="right">39.77303</td>
+<td align="right">4.107021</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">49.33359</td>
-<td align="right">3.545196</td>
+<td align="right">49.80712</td>
+<td align="right">6.025235</td>
 </tr>
 </tbody>
 </table>
-<p>With dummy coding the default of a level is coded as 0 and the non-default level coded as 1. Since R codes variables alphabetically ‘A’ is our default (or 0) and ‘B’ is our non-default (or 1). As a result the intercept (when x is 0) is the value of the default level, here the value of ‘A’. The first model below uses dummy coding. As can be seen the intercept is 42.3302132, the same value as the mean for level ‘A’. The estimate for ‘group’ is the same as the difference between group ‘A’ and group ‘B’ (7.0033753).</p>
+<p>With dummy coding the default of a level is coded as 0 and the non-default level is coded as 1. Since R codes variables alphabetically ‘A’ is our default (or 0) and ‘B’ is our non-default (or 1). As a result the intercept (when x is 0) is the value of the default level, here the mean of ‘A’. The first model below uses dummy coding. As you can see, the intercept is 39.7730349, the same value as the mean of level ‘A’. The estimate for ‘group’ is the difference between group ‘A’ and group ‘B’ (10.034082).</p>
 <pre class="r"><code>ab_dummy.lm = lm(score ~ group, data_twolevel)</code></pre>
 <table>
 <thead>
@@ -179,24 +167,24 @@ data_twolevel = data_threelevel %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">42.330213</td>
-<td align="right">1.226496</td>
-<td align="right">34.513136</td>
+<td align="right">39.77303</td>
+<td align="right">1.630507</td>
+<td align="right">24.393045</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">groupB</td>
-<td align="right">7.003375</td>
-<td align="right">1.734527</td>
-<td align="right">4.037629</td>
-<td align="right">0.0007723</td>
+<td align="right">10.03408</td>
+<td align="right">2.305885</td>
+<td align="right">4.351509</td>
+<td align="right">0.0003846</td>
 </tr>
 </tbody>
 </table>
-<p>With contrast coding we can recode the number values for our levels so that 0 is right in between each level, instead of being equal to a level. The code below does this by making a new column where ‘A’ is equal to -0.5 and ‘B’ to 0.5. Note, here I did this by making a new numeric column. Other tutorials on contrast coding often use the ‘contrasts()’ call, both methods produce the same results in the model.</p>
+<p>With contrast coding we can recode the number values for our levels so that 0 is in between each level, instead of being equal to a level. The code below does this by making a new column where ‘A’ is equal to -0.5 and ‘B’ to 0.5. Note, here I did this by making a new numeric column. Other tutorials on contrast coding often use the ‘contrasts()’ call, both methods produce the same results in the model.</p>
 <pre class="r"><code>data_twolevel_contrast = data_twolevel %&gt;%
   mutate(contrast_AvB = ifelse(group == &quot;A&quot;, -0.5, 0.5))</code></pre>
-<p>Now the model below is the same as the first model only using contrast coding. The estimate for ‘group’ (here ‘contrast_AvB’) is the same as for the model with dummy coding, but the intercept is the mean of ‘A’ <strong>and</strong> ‘B’ together (45.8319009), not just ‘A’.</p>
+<p>The model below is the same as the first model, but using contrast coding. The estimate for ‘group’ (here ‘contrast_AvB’) is the same as for the model with dummy coding, but the intercept is the mean of ‘A’ <em>and</em> ‘B’ together (44.7900759), not just the mean of ‘A’.</p>
 <pre class="r"><code>ab_contrast.lm = lm(score ~ contrast_AvB, data_twolevel_contrast)</code></pre>
 <table>
 <thead>
@@ -211,24 +199,24 @@ data_twolevel = data_threelevel %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">45.831901</td>
-<td align="right">0.8672634</td>
-<td align="right">52.846573</td>
+<td align="right">44.79008</td>
+<td align="right">1.152943</td>
+<td align="right">38.848484</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">contrast_AvB</td>
-<td align="right">7.003375</td>
-<td align="right">1.7345269</td>
-<td align="right">4.037629</td>
-<td align="right">0.0007723</td>
+<td align="right">10.03408</td>
+<td align="right">2.305885</td>
+<td align="right">4.351509</td>
+<td align="right">0.0003846</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="three-level-variable" class="section level1">
-<h1>Three Level Variable</h1>
-<p>Where this gets more complicated is when trying to recreate dummy coding estimates with contrast coding. First, here is a summary of our full data set with three levels for ‘group’.</p>
+<h1>Three-level Variable</h1>
+<p>Where this gets more complicated is when trying to recreate dummy coding estimates with contrast coding when you have a variable with three levels. First, here is a summary of our full data set with three levels for ‘group’.</p>
 <table>
 <thead>
 <tr class="header">
@@ -240,22 +228,22 @@ data_twolevel = data_threelevel %&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">A</td>
-<td align="right">42.33021</td>
-<td align="right">4.185381</td>
+<td align="right">39.77303</td>
+<td align="right">4.107021</td>
 </tr>
 <tr class="even">
 <td align="left">B</td>
-<td align="right">49.33359</td>
-<td align="right">3.545196</td>
+<td align="right">49.80712</td>
+<td align="right">6.025235</td>
 </tr>
 <tr class="odd">
 <td align="left">C</td>
-<td align="right">63.71514</td>
-<td align="right">4.477515</td>
+<td align="right">59.76273</td>
+<td align="right">5.591157</td>
 </tr>
 </tbody>
 </table>
-<p>As for the two-level data set, the first model here is the dummy coded. The intercept continues to be the same as for the model with only ‘A’ and ‘B’, since it is still the mean for ‘A’ (42.3302132). Similarly the estimate for ‘A’ versus ‘B’ is the same as the other model (7.0033753). This model also includes the estimate for ‘A’ versus ‘C’, which is the difference of the means for ‘A’ and ‘C’ (21.3849311).</p>
+<p>As for the two-level data set, the first model here uses dummy coding. The intercept continues to be the same as for the model with only ‘A’ and ‘B’, since it is still the mean of ‘A’ (39.7730349). Similarly the estimate for ‘A’ versus ‘B’ is the same as the other model (10.034082). This model also includes the estimate for ‘A’ versus ‘C’, which is the difference of the means of ‘A’ and ‘C’ (19.9896989).</p>
 <pre class="r"><code>ab_ac_dummy.lm = lm(score ~ group, data_threelevel)
 kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
 <table>
@@ -271,23 +259,23 @@ kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">42.330213</td>
-<td align="right">1.292723</td>
-<td align="right">32.745002</td>
+<td align="right">39.77303</td>
+<td align="right">1.677618</td>
+<td align="right">23.708033</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">groupB</td>
-<td align="right">7.003375</td>
-<td align="right">1.828186</td>
-<td align="right">3.830778</td>
-<td align="right">0.0006913</td>
+<td align="right">10.03408</td>
+<td align="right">2.372511</td>
+<td align="right">4.229309</td>
+<td align="right">0.0002407</td>
 </tr>
 <tr class="odd">
 <td align="left">groupC</td>
-<td align="right">21.384931</td>
-<td align="right">1.828186</td>
-<td align="right">11.697348</td>
+<td align="right">19.98970</td>
+<td align="right">2.372511</td>
+<td align="right">8.425546</td>
 <td align="right">0.0000000</td>
 </tr>
 </tbody>
@@ -298,7 +286,7 @@ kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
                   ifelse(group == &quot;B&quot;, 0.5, 0))) %&gt;%
      mutate(contrast_AvC = ifelse(group == &quot;A&quot;, -0.5,
                   ifelse(group == &quot;C&quot;, 0.5, 0)))</code></pre>
-<p>The contrast coded model does some things as expected and some not. The intercept is now the mean of the full data set including level ‘C’ (51.792982). However, the estimates for ‘A’ versus ‘B’ and ‘A’ versus ‘C’ don’t match the dummy coded model. What then are these estimates?</p>
+<p>The contrast coded model does some things as expected and some not. The intercept is now the mean of the full data set including level ‘C’ (49.7809619). However, the estimates for ‘A’ versus ‘B’ and ‘A’ versus ‘C’ don’t match the dummy coded model. What then are these estimates?</p>
 <pre class="r"><code>ab_ac_contrast.lm = lm(score ~ contrast_AvB + contrast_AvC, data_threelevel_contrast)</code></pre>
 <table>
 <thead>
@@ -313,37 +301,37 @@ kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">51.792982</td>
-<td align="right">0.7463539</td>
-<td align="right">69.394668</td>
+<td align="right">49.78096</td>
+<td align="right">0.9685735</td>
+<td align="right">51.3961642</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">contrast_AvB</td>
-<td align="right">-4.918787</td>
-<td align="right">2.1110076</td>
-<td align="right">-2.330066</td>
-<td align="right">0.0275236</td>
+<td align="right">0.05231</td>
+<td align="right">2.7395395</td>
+<td align="right">0.0190945</td>
+<td align="right">0.9849062</td>
 </tr>
 <tr class="odd">
 <td align="left">contrast_AvC</td>
-<td align="right">23.844324</td>
-<td align="right">2.1110076</td>
-<td align="right">11.295234</td>
-<td align="right">0.0000000</td>
+<td align="right">19.96354</td>
+<td align="right">2.7395395</td>
+<td align="right">7.2871896</td>
+<td align="right">0.0000001</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="three-level-variable-updated" class="section level1">
-<h1>Three Level Variable Updated</h1>
-<p>To get our desired estimates we need to do contrast coding where we collapse together two levels and compare them (together) to the remaining level. In this case both ‘A’ and ‘B’ get set to -0.5 and ‘C’ to 0.5. Note, other tutorials with contrast coding say that in this case ‘A’ and ‘B’ should be set to -0.25 so that the sum of the matrix is 0 (‘A’ vs. ‘B’: -0.5, 0.5, 0; ‘A’ and ‘B’ vs. ‘C’: -0.25, -0.25, 0.5). Both of these methods produce correct results in one sense and incorrect results in another. To show the differences we’ll make a column for both types of coding.</p>
+<h1>Three-level Variable Updated</h1>
+<p>To get our desired estimates we need to do contrast coding where we collapse together two levels and compare them (together) to the remaining level. To create this new column we’ll set both ‘A’ and ‘B’ to -0.5 and ‘C’ to 0.5. Other tutorials with contrast coding say that in this case ‘A’ and ‘B’ should be set to -0.25 so that the sum of the matrix is 0 (‘A’ vs. ‘B’: -0.5, 0.5, 0; ‘A’ and ‘B’ vs. ‘C’: -0.25, -0.25, 0.5). Both of these methods produce desired results in one sense and undesired results in another. To show the differences we’ll make a column for both types of coding.</p>
 <pre class="r"><code>data_threelevel_contrast_updated = data_threelevel_contrast %&gt;%
    mutate(contrast_ABvC1 = ifelse(group == &quot;C&quot;, 0.5, -0.5)) %&gt;%
    mutate(contrast_ABvC2 = ifelse(group == &quot;C&quot;, 0.5, -0.25))</code></pre>
 <div id="coding-method-1" class="section level2">
 <h2>Coding Method #1</h2>
-<p>Now we can make a new model that compares ‘A’ versus ‘B’ and then ‘A’ and ‘B’ versus ‘C’. We get our correct coefficient for ‘A’ versus ‘B’ that we got in both of dummy coded models and our two level contrast coded model (7.0033753). Our coefficient for the second variable is correctly the mean of ‘A’ and ‘B’ minus the mean of ‘C’ (17.8832434).</p>
+<p>Now we can make a new model that compares ‘A’ versus ‘B’ and then ‘A’ and ‘B’ versus ‘C’. We get our correct coefficient for ‘A’ versus ‘B’ that we got in both of our dummy coded models and our two-level contrast coded model (10.034082). Our coefficient for the second variable is correctly the mean of ‘A’ and ‘B’ minus the mean of ‘C’ (14.9726579).</p>
 <pre class="r"><code>ab_abc_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC1, data_threelevel_contrast_updated)</code></pre>
 <table>
 <thead>
@@ -358,32 +346,32 @@ kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">54.773523</td>
-<td align="right">0.7916279</td>
-<td align="right">69.190999</td>
+<td align="right">52.27640</td>
+<td align="right">1.027327</td>
+<td align="right">50.885832</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">contrast_AvB</td>
-<td align="right">7.003375</td>
-<td align="right">1.8281862</td>
-<td align="right">3.830778</td>
-<td align="right">0.0006913</td>
+<td align="right">10.03408</td>
+<td align="right">2.372511</td>
+<td align="right">4.229309</td>
+<td align="right">0.0002407</td>
 </tr>
 <tr class="odd">
 <td align="left">contrast_ABvC1</td>
-<td align="right">17.883243</td>
-<td align="right">1.5832557</td>
-<td align="right">11.295234</td>
-<td align="right">0.0000000</td>
+<td align="right">14.97266</td>
+<td align="right">2.054655</td>
+<td align="right">7.287190</td>
+<td align="right">0.0000001</td>
 </tr>
 </tbody>
 </table>
-<p>However, one thing is still incorrect, our intercept. It should be the mean of the full data set (51.792982), but instead it’s a different number. Further examination shows that it is actually the mean of ‘A’, ‘B’, and ‘C’ twice (54.7735226). NEEDS WORK.</p>
+<p>However, one thing is still incorrect, our intercept. It should be the mean of the full data set (49.7809619), but instead it’s a different number. Further examination shows that it is actually the mean of ‘A’, ‘B’, and ‘C’ twice (52.2764049), or <span class="math">\(\frac{A mean + B mean + C mean + C mean}{4}\)</span>. Another way to think of this is the estimate is actually the average of the mean of ‘A’ minus the mean of ‘C’, and then the mean of ‘B’ minus the mean of ‘C’, <span class="math">\(\frac{(C mean - A mean) + (C mean - B mean)}{2}\)</span>. As a result, it makes sense that the mean of ‘C’ would be represented twice in the computation of the intercept.</p>
 </div>
 <div id="coding-method-2" class="section level2">
 <h2>Coding Method #2</h2>
-<p>We can also build the model where we used the coding where ‘A’ and ‘B’ was set to -0.25. In this model the estimate is now correctly the mean of the full data set (51.792982), and the estimate of ‘A’ versus ‘B’ variable is correctly the mean of ‘A’ minus the mean of ‘B’ (7.0033753). However, the estimate for ‘A’ and ‘B’ versus ‘C’ is is not the mean of ‘A’ and ‘B’ minus the mean of ‘C’. It is actually the intercept minus the mean value for ‘A’ minus the mean value for ‘B’ plus the mean value for ‘C’ (23.8443245). NEEDS WORK. You may have noticed that this is the same value we got for (what we thought was) ‘A’ vs. ‘C’ in the original three level contrast coded model.</p>
+<p>We can also build the model where we used the coding where ‘A’ and ‘B’ were set to -0.25. In this model the estimate is now correctly the mean of the full data set (49.7809619), and the estimate of ‘A’ versus ‘B’ variable is correctly the mean of ‘A’ minus the mean of ‘B’ (10.034082).</p>
 <pre class="r"><code>ab_abc2_contrast.lm = lm(score ~ contrast_AvB + contrast_ABvC2, data_threelevel_contrast_updated)</code></pre>
 <table>
 <thead>
@@ -398,33 +386,34 @@ kable(coef(summary(ab_ac_dummy.lm)))</code></pre>
 <tbody>
 <tr class="odd">
 <td align="left">(Intercept)</td>
-<td align="right">51.792982</td>
-<td align="right">0.7463539</td>
-<td align="right">69.394668</td>
+<td align="right">49.78096</td>
+<td align="right">0.9685735</td>
+<td align="right">51.396164</td>
 <td align="right">0.0000000</td>
 </tr>
 <tr class="even">
 <td align="left">contrast_AvB</td>
-<td align="right">7.003375</td>
-<td align="right">1.8281862</td>
-<td align="right">3.830778</td>
-<td align="right">0.0006913</td>
+<td align="right">10.03408</td>
+<td align="right">2.3725108</td>
+<td align="right">4.229309</td>
+<td align="right">0.0002407</td>
 </tr>
 <tr class="odd">
 <td align="left">contrast_ABvC2</td>
-<td align="right">23.844324</td>
-<td align="right">2.1110076</td>
-<td align="right">11.295234</td>
-<td align="right">0.0000000</td>
+<td align="right">19.96354</td>
+<td align="right">2.7395395</td>
+<td align="right">7.287190</td>
+<td align="right">0.0000001</td>
 </tr>
 </tbody>
 </table>
-<p>It’s worth noting that the t-value and p-value for ‘A’ and ‘B’ versus ‘C’ is the same in both versions of our updated contrast coded models, while this is not the case for the intercept. In the end then it is probably preferred to have the correct intercept and an incorrect estimate for one of the variables. So, it is probably better to do the version where ‘A’ and ‘B’ are set to -0.25.</p>
+<p>However, the estimate for ‘A’ and ‘B’ versus ‘C’ is not the mean of ‘A’ and ‘B’ minus the mean of ‘C’. It is actually the grand mean of the data minus the mean of ‘A’ minus the mean of ‘B’ plus the mean value for ‘C’ (19.9635439), or full <span class="math">\(data set mean - A mean - B mean + C mean\)</span>. We can also rewrite this equation as <span class="math">\(\frac{-2 * A mean}{3} + \frac{-2 * B mean}{3} + \frac{4 * C mean}{3}\)</span>. Both levels ‘A’ and ‘B’ were set to -0.25, which divided by the mean of the other possible coding (0.5) equals <span class="math">\(\frac{-2}{3}\)</span>, the multiplier or ‘A’ and ‘B’, <span class="math">\(\frac{-0.25}{(0.25 + 0.5)/2}\)</span>. Conversely the <span class="math">\(\frac{4}{3}\)</span>, the multiplier for ‘C’, is <span class="math">\(\frac{0.5}{(0.25 + 0.5)/2}\)</span>.</p>
+<p>You may have noticed that this is the same value we got for (what we thought was) ‘A’ vs. ‘C’ in the original three-level contrast coded model. It’s also worth noting that the t-value and p-value for ‘A’ and ‘B’ versus ‘C’ is the same in both versions of our updated contrast coded models, while this is not the case for the intercept. In the end then it is probably preferred to have the correct intercept and an (slightly) incorrect estimate for one of the variables if you are using the models for significance testing. So, it is better to use the version where ‘A’ and ‘B’ are set to -0.25.</p>
 </div>
 </div>
 <div id="conclusion" class="section level1">
 <h1>Conclusion</h1>
-<p>In conclusion, contrast coding is a way to reset the intercept to be the full data set, not just a single level of a variable. For variables with only two levels this produces the same estimates (just different intercepts) as dummy coding. However, when a variable has three levels it becomes more difficult to replicate the estimates from dummy coding. The closest method appears to be to maintain one contrast and for the second comparison collapse together two levels and compare it to the third. Here I leave as an open question, is it possible replicate the dummy coded model with three levels using contrast coding?</p>
+<p>In conclusion, contrast coding is a way to reset the intercept to the mean of the full data set, not just a single level of a variable. For variables with only two levels this produces the same estimates (just different intercepts) as dummy coding. However, when a variable has three levels it becomes more difficult to replicate the estimates from dummy coding. The closest method appears to be to maintain one contrast and for the second comparison collapse together two levels and compare it to the third level. Here I leave as an open question, is it possible replicate the dummy coded model with three levels using contrast coding?</p>
 </div>
 
 
