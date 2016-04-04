@@ -1,0 +1,13 @@
+origin	destination	method	time	price
+san francisco	chicago	plane	4.233333333	89
+san francisco	chicago	train	53	134
+san francisco	chicago	auto	31	221.9218182
+chicago	cleveland	plane	1.283333333	96
+chicago	cleveland	train	6.083333333	45
+chicago	cleveland	auto	5.266666667	35.80727273
+cleveland	princeton	plane	1.983333333	2300
+cleveland	princeton	train	18.73333333	98
+cleveland	princeton	auto	5.166666667	35.70318182
+princeton	cleveland	plane	1.983333333	2300
+princeton	cleveland	train	20.71666667	98
+princeton	cleveland	auto	5.216666667	35.80727273
