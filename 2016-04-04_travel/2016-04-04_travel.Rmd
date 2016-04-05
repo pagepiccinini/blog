@@ -5,11 +5,11 @@ output: html_document
 
 # Introduction
 
-Today's blog post title comes from the 1987 classic [Planes, Trains, and Automobilies](https://en.wikipedia.org/wiki/Planes,_Trains_and_Automobiles) or [A Ticket for Two](https://de.wikipedia.org/wiki/Ein_Ticket_f%C3%BCr_Zwei) in German. I just got back from a whirlwind trip to the United States where I was in four cities in 10 days (San Francisco, CA, Chicago, IL, Cleveland, OH, and Princeton, WV) all with a starting and ending point of Paris, France. To accomplish all of this travel I took airplanes, trains (if you include local the [http://www.transitchicago.com/](Chicago CTA)), and automobiles. In this post we'll look at the most time and cost effective way to do this trip. There's no difficult math or modeling in this post, but it can give you an idea of the power data manipulation and descriptive statistics in R. 
+Today's blog post title comes from the 1987 classic [Planes, Trains, and Automobilies](https://en.wikipedia.org/wiki/Planes,_Trains_and_Automobiles) or [A Ticket for Two](https://de.wikipedia.org/wiki/Ein_Ticket_f%C3%BCr_Zwei) in German. I just got back from a whirlwind trip to the United States where I was in four cities in 10 days (San Francisco, CA, Chicago, IL, Cleveland, OH, and Princeton, WV) all with a starting and ending point of Paris, France. To accomplish all of this travel I took airplanes, trains (if you include local the [http://www.transitchicago.com/](Chicago CTA)), and automobiles. In this post we'll look at the most time and cost effective way to do this trip. There's no difficult math or modeling in this post, but it can give you an idea of the power data manipulation and descriptive statistics in R using the package [https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html](dplyr). We'll end by making a map of the trip 
 
 **TAKE AWAY POINTS FROM THIS POST**
 
-* [to be added]
+* The package dplyr is a useful and clean way to organize data and get descriptive information.
 
 * [to be added] 
 
@@ -22,9 +22,7 @@ My data contains legs for four one-way trips: 1) San Francisco to Chicago, 2) Ch
 
 ```{r, echo=FALSE}
 data = read.table("data_travel.txt", header=T, sep="\t")
-```
 
-```{r}
 library(DT)
 
 datatable(data, options = list(pageLength = 12, dom = 'tip'), rownames = FALSE)
@@ -42,12 +40,11 @@ itinerary_time = data %>%
   group_by(origin, destination) %>%
   filter(time == min(time)) %>%
   ungroup()
-
-
-datatable(itinerary_time, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
 ```
 
 ```{r, echo=FALSE}
+datatable(itinerary_time, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
 itinerary_time_totaltime = sum(itinerary_time$time)
 itinerary_time_totalprice = sum(itinerary_time$price)
 ```
@@ -60,18 +57,15 @@ With this method we see that we have a total travel time of `r round(itinerary_t
 Here we do the same thing as before, but now filtering based on the lowest (minimum) price. The code is shown below.
 
 ```{r, warning=FALSE, message=FALSE}
-library(dplyr)
-
 itinerary_price = data %>%
   group_by(origin, destination) %>%
   filter(price == min(price)) %>%
   ungroup()
-
-
-datatable(itinerary_price, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
 ```
 
 ```{r, echo=FALSE}
+datatable(itinerary_price, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
 itinerary_price_totaltime = sum(itinerary_price$time)
 itinerary_price_totalprice = sum(itinerary_price$price)
 ```
@@ -81,27 +75,19 @@ With this method we see that we have a total travel price of $`r round(itinerary
 
 # Best Itinerary Based on Time and Price
 
-In this last section we play with how much we're willing to pay to "buy" less travel time. We'll say that we're willing to pay $50 for each hour less of travel time. For example, if traveling by auto costs $50 but takes 3 hours I would be willing to pay $100 for a plane if it only took 2 hours. The code is shown below. To do this I'll compute the average cost for the increase in time for each mode of transportation relative to the cheapest one, and then filter to include the best method given our ceiling of $50 per extra hour.
+In this last section we play with how much we're willing to pay to "buy" less travel time. We'll say that we're willing to pay $50 for each hour less of travel time. For example, if traveling by auto costs $50 but takes 3 hours I would be willing to pay $100 for a plane if it only took 2 hours. The code is shown below. To do this I'll create a new column called "cost" first mutliples the total time by 50 and then adds the price of the trip. In effect we're saying each hour costs $50 (thus total time x 50), so longer trips will "cost" more. We then add the actual price of the trip to take that into account as well. Finally, we'll filter by the minimum total cost to get the best trip given our willingness to pay $50 for each less hour of travel time.
 
 ```{r, warning=FALSE, message=FALSE}
-library(dplyr)
-
 itinerary_mix = data %>%
   group_by(origin, destination) %>%
-  arrange(price) %>%
-  mutate(price_diff = price - price[1]) %>%
-  mutate(time_diff = time[1] - time) %>%
-  mutate(cost = price_diff / time_diff) %>%
-  mutate(cost = ifelse(is.na(cost), 0, cost)) %>%
-  filter(time_diff >= 0 & cost <= 50) %>%
-  filter(cost == max(cost)) %>%
+  mutate(cost = time * 50 + price) %>%
+  filter(cost == min(cost)) %>%
   ungroup()
-
-
-datatable(itinerary_mix, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
 ```
 
 ```{r, echo=FALSE}
+datatable(itinerary_mix, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
 itinerary_mix_totaltime = sum(itinerary_mix$time)
 itinerary_mix_totalprice = sum(itinerary_mix$price)
 ```
@@ -129,7 +115,8 @@ trip.plot = ggplot(state_sizes, aes(x = long, y = lat, group = group)) +
   ylab("") +
   scale_y_continuous(breaks=c()) +
   scale_x_continuous(breaks=c()) +
-  theme(panel.border =  element_blank())
+  theme(panel.border =  element_blank()) +
+  coord_fixed(1.3)
 
 trip.plot
 ```
