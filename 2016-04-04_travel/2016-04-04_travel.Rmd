@@ -1,0 +1,103 @@
+---
+title: "Planes, Trains, and Automobiles"
+output: html_document
+---
+
+# Introduction
+
+Today's blog post title comes from the 1987 classic [Planes, Trains, and Automobiles](https://en.wikipedia.org/wiki/Planes,_Trains_and_Automobiles) or [A Ticket for Two](https://de.wikipedia.org/wiki/Ein_Ticket_f%C3%BCr_Zwei) in German. I just got back from a whirlwind trip to the United States where I was in four cities in 10 days (San Francisco, CA, Chicago, IL, Cleveland, OH, and Princeton, WV) all with a starting and ending point of Paris, France. To accomplish all of this travel I took airplanes, trains (if you include the local [Chicago CTA](http://www.transitchicago.com/)), and automobiles. In this post we'll look at the most time and cost effective way to do this trip. There's no difficult math or modeling in this post, but it can give you an idea of the power of data manipulation and descriptive statistics in R using the package [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html).
+
+**TAKE AWAY POINTS FROM THIS POST**
+
+* The package dplyr is a useful and clean way to organize data and get descriptive information.
+
+* The package dplyr can also be used to create new columns to manipulate data.
+
+* Don't fly from Cleveland, OH to Princeton, WV unless you have a lot of money to burn.
+
+
+# Data
+
+My data contains legs for four one-way trips: 1) San Francisco to Chicago, 2) Chicago to Cleveland, 3) Cleveland to Princeton, and 4) Princeton to Cleveland. I then found out the time and price for three methods of travel: 1) airplane, 2) train, and 3) automobile. For the airplane data, I took the cheapest one-way flight based on a search of a website that aggregates across airlines and included the price and estimated duration of the flight. Since there was no available flight into Princeton, WV my airport was Beckley, WV. For the train data, I used Amtrak train estimates taking the time and price of the first available, cheapest ticket. Since there was no available train into Princeton, WV my station was in Norfolk, VA. For the automobile data, I assumed you already had a car and were only paying for gas. I used the current national average of $2.29 and a car with an MPG of 22, which is roughly the average for a mid-sized non-hybrid car. Below is the data set.
+
+```{r, echo=FALSE}
+data = read.table("data_travel.txt", header=T, sep="\t")
+
+library(DT)
+
+datatable(data, options = list(pageLength = 12, dom = 'tip'), rownames = FALSE)
+```
+
+
+# Best Itinerary Based on Time
+
+To find out the best itinerary based on time we can simply see which method within each leg has the shortest duration of travel. The code for how to do this is shown below. First I group by my origin and destination so I can look at each leg separately. To do this I use the "group_by()" verb. Then I filter my data so that within each leg I only keep the method with the shortest time, the minimum time. Intuitively this done via the "filter()" verb. I end by "ungroup()"ing the data so that any future analyses are on the whole data set, not specific to my groupings.
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+
+itinerary_time = data %>%
+  group_by(origin, destination) %>%
+  filter(time == min(time)) %>%
+  ungroup()
+```
+
+```{r, echo=FALSE}
+datatable(itinerary_time, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
+itinerary_time_totaltime = sum(itinerary_time$time)
+itinerary_time_totalprice = sum(itinerary_time$price)
+```
+
+With this method we see that we have a total travel time of `r round(itinerary_time_totaltime, 2)` hours, but our price is pretty high at $`r round(itinerary_time_totalprice, 2)`. Regarding method, we see all legs are by plane. If you look at the data you can see that this high price is almost entirely driven by the cost of the flight to and from Princeton, which comes in at $2300 per leg and requires an [air taxi](http://www.linearair.com/). Instead of the shortest trip, let's see what our itinerary looks like if want the cheapest price.
+
+
+# Best Itinerary Based on Price
+
+Here we do the same thing as before, but now filtering based on the lowest (minimum) price. The code is shown below.
+
+```{r, warning=FALSE, message=FALSE}
+itinerary_price = data %>%
+  group_by(origin, destination) %>%
+  filter(price == min(price)) %>%
+  ungroup()
+```
+
+```{r, echo=FALSE}
+datatable(itinerary_price, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
+itinerary_price_totaltime = sum(itinerary_price$time)
+itinerary_price_totalprice = sum(itinerary_price$price)
+```
+
+With this method we see that we have a total travel price of $`r round(itinerary_price_totalprice, 2)`, but now our travel time is much higher at `r round(itinerary_price_totaltime, 2)` hours, over 10 hours longer than when we based our trip on travel time. Regarding method, we have one leg by plane (San Francisco to Chicago) and the rest by automobile. At least in the United States, it seems it is never most advantageous to travel via train, either regarding time or price. A total price of  $`r round(itinerary_price_totalprice, 2)` is pretty inexpensive for such a long trip, but what if we're willing to pay a little more to get a shorter total travel time?
+
+
+# Best Itinerary Based on Time and Price
+
+In this last section we play with how much we're willing to pay to "buy" less travel time. We'll say that we're willing to pay $50 for each hour less of travel time. For example, if traveling by auto costs $50 but takes 3 hours I would be willing to pay $100 for a plane if it only took 2 hours. The code is shown below. To do this I'll create a new column called "cost" that first multiples the total time by 50 and then adds the price of the trip. In effect we're saying each hour costs $50 (thus total time x 50), so longer trips will "cost" more. We then add the actual price of the trip to take that into account when computing our total cost. To create this new column we use the "mutate()" verb. Finally, we'll filter by the minimum total cost to get the best trip given our willingness to pay $50 for each hour less of travel time.
+
+```{r, warning=FALSE, message=FALSE}
+itinerary_cost = data %>%
+  group_by(origin, destination) %>%
+  mutate(cost = time * 50 + price) %>%
+  filter(cost == min(cost)) %>%
+  ungroup()
+```
+
+```{r, echo=FALSE}
+datatable(itinerary_cost, options = list(pageLength = 4, dom = 'tip'), rownames = FALSE)
+
+itinerary_cost_totaltime = sum(itinerary_cost$time)
+itinerary_cost_totalprice = sum(itinerary_cost$price)
+```
+
+Using our cost benefit analysis method we now find that the total price of our trip is $`r round(itinerary_cost_totalprice, 2)` and that it will take `r round(itinerary_cost_totaltime, 2)` hours. Our modes of transportation have only changed a bit, we now fly from Chicago to Cleveland instead of driving as we did in the cheapest trip version. Actually this is the trip I ended up doing, which is good to know (also, I didn't own a car for the trip from Chicago to Cleveland, so that would have made the trip cost more than this analysis predicts).
+
+
+# Conclusion
+
+R (and more specifically [dplyr](https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html)) can be a useful tool to get descriptive information about your data, both as a whole and grouped. We can also create new columns to analyze our data with new variables. You may have noticed that my example here doesn't take into account the fact that in a car I can drive directly to my destination, while with a plane I need to get from the airport to my final destination. With a little more data we can also take this into account using the same methods we did in this post. For example we can add a variable of "trip" and have multiple methods within a single trip. By grouping by "trip"" we can get summary costs (the verb "summarise()" in dplyr) and then run the same comparisons we did above. I hope you enjoyed playing with the data from my recent United States trip. Your most important take away should be that flying from Cleveland, OH to Princeton, WV is pretty much out of the question, although  it would be pretty awesome to take an air taxi. 
+
+
+
