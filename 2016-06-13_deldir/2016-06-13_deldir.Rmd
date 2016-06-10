@@ -57,32 +57,19 @@ prague_map = get_googlemap(center = "Prague", maptype = "roadmap", zoom = 12, si
 
 ```{r}
 # Plot city specific maps with markers
-paris.plot = ggmap(paris_map, extent = "device") +
-  geom_point(data = subset(data, city == "Paris"), aes(x = longitude, y = latitude),
+city_plot = function(city_name, city_map){
+  ggmap(city_map, extent = "device") +
+  geom_point(data = subset(data, city == city_name), aes(x = longitude, y = latitude),
              color = "red", size = 4)
+}
 
-paris.plot
+city_plot("Paris", paris_map)
 
+city_plot("Berlin", berlin_map)
 
-berlin.plot = ggmap(berlin_map, extent = "device") +
-  geom_point(data = subset(data, city == "Berlin"), aes(x = longitude, y = latitude),
-             color = "red", size = 4)
+city_plot("Barcelona", barcelona_map)
 
-berlin.plot
-
-
-barcelona.plot = ggmap(barcelona_map, extent = "device") +
-  geom_point(data = subset(data, city == "Barcelona"), aes(x = longitude, y = latitude),
-             color = "red", size = 4)
-
-barcelona.plot
-
-
-prague.plot = ggmap(prague_map, extent = "device") +
-  geom_point(data = subset(data, city == "Prague"), aes(x = longitude, y = latitude),
-             color = "red", size = 4)
-
-prague.plot
+city_plot("Prague", prague_map)
 ```
 
 
@@ -124,32 +111,19 @@ prague_deldir = deldir(prague_data$longitude, prague_data$latitude)
 Now we can update our figures with the tessliations.
 
 ```{r}
-paris_del.plot = paris.plot +
-  geom_segment(data = paris_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
+del_plot = function(city_data, city_map) {
+  city_map +
+  geom_segment(data = city_data$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
     size = 1, color= "black")
+}
 
-paris_del.plot
+del_plot(paris_deldir, paris.plot)
 
+del_plot(berlin_deldir, berlin.plot)
 
-berlin_del.plot = berlin.plot +
-  geom_segment(data = berlin_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
-    size = 1, color= "black")
+del_plot(barcelona_deldir, barcelona.plot)
 
-berlin_del.plot
-
-
-barcelona_del.plot = barcelona.plot +
-  geom_segment(data = barcelona_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
-    size = 1, color= "black")
-
-barcelona_del.plot
-
-
-prague_del.plot = prague.plot +
-  geom_segment(data = prague_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
-    size = 1, color= "black")
-
-prague_del.plot
+del_plot(prague_deldir, prague.plot)
 ```
 
 Let's compare the areas. The area for Paris is `r paris_deldir$del.area`, Berlin `r berlin_deldir$del.area`, Barelona `r barcelona_deldir$del.area`, and Prague `r prague_deldir$del.area`.
@@ -187,46 +161,22 @@ data_deldir_centroid = data_deldir_sum %>%
 Plot figures with centroid noted.
 
 ```{r}
-paris_del_cent.plot = paris_del.plot +
-  geom_point(data = subset(data_deldir_centroid, city == "Paris"),
-              aes(x = cent_x, y = cent_y),
-              size = 8, color= "blue")
-
-paris_del_cent.plot
-
-
-berlin_del_cent.plot = berlin_del.plot +
-  geom_point(data = subset(data_deldir_centroid, city == "Berlin"),
-              aes(x = cent_x, y = cent_y),
-              size = 8, color= "blue")
-
-berlin_del_cent.plot
-
-
-barcelona_del_cent.plot = barcelona_del.plot +
-  geom_point(data = subset(data_deldir_centroid, city == "Barcelona"),
-              aes(x = cent_x, y = cent_y),
-              size = 8, color= "blue")
-
-barcelona_del_cent.plot
-
-prague_del_cent.plot = prague_del.plot +
-  geom_point(data = subset(data_deldir_centroid, city == "Prague"),
-              aes(x = cent_x, y = cent_y),
-              size = 8, color= "blue")
-
-prague_del_cent.plot
-
-
-cent_plot = function(specific_plot, specific_city){
-  specific_plot +
-  geom_point(data = subset(data_deldir_centroid, city == specific_city),
+# Make plots with centroid
+cent_plot = function(city_name, city_map){
+  city_map +
+  geom_point(data = subset(data_deldir_centroid, city == city_name),
               aes(x = cent_x, y = cent_y),
               size = 8, color= "blue")
     
 }
 
-cent_plot(paris_del.plot, "Paris")
+cent_plot("Paris", paris_del.plot)
+
+cent_plot("Berlin", berlin_del.plot)
+
+cent_plot("Barcelona", barcelona_del.plot)
+
+cent_plot("Prague", prague_del.plot)
 ```
 
 
