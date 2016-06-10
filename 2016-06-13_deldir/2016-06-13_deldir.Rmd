@@ -1,0 +1,106 @@
+---
+title: "Spacial Data"
+output: html_document
+---
+
+# Introduction
+
+
+
+**TAKE AWAY POINTS FROM THIS POST**
+
+* 
+
+* 
+
+* 
+
+
+# Data
+
+First we read in and organize the data.
+
+```{r, echo=FALSE}
+library(dplyr)
+library(tidyr)
+library(ggmap)
+
+data = read.table("data_locations.txt", header=T, sep="\t") %>%
+  unite(geo_location, c(landmark, city), sep = ", ", remove = FALSE) %>%
+  rowwise() %>%
+  mutate(longitude = geocode(geo_location, source = "google")[1, 1]) %>%
+  mutate(latitude = geocode(geo_location, source = "google")[1, 2])
+```
+
+Let's view the data.
+
+```{r, echo = FALSE}
+library(DT)
+
+datatable(data, options = list(pageLength = 12, dom = 'tip'), rownames = FALSE)
+```
+
+Next we pull out out the city specific markers.
+
+```{r}
+# Get city specific markers
+paris_markers = data %>%
+  filter(city == "Paris") %>%
+  select(landmark, longitude, latitude)
+
+berlin_markers = data %>%
+  filter(city == "Berlin") %>%
+  select(landmark, longitude, latitude)
+
+barcelona_markers = data %>%
+  filter(city == "Barcelona") %>%
+  select(longitude, latitude)
+
+prague_markers = data %>%
+  filter(city == "Prague") %>%
+  select(longitude, latitude)
+```
+
+We then create a map object pulled from Google maps with each city and the 
+
+```{r}
+# Get city specific maps
+paris_map = get_googlemap(center = "Paris", maptype = "roadmap", zoom = 12)
+
+berlin_map = get_googlemap(center = "Berlin", maptype = "roadmap", markers = berlin_markers)
+
+barcelona_map = get_googlemap(center = "Barcelona", maptype = "roadmap", markers = barcelona_markers)
+
+prague_map = get_googlemap(center = "Prague", maptype = "roadmap", markers = prague_markers)
+```
+
+```{r}
+# Plot city specific maps with markers
+paris.plot = ggmap(paris_map) +
+  geom_point(data = paris_markers, aes(x = longitude, y = latitude),
+             color = "red", size = 3) +
+  geom_text(data = paris_markers, aes(x = longitude, y = latitude, label = landmark),
+             hjust = 0, nudge_x = 0.001)
+
+paris.plot
+
+berlin.plot = ggmap(berlin_map)
+
+barcelona.plot = ggmap(barcelona_map)
+
+prague.plot = ggmap(prague_map)
+
+paris.plot
+berlin.plot
+barcelona.plot
+prague.plot
+
+```
+
+
+# Conclusion
+
+
+
+
+
