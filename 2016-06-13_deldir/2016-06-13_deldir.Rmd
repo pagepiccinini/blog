@@ -24,12 +24,14 @@ First we read in and organize the data.
 library(dplyr)
 library(tidyr)
 library(ggmap)
+```
 
+```{r}
 data = read.table("data_locations.txt", header=T, sep="\t") %>%
-  unite(geo_location, c(landmark, city), sep = ", ", remove = FALSE) %>%
+  mutate(address = as.character(address)) %>%
   rowwise() %>%
-  mutate(longitude = geocode(geo_location, source = "google")[1, 1]) %>%
-  mutate(latitude = geocode(geo_location, source = "google")[1, 2])
+  mutate(longitude = geocode(address, source = "google")[1, 1]) %>%
+  mutate(latitude = geocode(address, source = "google")[1, 2])
 ```
 
 Let's view the data.
@@ -40,61 +42,191 @@ library(DT)
 datatable(data, options = list(pageLength = 12, dom = 'tip'), rownames = FALSE)
 ```
 
-Next we pull out out the city specific markers.
-
-```{r}
-# Get city specific markers
-paris_markers = data %>%
-  filter(city == "Paris") %>%
-  select(landmark, longitude, latitude)
-
-berlin_markers = data %>%
-  filter(city == "Berlin") %>%
-  select(landmark, longitude, latitude)
-
-barcelona_markers = data %>%
-  filter(city == "Barcelona") %>%
-  select(longitude, latitude)
-
-prague_markers = data %>%
-  filter(city == "Prague") %>%
-  select(longitude, latitude)
-```
-
 We then create a map object pulled from Google maps with each city and the 
 
 ```{r}
 # Get city specific maps
-paris_map = get_googlemap(center = "Paris", maptype = "roadmap", zoom = 12)
+paris_map = get_googlemap(center = "Paris", maptype = "roadmap", zoom = 12, size = c(640, 420))
 
-berlin_map = get_googlemap(center = "Berlin", maptype = "roadmap", markers = berlin_markers)
+berlin_map = get_googlemap(center = "Berlin", maptype = "roadmap", zoom = 11, size = c(640, 420))
 
-barcelona_map = get_googlemap(center = "Barcelona", maptype = "roadmap", markers = barcelona_markers)
+barcelona_map = get_googlemap(center = "Barcelona", maptype = "roadmap", zoom = 12, size = c(640, 420))
 
-prague_map = get_googlemap(center = "Prague", maptype = "roadmap", markers = prague_markers)
+prague_map = get_googlemap(center = "Prague", maptype = "roadmap", zoom = 12, size = c(640, 420))
 ```
 
 ```{r}
 # Plot city specific maps with markers
-paris.plot = ggmap(paris_map) +
-  geom_point(data = paris_markers, aes(x = longitude, y = latitude),
-             color = "red", size = 3) +
-  geom_text(data = paris_markers, aes(x = longitude, y = latitude, label = landmark),
-             hjust = 0, nudge_x = 0.001)
+paris.plot = ggmap(paris_map, extent = "device") +
+  geom_point(data = subset(data, city == "Paris"), aes(x = longitude, y = latitude),
+             color = "red", size = 4)
 
 paris.plot
 
-berlin.plot = ggmap(berlin_map)
 
-barcelona.plot = ggmap(barcelona_map)
+berlin.plot = ggmap(berlin_map, extent = "device") +
+  geom_point(data = subset(data, city == "Berlin"), aes(x = longitude, y = latitude),
+             color = "red", size = 4)
 
-prague.plot = ggmap(prague_map)
-
-paris.plot
 berlin.plot
-barcelona.plot
-prague.plot
 
+
+barcelona.plot = ggmap(barcelona_map, extent = "device") +
+  geom_point(data = subset(data, city == "Barcelona"), aes(x = longitude, y = latitude),
+             color = "red", size = 4)
+
+barcelona.plot
+
+
+prague.plot = ggmap(prague_map, extent = "device") +
+  geom_point(data = subset(data, city == "Prague"), aes(x = longitude, y = latitude),
+             color = "red", size = 4)
+
+prague.plot
+```
+
+
+# Delany Tessilation Area
+
+With our maps and data points in place let's compute the tessilation for each map.
+
+```{r}
+library(deldir)
+
+# data_deldir = data %>%
+#   group_by(city) %>%
+#   do(deldir(.$longitude, .$latitude)) %>%
+#   ungroup()
+# 
+# 
+# data_deldir = data %>%
+#   nest(-city) %>%
+#   mutate(col = map2(longitude, latitude, deldir)) %>%
+#   select(city, col) %>%
+#   unnest()
+
+
+
+### TO BE CHANGED
+paris_data = filter(data, city == "Paris")
+paris_deldir = deldir(paris_data$longitude, paris_data$latitude)
+
+berlin_data = filter(data, city == "Berlin")
+berlin_deldir = deldir(berlin_data$longitude, berlin_data$latitude)
+
+barcelona_data = filter(data, city == "Barcelona")
+barcelona_deldir = deldir(barcelona_data$longitude, barcelona_data$latitude)
+
+prague_data = filter(data, city == "Prague")
+prague_deldir = deldir(prague_data$longitude, prague_data$latitude)
+```
+
+Now we can update our figures with the tessliations.
+
+```{r}
+paris_del.plot = paris.plot +
+  geom_segment(data = paris_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
+    size = 1, color= "black")
+
+paris_del.plot
+
+
+berlin_del.plot = berlin.plot +
+  geom_segment(data = berlin_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
+    size = 1, color= "black")
+
+berlin_del.plot
+
+
+barcelona_del.plot = barcelona.plot +
+  geom_segment(data = barcelona_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
+    size = 1, color= "black")
+
+barcelona_del.plot
+
+
+prague_del.plot = prague.plot +
+  geom_segment(data = prague_deldir$delsgs, aes(x = x1, y = y1, xend = x2, yend = y2),
+    size = 1, color= "black")
+
+prague_del.plot
+```
+
+Let's compare the areas. The area for Paris is `r paris_deldir$del.area`, Berlin `r berlin_deldir$del.area`, Barelona `r barcelona_deldir$del.area`, and Prague `r prague_deldir$del.area`.
+
+
+# Delany Tessilation Ceintroid
+
+Caculate centroid of the tesselation.
+
+```{r}
+paris_deldir_sum = data.frame(paris_deldir$summary) %>%
+  mutate(city = "Paris")
+
+berlin_deldir_sum = data.frame(berlin_deldir$summary) %>%
+  mutate(city = "Berlin")
+
+barcelona_deldir_sum = data.frame(barcelona_deldir$summary) %>%
+  mutate(city = "Barcelona")
+
+prague_deldir_sum = data.frame(prague_deldir$summary) %>%
+  mutate(city = "Prague")
+
+data_deldir_sum = paris_deldir_sum %>%
+  bind_rows(berlin_deldir_sum) %>%
+  bind_rows(barcelona_deldir_sum) %>%
+  bind_rows(prague_deldir_sum)
+
+data_deldir_centroid = data_deldir_sum %>%
+  group_by(city) %>%
+  summarise(cent_x = sum(x * del.wts),
+            cent_y = sum(y * del.wts)) %>%
+  ungroup()
+```
+
+Plot figures with centroid noted.
+
+```{r}
+paris_del_cent.plot = paris_del.plot +
+  geom_point(data = subset(data_deldir_centroid, city == "Paris"),
+              aes(x = cent_x, y = cent_y),
+              size = 8, color= "blue")
+
+paris_del_cent.plot
+
+
+berlin_del_cent.plot = berlin_del.plot +
+  geom_point(data = subset(data_deldir_centroid, city == "Berlin"),
+              aes(x = cent_x, y = cent_y),
+              size = 8, color= "blue")
+
+berlin_del_cent.plot
+
+
+barcelona_del_cent.plot = barcelona_del.plot +
+  geom_point(data = subset(data_deldir_centroid, city == "Barcelona"),
+              aes(x = cent_x, y = cent_y),
+              size = 8, color= "blue")
+
+barcelona_del_cent.plot
+
+prague_del_cent.plot = prague_del.plot +
+  geom_point(data = subset(data_deldir_centroid, city == "Prague"),
+              aes(x = cent_x, y = cent_y),
+              size = 8, color= "blue")
+
+prague_del_cent.plot
+
+
+cent_plot = function(specific_plot, specific_city){
+  specific_plot +
+  geom_point(data = subset(data_deldir_centroid, city == specific_city),
+              aes(x = cent_x, y = cent_y),
+              size = 8, color= "blue")
+    
+}
+
+cent_plot(paris_del.plot, "Paris")
 ```
 
 
