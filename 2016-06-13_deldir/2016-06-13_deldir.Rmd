@@ -2,6 +2,10 @@
 title: "Spacial Data"
 output: html_document
 ---
+```{r, echo = FALSE}
+library(knitr)
+opts_chunk$set(warning=FALSE, message=FALSE, fig.align='center') 
+```
 
 # Introduction
 
@@ -20,18 +24,17 @@ output: html_document
 
 First we read in and organize the data.
 
-```{r, echo=FALSE}
-library(dplyr)
-library(tidyr)
-library(ggmap)
-```
-
 ```{r}
-data = read.table("data_locations.txt", header=T, sep="\t") %>%
-  mutate(address = as.character(address)) %>%
-  rowwise() %>%
-  mutate(longitude = geocode(address, source = "google")[1, 1]) %>%
-  mutate(latitude = geocode(address, source = "google")[1, 2])
+library(dplyr)
+library(ggmap)
+
+# data = read.table("data_locations.txt", header=T, sep="\t") %>%
+#   mutate(address = as.character(address)) %>%
+#   rowwise() %>%
+#   mutate(longitude = geocode(address, source = "google")[1, 1]) %>%
+#   mutate(latitude = geocode(address, source = "google")[1, 2])
+
+data = read.table("data_saved.txt", header=T, sep="\t")
 ```
 
 Let's view the data.
@@ -42,9 +45,9 @@ library(DT)
 datatable(data, options = list(pageLength = 12, dom = 'tip'), rownames = FALSE)
 ```
 
-We then create a map object pulled from Google maps with each city and the 
+We then create a map object pulled from Google maps. 
 
-```{r}
+```{r, cache=TRUE}
 # Get city specific maps
 paris_map = get_googlemap(center = "Paris", maptype = "roadmap", zoom = 12, size = c(640, 420))
 
@@ -55,21 +58,27 @@ barcelona_map = get_googlemap(center = "Barcelona", maptype = "roadmap", zoom = 
 prague_map = get_googlemap(center = "Prague", maptype = "roadmap", zoom = 12, size = c(640, 420))
 ```
 
+With our map object saved 
+
 ```{r}
-# Plot city specific maps with markers
+# Plot city specific maps with landmarks noted
 city_plot = function(city_name, city_map){
   ggmap(city_map, extent = "device") +
   geom_point(data = subset(data, city == city_name), aes(x = longitude, y = latitude),
              color = "red", size = 4)
 }
 
-city_plot("Paris", paris_map)
+paris.plot = city_plot("Paris", paris_map)
+paris.plot
 
-city_plot("Berlin", berlin_map)
+berlin.plot = city_plot("Berlin", berlin_map)
+berlin.plot
 
-city_plot("Barcelona", barcelona_map)
+barcelona.plot = city_plot("Barcelona", barcelona_map)
+barcelona.plot
 
-city_plot("Prague", prague_map)
+prague.plot = city_plot("Prague", prague_map)
+prague.plot
 ```
 
 
@@ -91,8 +100,6 @@ library(deldir)
 #   mutate(col = map2(longitude, latitude, deldir)) %>%
 #   select(city, col) %>%
 #   unnest()
-
-
 
 ### TO BE CHANGED
 paris_data = filter(data, city == "Paris")
@@ -117,13 +124,17 @@ del_plot = function(city_data, city_map) {
     size = 1, color= "black")
 }
 
-del_plot(paris_deldir, paris.plot)
+paris_del.plot = del_plot(paris_deldir, paris.plot)
+paris_del.plot
 
-del_plot(berlin_deldir, berlin.plot)
+berlin_del.plot = del_plot(berlin_deldir, berlin.plot)
+berlin_del.plot
 
-del_plot(barcelona_deldir, barcelona.plot)
+barcelona_del.plot = del_plot(barcelona_deldir, barcelona.plot)
+barcelona_del.plot
 
-del_plot(prague_deldir, prague.plot)
+prague_del.plot = del_plot(prague_deldir, prague.plot)
+prague_del.plot
 ```
 
 Let's compare the areas. The area for Paris is `r paris_deldir$del.area`, Berlin `r berlin_deldir$del.area`, Barelona `r barcelona_deldir$del.area`, and Prague `r prague_deldir$del.area`.
@@ -134,6 +145,7 @@ Let's compare the areas. The area for Paris is `r paris_deldir$del.area`, Berlin
 Caculate centroid of the tesselation.
 
 ```{r}
+## TO BE CHANGED
 paris_deldir_sum = data.frame(paris_deldir$summary) %>%
   mutate(city = "Paris")
 
@@ -170,13 +182,17 @@ cent_plot = function(city_name, city_map){
     
 }
 
-cent_plot("Paris", paris_del.plot)
+paris_del_cent.plot = cent_plot("Paris", paris_del.plot)
+paris_del_cent.plot
 
-cent_plot("Berlin", berlin_del.plot)
+berlin_del_cent.plot = cent_plot("Berlin", berlin_del.plot)
+berlin_del_cent.plot
 
-cent_plot("Barcelona", barcelona_del.plot)
+barcelona_del_cent.plot = cent_plot("Barcelona", barcelona_del.plot)
+barcelona_del_cent.plot
 
-cent_plot("Prague", prague_del.plot)
+prauge_del_cent.plot = cent_plot("Prague", prague_del.plot)
+prauge_del_cent.plot
 ```
 
 
