@@ -1,0 +1,109 @@
+"city"	"landmark"	"address"	"longitude"	"latitude"
+"1"	"Paris"	"Arc de Triomphe"	"Place Charles de Gaulle, 75008 Paris, France"	2.2959091	48.8737573
+"2"	"Paris"	"Catacombs"	"1 Avenue du Colonel Henri Rol-Tanguy, 75014 Paris, France"	2.3324228	48.8338325
+"3"	"Paris"	"Tour Eiffel"	"Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"	2.2944861	48.8588871
+"4"	"Paris"	"Cathédrale Notre-Dame de Paris"	"6 Parvis Notre-Dame - Pl. Jean-Paul II, 75004 Paris, France"	2.3492923	48.85267
+"5"	"Paris"	"Opera Garnier"	"8 Rue Scribe, 75009 Paris, France"	2.3317433	48.8720223
+"6"	"Paris"	"Pantheon"	"Place du Panthéon, 75005 Paris, France"	2.3463884	48.8467002
+"7"	"Paris"	"Père Lachaise Cemetery"	"16 Rue du Repos, 75020 Paris, France"	2.3908664	48.8600238
+"8"	"Paris"	"Sacré Coeur"	"35 Rue du Chevalier de la Barre, 75018 Paris, France"	2.3430419	48.8867524
+"9"	"Paris"	"Sainte-Chapelle"	"8 Boulevard du Palais, 75001 Paris, France"	2.345338	48.8550408
+"10"	"Paris"	"Place de la République"	"Place de la République, Paris, France"	2.3634673	48.8672991
+"11"	"Paris"	"The Louvre"	"Louvre Museum, 75001 Paris, France"	2.3310526	48.8640493
+"12"	"Paris"	"Musée d’Orsay"	"1 Rue de la Légion d’Honneur, 75007 Paris, France"	2.3259283	48.8601978
+"13"	"Paris"	"Rodin Museum"	"79 Rue de Varenne, 75007 Paris, France"	2.3159636	48.8553375
+"14"	"Paris"	"Picasso National Museum"	"5 Rue de Thorigny, 75003 Paris, France"	2.3624103	48.8596829
+"15"	"Paris"	"Musée Marmottan Monet"	"2 Rue Louis Boilly, Paris, France"	2.267221	48.8592264
+"16"	"Paris"	"Orangerie Museum"	"Jardin Tuileries, 75001 Paris, France"	2.3252606	48.8638608
+"17"	"Paris"	"Musée National Eugène Delacroix"	"6 Rue de Furstenberg, 75006 Paris, France"	2.3356553	48.8544106
+"18"	"Paris"	"The Centre Pompidou"	"Place Georges-Pompidou, 75004 Paris, France"	2.3516748	48.860642
+"19"	"Paris"	"Les Invalides"	"129 Rue de Grenelle, 75007 Paris, France"	2.3125434	48.8559349
+"20"	"Paris"	"Cluny"	"6 Place Paul Painlevé, 75005 Paris, France"	2.3439212	48.8503245
+"21"	"Paris"	"Decorative Arts Museum"	"107 Rue de Rivoli, 75001 Paris, France"	2.333307	48.863091
+"22"	"Paris"	"Carnavalet"	"16 Rue des Francs Bourgeois, 75003 Paris, France"	2.3621482	48.8571611
+"23"	"Paris"	"City of Science and Industry"	"30 Avenue Corentin Cariou, 75019 Paris, France"	2.3876555	48.895639
+"24"	"Paris"	"Mémorial de la Shoah"	"17 Rue Geoffroy l’Asnier, 75004 Paris, France"	2.3563212	48.8548328
+"25"	"Paris"	"Musée Jacquemart-André"	"158 Boulevard Haussmann, 75008 Paris, France"	2.3107324	48.8750259
+"26"	"Paris"	"Musée de quai Branly"	"37 Quai Branly, 75007 Paris, France"	2.297441	48.861899
+"27"	"Berlin"	"Kulturforum"	"Matthäikirchplatz, 10785 Berlin, Germany"	13.367335	52.508218
+"28"	"Berlin"	"Museen Charlottenburg"	"Schloßstraße 55, 14059 Berlin, Germany"	13.29812	52.5161
+"29"	"Berlin"	"Museen Dahlem"	"Lansstraße 8, 14195 Berlin, Germany"	13.2928777	52.4573169
+"30"	"Berlin"	"Deutsches Historisches Museum"	"Unter den Linden 2, 10117 Berlin, Germany"	13.3968884	52.5176866
+"31"	"Berlin"	"Museum für Naturkunde"	"Invalidenstraße 43, 10115 Berlin, Germany"	13.3780673	52.5303177
+"32"	"Berlin"	"Hamburger Bahnhof Museum für Gegenwart"	"Invalidenstraße 50-51, 10557 Berlin, Germany"	13.3714932	52.5281834
+"33"	"Berlin"	"Jüdisches Museum"	"Lindenstraße 9-14, 10969 Berlin, Germany"	13.394973	52.501973
+"34"	"Berlin"	"Berlinische Galerie"	"Alte Jakobstraße 124-128, 10969 Berlin, Germany"	13.39881	52.50408
+"35"	"Berlin"	"Technikmuseum"	"Trebbiner Str. 9, 10963 Berlin, Germany"	13.3768443	52.4986278
+"36"	"Berlin"	"Mauermuseum at Checkpoint Charlie"	"Friedrichstraße 43-45, 10969 Berlin, Germany"	13.3907303	52.5071609
+"37"	"Berlin"	"Topography of Terror"	"Niederkirchnerstraße 8, 10963 Berlin, Germany"	13.3834565	52.5067418
+"38"	"Berlin"	"DDR Museum"	"Karl-Liebknecht-Str. 1, 10178 Berlin, Germany"	13.4026364	52.5193236
+"39"	"Berlin"	"Story of Berline"	"Kurfürstendamm 207, 10719 Berlin, Germany"	13.32312	52.50186
+"40"	"Berlin"	"Stasi Museum"	"Haus 1, Ruschestraße 103, 10365 Berlin, Germany"	13.4876721	52.5151305
+"41"	"Berlin"	"Eigen + Art"	"Auguststraße 26, 10117 Berlin, Germany"	13.3971198	52.5269196
+"42"	"Berlin"	"loop -- raum fur aktuelle kunst"	"Jägerstrasse 5, 10117 Berlin, Germany"	13.38595	52.51335
+"43"	"Berlin"	"Berliner Dom"	"Am Lustgarten, 10178 Berlin, Germany"	13.4002955	52.518999
+"44"	"Berlin"	"Kaiser Wilhelm Gedächtniskirche"	"Breitscheidplatz, 10789 Berlin, Germany"	13.3355106	52.5048861
+"45"	"Berlin"	"Deutscher Dom"	"Gendarmenmarkt 1-2, 10117 Berlin, Germany"	13.3923	52.51265
+"46"	"Berlin"	"Französischer Dom"	"Gendarmenmarkt 1-5, 10117 Berlin, Germany"	13.3923	52.51265
+"47"	"Berlin"	"Marienkirche"	"Karl-Liebknecht-Str. 8, 10178 Berlin, Germany"	13.40728	52.52048
+"48"	"Berlin"	"Nikolaikirche"	"Nikolaikirchplatz, 10178 Berlin, Germany"	13.4077527	52.516601
+"49"	"Berlin"	"St. Hedwigs Kathedrale"	"Hinter der Katholischen Kirche 3, 10117 Berlin, Germany"	13.3948485	52.5157481
+"50"	"Berlin"	"New Synagogue"	"Oranienburger Str. 28-30, 10117 Berlin, Germany"	13.3946097	52.5247343
+"51"	"Berlin"	"Franziskaner Klosterkirche"	"Klosterstraße 73, 10179 Berlin, Germany"	13.41234	52.51837
+"52"	"Berlin"	"Berliner Fernsehturm"	"Panoramastraße 1A, 10178 Berlin, Germany"	13.4093	52.52086
+"53"	"Berlin"	"Reichstag building - Bundestag"	"Platz der Republik 1, 11011 Berlin, Germany"	13.3761181	52.5186283
+"54"	"Berlin"	"Berliner Funkturm"	"Hammarskjöldplatz, 14055 Berlin, Germany"	13.2738917	52.5073039
+"55"	"Berlin"	"Siegessäule"	"Großer Stern, 10557 Berlin, Germany"	13.3509795	52.5148573
+"56"	"Berlin"	"Kollhoff Tower"	"Kollhoff-Tower, Potsdamer Platz 1, 10785 Berlin, Germany"	13.3751455	52.5089482
+"57"	"Berlin"	"Memorial to the Murdered Jews of Europe"	"Cora-Berliner-Straße 1, 10117 Berlin, Germany"	13.37984	52.5138
+"58"	"Berlin"	"Berlin Wall Memorial"	"Bernauer Str. 111, 13355 Berlin, Germany"	13.38943	52.53523
+"59"	"Berlin"	"Checkpoint Charlie"	"Friedrichstraße 43-45, 10117 Berlin, Germany"	13.3907303	52.5071609
+"60"	"Berlin"	"Tempelhof airport"	"Tempelhofer Damm 1-7, 12107 Berlin, Germany"	13.38609	52.4832
+"61"	"Berlin"	"Berlin Zoo"	"Hardenbergplatz 8, 10787 Berlin, Germany"	13.3342673	52.5069129
+"62"	"Berlin"	"Tierpark Berlin"	"Am Tierpark 125, 10319 Berlin, Germany"	13.52734	52.49626
+"63"	"Barcelona"	"Harbour Cable Car"	"Passeig Don Joan Borbó Comte Barcelona, S/N, 08039 Barcelona, Spain"	2.1683571	41.3570442
+"64"	"Barcelona"	"Templo Barcelona"	"Plaça Reial, 12, 08002 Barcelona, Spain"	2.1757541	41.3800253
+"65"	"Barcelona"	"Parc Güell"	"08024 Barcelona, Spain"	2.1585314	41.4123152
+"66"	"Barcelona"	"Sagrada Familia"	"Carrer de Mallorca, 401, 08013 Barcelona, Spain"	2.1748507	41.4032029
+"67"	"Barcelona"	"Casa Milà"	"Provença, 261-265, 08008 Barcelona, Spain"	2.1620185	41.3953008
+"68"	"Barcelona"	"La Casa Batlló"	"Passeig de Gràcia, 43, 08007 Barcelona, Spain"	2.1650169	41.3916837
+"69"	"Barcelona"	"Palau Güell"	"Carrer Nou de la Rambla, 3-5, 08001 Barcelona, Spain"	2.1744399	41.3791611
+"70"	"Barcelona"	"Torre Bellesguard"	"Carrer de Bellesguard, 16, 08022 Barcelona, Spain"	2.1265247	41.4090519
+"71"	"Barcelona"	"Ruta del Modernisme"	"Plaça de Catalunya, 17, 08002 Barcelona, Spain"	2.1714164	41.3866286
+"72"	"Barcelona"	"Museu de Ciències Naturals"	"Parc del Fòrum, Museu Blau, Parque del Fórum, Plaza Leonardo da Vinci, 4-5, 08019 Barcelona, Spain"	2.1734035	41.3850639
+"73"	"Barcelona"	"Can Framis Museum"	"Carrer de Roc Boronat, 116-126, 08018 Barcelona, Spain"	2.1947612	41.4029624
+"74"	"Barcelona"	"CosmoCaixa: Museum of Science"	"Carrer d’Isaac Newton, 26, 08022 Barcelona, Spain"	2.1309682	41.4134729
+"75"	"Barcelona"	"Tibidabo Amusement Park "	"Plaça del Tibidabo, 3-4, 08035 Barcelona, Spain"	2.1204969	41.4206148
+"76"	"Prague"	"Prague Castle"	"119 08 Praha 1, Czech Republic"	14.4458729	50.0984708
+"77"	"Prague"	"Charles Bridge"	"Karlův most, 110 00 Praha 1, Czech Republic"	14.4097584	50.0866797
+"78"	"Prague"	"Infant of Prague"	"Karmelitská 385/9, 118 00 Praha 1-Malá Strana, Czech Republic"	14.4040705	50.0857827
+"79"	"Prague"	"Loreta"	"Loretánské nám. 100/7, 118 00 Praha, Czech Republic"	14.3915575	50.0892662
+"80"	"Prague"	"Strahov Monastery"	"Strahovské nádvoří 1/132, 118 00 Praha 1, Czech Republic"	14.3887817	50.0861185
+"81"	"Prague"	"Prague Dancing House"	"Jiráskovo nám. 1981/6, 120 00 Praha 2, Czech Republic"	14.4141944	50.075451
+"82"	"Prague"	"Vyšehrad"	"V Pevnosti 159/5b, 128 00 Praha 2, Czech Republic"	14.4229926	50.0629625
+"83"	"Prague"	"Petřínská rozhledna"	"Petřínské sady, 118 00 Praha 1, Czech Republic"	14.3990278	50.0825005
+"84"	"Prague"	"Prague Giant Metronome"	"Nábřeží Edvarda Beneše, 118 00 Praha 1, Czech Republic"	14.4100719	50.0916131
+"85"	"Prague"	"Memorial to the 1989 Velvet Revolution"	"Národní 118/16, 110 00 Praha 1-Nové Město, Czech Republic"	14.4179277	50.0819173
+"86"	"Prague"	"Prague Zoo"	"U Trojského zámku 3/120, 171 00 Praha 7, Czech Republic"	14.4111405	50.1160454
+"87"	"Prague"	"Vitkov Hill"	"U památníku 1900, 130 00 Praha, Czech Republic"	14.4500316	50.0885394
+"88"	"Prague"	"Czech National Gallery"	"Staroměstské nám. 12, 110 15 Praha 1, Czech Republic"	14.421624	50.0878624
+"89"	"Prague"	"Czech National Museum"	"Václavské nám. 68, 115 79 Praha 1, Czech Republic"	14.4304172	50.0798433
+"90"	"Prague"	"Prague City Gallery"	"Mariánské nám. 98/1, 110 00 Praha 1-Staré Město, Czech Republic"	14.4173879	50.0873831
+"91"	"Prague"	"Czech Museum of Fine Arts"	"Husova 229/19, 110 00 Praha, Czech Republic"	14.4177429	50.0858353
+"92"	"Prague"	"Museum of Decorative Arts"	"17. listopadu 2, 110 00 Praha, Czech Republic"	14.4160668	50.0897658
+"93"	"Prague"	"National Technical Museum"	"Kostelní 1320/42, 170 78 Praha 7, Czech Republic"	14.425138	50.0970003
+"94"	"Prague"	"Military Museum"	"U Památníku 1600/2, 130 00 Praha 3-Žižkov, Czech Republic"	14.4449891	50.0873516
+"95"	"Prague"	"Jewish Museum"	"U Staré školy 141/1, 110 00 Praha 1, Czech Republic"	14.4211202	50.09035
+"96"	"Prague"	"Mozart and Dušek Museum"	"Mozartova 129, 150 00 Praha 5, Czech Republic"	14.3970226	50.0716796
+"97"	"Prague"	"Prague City Museum"	"Na Poříčí 1554/52, 186 00 Praha 8-Nové Město, Czech Republic"	14.4383215	50.0899293
+"98"	"Prague"	"Mucha Museum"	"Kaunický Palác, Panská 7, 110 00 Praha 1, Czech Republic"	14.4275809	50.0843524
+"99"	"Prague"	"Kafka Museum"	"Cihelná 635/2b, 118 00 Praha 1, Czech Republic"	14.4103086	50.0881279
+"100"	"Prague"	"The Pedagogical Comenius Museum"	"Valdštejnská 161/20, 118 00 Praha-Malá Strana, Czech Republic"	14.4052046	50.0905081
+"101"	"Prague"	"The Mueller Villa"	"Nad Hradním Vodojemem 642/14, Střešovice, 162 00 Praha 6, Czech Republic"	14.3784601	50.0925873
+"102"	"Prague"	"Museum of Communism"	"Na Příkopě 10, 110 00 Praha, Czech Republic"	14.4248557	50.0850016
+"103"	"Prague"	"Karel Zeman Museum"	"Saská 80/1, 118 00 Praha 1-Malá Strana, Czech Republic"	14.4075545	50.0869951
+"104"	"Prague"	"Lobkowicz Palace"	"Jiřská 3, 119 00 Praha 1, Czech Republic"	14.4038153	50.0915032
+"105"	"Prague"	"DOX - Centre for Contemporary Art"	"Poupětova 1, 170 00 Praha 7, Czech Republic"	14.4470411	50.1067812
+"106"	"Prague"	"MeetFactory"	"Ke Sklárně 3213/15, 150 00 Praha 5, Czech Republic"	14.4081814	50.0532377
+"107"	"Prague"	"Museum Kampa"	"U Sovových mlýnů 2, 118 00 Praha 1, Czech Republic"	14.4084767	50.0840345
+"108"	"Prague"	"Jaroslav Fragner Gallery"	"Betlémské nám. 169/5a, 110 00 Praha-Staré Město, Czech Republic"	14.4179062	50.0844866
