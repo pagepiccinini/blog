@@ -1,0 +1,679 @@
+"city"	"geo_location"	"location"	"station"	"line"	"opened_month"	"opened_day"	"opened_year"	"lon"	"lat"
+"1"	"Paris"	"Abbesses, Paris, France"	"Paris, France"	"Abbesses"	"12"	10	31	1912	2.338559	48.884304
+"2"	"Paris"	"Alésia, Paris, France"	"Paris, France"	"Alésia"	"4"	10	30	1909	2.327058	48.828198
+"3"	"Paris"	"Alexandre Dumas, Paris, France"	"Paris, France"	"Alexandre Dumas"	"2"	1	31	1903	2.3944193	48.8563262
+"4"	"Paris"	"Alma – Marceau, Paris, France"	"Paris, France"	"Alma – Marceau"	"9"	5	27	1923	2.3522219	48.856614
+"5"	"Paris"	"Anatole France, Levallois-Perret, France"	"Levallois-Perret, France"	"Anatole France"	"3"	9	24	1937	2.284904	48.892226
+"6"	"Paris"	"Anvers, Paris, France"	"Paris, France"	"Anvers"	"2"	10	7	1902	2.344253	48.882848
+"7"	"Paris"	"Argentine, Paris, France"	"Paris, France"	"Argentine"	"1"	9	1	1900	2.2893645	48.8757746
+"8"	"Paris"	"Arts et Métiers, Paris, France"	"Paris, France"	"Arts et Métiers"	"3, 11"	10	19	1904	2.3572703	48.8666646
+"9"	"Paris"	"Asnières – Gennevilliers – Les Courtilles, Asnières-sur-Seine, France"	"Asnières-sur-Seine, France"	"Asnières – Gennevilliers – Les Courtilles"	"13"	6	14	2008	2.2839203	48.9305197
+"10"	"Paris"	"Assemblée Nationale, Paris, France"	"Paris, France"	"Assemblée Nationale"	"12"	11	5	1910	2.3211948	48.8602984
+"11"	"Paris"	"Aubervilliers – Pantin – Quatre Chemins, Aubervilliers, France"	"Aubervilliers, France"	"Aubervilliers – Pantin – Quatre Chemins"	"7"	10	4	1979	2.384049	48.912259
+"12"	"Paris"	"Avenue Émile Zola, Paris, France"	"Paris, France"	"Avenue Émile Zola"	"10"	7	13	1913	2.294928	48.846995
+"13"	"Paris"	"Avron, Paris, France"	"Paris, France"	"Avron"	"2"	4	2	1903	2.398311	48.851307
+"14"	"Paris"	"Balard, Paris, France"	"Paris, France"	"Balard"	"8"	7	27	1937	2.2806102	48.8392565
+"15"	"Paris"	"Barbès – Rochechouart, Paris, France"	"Paris, France"	"Barbès – Rochechouart"	"2, 4"	3	26	1903	2.349508	48.88376
+"16"	"Paris"	"Basilique de Saint-Denis, Saint-Denis, France"	"Saint-Denis, France"	"Basilique de Saint-Denis"	"13"	6	20	1976	2.357443	48.936181
+"17"	"Paris"	"Bastille, Paris, France"	"Paris, France"	"Bastille"	"1, 5, 8"	7	19	1900	2.3695104	48.8530243
+"18"	"Paris"	"Bel-Air, Paris, France"	"Paris, France"	"Bel-Air"	"6"	3	1	1909	2.4053177	48.8418326
+"19"	"Paris"	"Belleville, Paris, France"	"Paris, France"	"Belleville"	"2, 11"	1	1	1903	2.389461	48.8728179
+"20"	"Paris"	"Bérault, Vincennes, France"	"Vincennes, France"	"Bérault"	"1"	3	24	1934	2.42944	48.845443
+"21"	"Paris"	"Bercy, Paris, France"	"Paris, France"	"Bercy"	"6, 14"	3	1	1909	2.3856832	48.835455
+"22"	"Paris"	"Bibliothèque François Mitterrand, Paris, France"	"Paris, France"	"Bibliothèque François Mitterrand"	"14"	10	15	1998	2.376751	48.829824
+"23"	"Paris"	"Billancourt, Boulogne-Billancourt, France"	"Boulogne-Billancourt, France"	"Billancourt"	"9"	2	3	1934	2.2384569	48.8322027
+"24"	"Paris"	"Bir-Hakeim, Paris, France"	"Paris, France"	"Bir-Hakeim"	"6"	4	24	1906	2.2871276	48.8562697
+"25"	"Paris"	"Blanche, Paris, France"	"Paris, France"	"Blanche"	"2"	10	21	1902	2.333144	48.883646
+"26"	"Paris"	"Bobigny – Pablo Picasso, Bobigny, France"	"Bobigny, France"	"Bobigny – Pablo Picasso"	"5"	4	25	1985	2.449361	48.90677
+"27"	"Paris"	"Boissière, Paris, France"	"Paris, France"	"Boissière"	"6"	10	2	1900	2.290121	48.86685
+"28"	"Paris"	"Bolivar, Paris, France"	"Paris, France"	"Bolivar"	"7bis"	7	18	1911	2.383018	48.8754729
+"29"	"Paris"	"Bonne Nouvelle, Paris, France"	"Paris, France"	"Bonne Nouvelle"	"8, 9"	5	5	1931	2.3496033	48.8674501
+"30"	"Paris"	"Botzaris, Paris, France"	"Paris, France"	"Botzaris"	"7bis"	1	18	1911	2.38906	48.879532
+"31"	"Paris"	"Boulogne – Jean Jaurès, Boulogne-Billancourt, France"	"Boulogne-Billancourt, France"	"Boulogne – Jean Jaurès"	"10"	10	3	1980	2.238786	48.841973
+"32"	"Paris"	"Boulogne – Pont de Saint-Cloud, Boulogne-Billancourt, France"	"Boulogne-Billancourt, France"	"Boulogne – Pont de Saint-Cloud"	"10"	10	2	1981	2.228449	48.840882
+"33"	"Paris"	"Boucicaut, Paris, France"	"Paris, France"	"Boucicaut"	"8"	7	27	1937	2.287789	48.841087
+"34"	"Paris"	"Bourse, Paris, France"	"Paris, France"	"Bourse"	"3"	10	19	1904	2.3406922	48.8689707
+"35"	"Paris"	"Bréguet – Sabin, Paris, France"	"Paris, France"	"Bréguet – Sabin"	"5"	12	31	1906	2.370558	48.856725
+"36"	"Paris"	"Brochant, Paris, France"	"Paris, France"	"Brochant"	"13"	1	20	1912	2.320138	48.890633
+"37"	"Paris"	"Buttes Chaumont, Paris, France"	"Paris, France"	"Buttes Chaumont"	"7bis"	2	13	1912	2.3827609	48.8809496
+"38"	"Paris"	"Buzenval, Paris, France"	"Paris, France"	"Buzenval"	"9"	12	10	1933	2.401347	48.851757
+"39"	"Paris"	"Cadet, Paris, France"	"Paris, France"	"Cadet"	"7"	11	5	1910	2.344422	48.876034
+"40"	"Paris"	"Cambronne, Paris, France"	"Paris, France"	"Cambronne"	"6"	4	24	1906	2.302861	48.847541
+"41"	"Paris"	"Campo Formio, Paris, France"	"Paris, France"	"Campo Formio"	"5"	6	2	1906	2.358606	48.83566
+"42"	"Paris"	"Cardinal Lemoine, Paris, France"	"Paris, France"	"Cardinal Lemoine"	"10"	4	26	1931	2.351576	48.846633
+"43"	"Paris"	"Carrefour Pleyel, Saint-Denis, France"	"Saint-Denis, France"	"Carrefour Pleyel"	"13"	6	30	1952	2.343028	48.919626
+"44"	"Paris"	"Censier – Daubenton, Paris, France"	"Paris, France"	"Censier – Daubenton"	"7"	2	15	1930	2.3515488	48.8404351
+"45"	"Paris"	"Champs-Élysées – Clemenceau, Paris, France"	"Paris, France"	"Champs-Élysées – Clemenceau"	"1, 13"	7	19	1900	2.31331	48.8675022
+"46"	"Paris"	"Chardon Lagache, Paris, France"	"Paris, France"	"Chardon Lagache"	"10"	9	30	1913	2.265556	48.843852
+"47"	"Paris"	"Charenton – Écoles, Charenton-le-Pont, France"	"Charenton-le-Pont, France"	"Charenton – Écoles"	"8"	10	5	1942	2.413481	48.821649
+"48"	"Paris"	"Charles de Gaulle – Étoile, Paris, France"	"Paris, France"	"Charles de Gaulle – Étoile"	"1, 2, 6"	9	1	1900	2.2949	48.873934
+"49"	"Paris"	"Charles Michels, Paris, France"	"Paris, France"	"Charles Michels"	"10"	7	13	1913	2.286594	48.846566
+"50"	"Paris"	"Charonne, Paris, France"	"Paris, France"	"Charonne"	"9"	12	10	1933	2.4031934	48.8525023
+"51"	"Paris"	"Château d’Eau, Paris, France"	"Paris, France"	"Château d’Eau"	"4"	4	21	1908	2.355908	48.8724895
+"52"	"Paris"	"Château de Vincennes, Paris, France"	"Paris, France"	"Château de Vincennes"	"1"	3	24	1934	2.438748	48.844582
+"53"	"Paris"	"Château-Landon, Paris, France"	"Paris, France"	"Château-Landon"	"7"	11	5	1910	2.362072	48.878459
+"54"	"Paris"	"Château Rouge, Paris, France"	"Paris, France"	"Château Rouge"	"4"	4	21	1908	2.349457	48.887159
+"55"	"Paris"	"Châtelet, Paris, France"	"Paris, France"	"Châtelet"	"1, 4, 7, 11, 14"	8	6	1900	2.3473009	48.8586927
+"56"	"Paris"	"Châtillon – Montrouge, Châtillon, France"	"Châtillon, France"	"Châtillon – Montrouge"	"13"	11	9	1976	2.2823166	48.8016465
+"57"	"Paris"	"Chaussée d’Antin – La Fayette, Paris, France"	"Paris, France"	"Chaussée d’Antin – La Fayette"	"7, 9"	11	5	1910	2.333235	48.872928
+"58"	"Paris"	"Chemin Vert, Paris, France"	"Paris, France"	"Chemin Vert"	"8"	5	5	1931	2.36794	48.857621
+"59"	"Paris"	"Chevaleret, Paris, France"	"Paris, France"	"Chevaleret"	"6"	3	1	1909	2.368083	48.834941
+"60"	"Paris"	"Cité, Paris, France"	"Paris, France"	"Cité"	"4"	1	9	1910	2.3477436	48.85466
+"61"	"Paris"	"Cluny – La Sorbonne, Paris, France"	"Paris, France"	"Cluny – La Sorbonne"	"10"	2	15	1930	2.344586	48.851023
+"62"	"Paris"	"Colonel Fabien, Paris, France"	"Paris, France"	"Colonel Fabien"	"2"	1	31	1903	2.3706161	48.8776099
+"63"	"Paris"	"Commerce, Paris, France"	"Paris, France"	"Commerce"	"8"	7	27	1937	2.293769	48.844668
+"64"	"Paris"	"Concorde, Paris, France"	"Paris, France"	"Concorde"	"1, 8, 12"	8	13	1900	2.325043	48.8659329
+"65"	"Paris"	"Convention, Paris, France"	"Paris, France"	"Convention"	"12"	11	5	1910	2.296405	48.837238
+"66"	"Paris"	"Corentin Cariou, Paris, France"	"Paris, France"	"Corentin Cariou"	"7"	11	5	1910	2.382408	48.894747
+"67"	"Paris"	"Corentin Celton, Issy-les-Moulineaux, France"	"Issy-les-Moulineaux, France"	"Corentin Celton"	"12"	3	24	1934	2.279373	48.827023
+"68"	"Paris"	"Corvisart, Paris, France"	"Paris, France"	"Corvisart"	"6"	4	24	1906	2.350505	48.829866
+"69"	"Paris"	"Cour Saint-Émilion, Paris, France"	"Paris, France"	"Cour Saint-Émilion"	"14"	10	15	1998	2.386401	48.832986
+"70"	"Paris"	"Courcelles, Paris, France"	"Paris, France"	"Courcelles"	"2"	10	7	1902	2.303304	48.879268
+"71"	"Paris"	"Couronnes, Paris, France"	"Paris, France"	"Couronnes"	"2"	1	31	1903	2.380155	48.869274
+"72"	"Paris"	"Créteil – L’Échat, Créteil, France"	"Créteil, France"	"Créteil – L’Échat"	"8"	9	24	1973	2.4334892	48.7726181
+"73"	"Paris"	"Créteil – Préfecture, Créteil, France"	"Créteil, France"	"Créteil – Préfecture"	"8"	9	9	1974	2.459319	48.779777
+"74"	"Paris"	"Créteil – Université, Créteil, France"	"Créteil, France"	"Créteil – Université"	"8"	9	9	1974	2.45059	48.789842
+"75"	"Paris"	"Crimée, Paris, France"	"Paris, France"	"Crimée"	"7"	11	5	1910	2.377233	48.891089
+"76"	"Paris"	"Croix de Chavaux, Montreuil, France"	"Montreuil, France"	"Croix de Chavaux"	"9"	10	14	1937	2.435764	48.858055
+"77"	"Paris"	"Danube, Paris, France"	"Paris, France"	"Danube"	"7bis"	1	18	1911	2.3953673	48.8847674
+"78"	"Paris"	"Daumesnil, Paris, France"	"Paris, France"	"Daumesnil"	"6, 8"	3	1	1909	2.3964031	48.83944
+"79"	"Paris"	"Denfert-Rochereau, Paris, France"	"Paris, France"	"Denfert-Rochereau"	"4, 6"	4	24	1906	2.3325223	48.8338632
+"80"	"Paris"	"Dugommier, Paris, France"	"Paris, France"	"Dugommier"	"6"	3	1	1909	2.389965	48.839049
+"81"	"Paris"	"Dupleix, Paris, France"	"Paris, France"	"Dupleix"	"6"	4	24	1906	2.293557	48.850432
+"82"	"Paris"	"Duroc, Paris, France"	"Paris, France"	"Duroc"	"10, 13"	12	30	1923	2.316479	48.846834
+"83"	"Paris"	"École Militaire, Paris, France"	"Paris, France"	"École Militaire"	"8"	7	13	1913	2.3036513	48.8524005
+"84"	"Paris"	"École Vétérinaire de Maisons-Alfort, Maisons-Alfort, France"	"Maisons-Alfort, France"	"École Vétérinaire de Maisons-Alfort"	"8"	9	19	1970	2.4223068	48.8149257
+"85"	"Paris"	"Edgar Quinet, Paris, France"	"Paris, France"	"Edgar Quinet"	"6"	4	24	1906	2.325464	48.840974
+"86"	"Paris"	"Église d’Auteuil, Paris, France"	"Paris, France"	"Église d’Auteuil"	"10"	9	30	1913	2.269396	48.847032
+"87"	"Paris"	"Église de Pantin, Pantin, France"	"Pantin, France"	"Église de Pantin"	"5"	10	12	1942	2.412337	48.893024
+"88"	"Paris"	"Esplanade de La Défense, Puteaux, France"	"Puteaux, France"	"Esplanade de La Défense"	"1"	4	1	1992	2.250164	48.888004
+"89"	"Paris"	"Étienne Marcel, Paris, France"	"Paris, France"	"Étienne Marcel"	"4"	4	21	1908	2.3489432	48.8637323
+"90"	"Paris"	"Europe, Paris, France"	"Paris, France"	"Europe"	"3"	10	19	1904	2.3522219	48.856614
+"91"	"Paris"	"Exelmans, Paris, France"	"Paris, France"	"Exelmans"	"9"	11	8	1922	2.2600545	48.8429646
+"92"	"Paris"	"Faidherbe – Chaligny, Paris, France"	"Paris, France"	"Faidherbe – Chaligny"	"8"	5	5	1931	2.3522219	48.856614
+"93"	"Paris"	"Falguière, Paris, France"	"Paris, France"	"Falguière"	"12"	11	5	1910	2.3113201	48.8373882
+"94"	"Paris"	"Félix Faure, Paris, France"	"Paris, France"	"Félix Faure"	"8"	7	27	1937	2.291699	48.842744
+"95"	"Paris"	"Filles du Calvaire, Paris, France"	"Paris, France"	"Filles du Calvaire"	"8"	5	5	1931	2.36661	48.863056
+"96"	"Paris"	"Fort d’Aubervilliers, Aubervilliers, France"	"Aubervilliers, France"	"Fort d’Aubervilliers"	"7"	10	4	1979	2.407103	48.9113929
+"97"	"Paris"	"Franklin D. Roosevelt, Paris, France"	"Paris, France"	"Franklin D. Roosevelt"	"1, 9"	7	19	1900	2.310117	48.868978
+"98"	"Paris"	"Gabriel Péri, Asnières-sur-Seine, France"	"Asnières-sur-Seine, France"	"Gabriel Péri"	"13"	5	3	1980	2.3319181	48.9063192
+"99"	"Paris"	"Gaîté, Paris, France"	"Paris, France"	"Gaîté"	"13"	1	21	1937	2.322396	48.838626
+"100"	"Paris"	"Gallieni, Bagnolet, France"	"Bagnolet, France"	"Gallieni"	"3"	4	2	1971	2.414576	48.865429
+"101"	"Paris"	"Gambetta, Paris, France"	"Paris, France"	"Gambetta"	"3, 3bis"	3	27	1905	2.398461	48.8649071
+"102"	"Paris"	"Gare d’Austerlitz, Paris, France"	"Paris, France"	"Gare d’Austerlitz"	"5, 10"	6	2	1906	2.366116	48.841748
+"103"	"Paris"	"Gare de l’Est, Paris, France"	"Paris, France"	"Gare de l’Est"	"4, 5, 7"	11	15	1907	2.3591135	48.876636
+"104"	"Paris"	"Gare de Lyon, Paris, France"	"Paris, France"	"Gare de Lyon"	"1, 14"	7	19	1900	2.3743773	48.8443038
+"105"	"Paris"	"Gare du Nord, Paris, France"	"Paris, France"	"Gare du Nord"	"4, 5"	4	21	1908	2.3553137	48.8809481
+"106"	"Paris"	"George V, Paris, France"	"Paris, France"	"George V"	"1"	8	13	1900	2.300569	48.872013
+"107"	"Paris"	"Glacière, Paris, France"	"Paris, France"	"Glacière"	"6"	4	24	1906	2.343385	48.831161
+"108"	"Paris"	"Goncourt, Paris, France"	"Paris, France"	"Goncourt"	"11"	4	28	1935	2.370923	48.869966
+"109"	"Paris"	"Grands Boulevards, Paris, France"	"Paris, France"	"Grands Boulevards"	"8, 9"	5	5	1931	2.3430732	48.8714722
+"110"	"Paris"	"Guy Môquet, Paris, France"	"Paris, France"	"Guy Môquet"	"13"	2	26	1911	2.3271655	48.8927683
+"111"	"Paris"	"Havre – Caumartin, Paris, France"	"Paris, France"	"Havre – Caumartin"	"3, 9"	10	19	1904	2.328729	48.873547
+"112"	"Paris"	"Hoche, Pantin, France"	"Pantin, France"	"Hoche"	"5"	10	12	1942	2.402766	48.891275
+"113"	"Paris"	"Hôtel de Ville, Paris, France"	"Paris, France"	"Hôtel de Ville"	"1, 9, 11"	7	19	1900	2.3582788	48.8534275
+"114"	"Paris"	"Invalides, Paris, France"	"Paris, France"	"Invalides"	"8, 13"	7	13	1913	2.3138127	48.8593608
+"115"	"Paris"	"Jacques Bonsergent, Paris, France"	"Paris, France"	"Jacques Bonsergent"	"5"	12	17	1906	2.3605	48.871126
+"116"	"Paris"	"Jasmin, Paris, France"	"Paris, France"	"Jasmin"	"9"	11	8	1922	2.268054	48.852228
+"117"	"Paris"	"Jaurès, Paris, France"	"Paris, France"	"Jaurès"	"2, 5, 7bis"	2	23	1903	2.3761334	48.8820163
+"118"	"Paris"	"Javel – André Citroën, Paris, France"	"Paris, France"	"Javel – André Citroën"	"10"	9	30	1913	2.2781728	48.8461549
+"119"	"Paris"	"Jourdain, Paris, France"	"Paris, France"	"Jourdain"	"11"	4	28	1935	2.389512	48.875206
+"120"	"Paris"	"Jules Joffrin, Paris, France"	"Paris, France"	"Jules Joffrin"	"12"	10	31	1912	2.344326	48.892518
+"121"	"Paris"	"Jussieu, Paris, France"	"Paris, France"	"Jussieu"	"7, 10"	4	26	1931	2.3547356	48.8460306
+"122"	"Paris"	"Kléber, Paris, France"	"Paris, France"	"Kléber"	"6"	10	2	1900	2.2935978	48.871624
+"123"	"Paris"	"La Chapelle, Paris, France"	"Paris, France"	"La Chapelle"	"2"	1	31	1903	2.3657346	48.8923042
+"124"	"Paris"	"La Courneuve – 8 Mai 1945, Saint-Denis, France"	"Saint-Denis, France"	"La Courneuve – 8 Mai 1945"	"7"	5	6	1987	2.4097655	48.9211324
+"125"	"Paris"	"La Défense – Grande Arche, Puteaux, France"	"Puteaux, France"	"La Défense – Grande Arche"	"1"	4	1	1992	2.23964	48.884748
+"126"	"Paris"	"La Fourche, Paris, France"	"Paris, France"	"La Fourche"	"13"	2	26	1911	2.325593	48.887501
+"127"	"Paris"	"La Motte-Picquet – Grenelle, Paris, France"	"Paris, France"	"La Motte-Picquet – Grenelle"	"6, 8, 10"	4	24	1906	2.297916	48.849047
+"128"	"Paris"	"La Muette, Paris, France"	"Paris, France"	"La Muette"	"9"	11	8	1922	2.2741282	48.8580698
+"129"	"Paris"	"La Tour-Maubourg, Paris, France"	"Paris, France"	"La Tour-Maubourg"	"8"	7	13	1913	2.310538	48.857641
+"130"	"Paris"	"Lamarck – Caulaincourt, Paris, France"	"Paris, France"	"Lamarck – Caulaincourt"	"12"	10	31	1912	2.338511	48.8896
+"131"	"Paris"	"Laumière, Paris, France"	"Paris, France"	"Laumière"	"5"	10	12	1942	2.3794349	48.8849406
+"132"	"Paris"	"Le Kremlin-Bicêtre, Le Kremlin-Bicêtre, France"	"Le Kremlin-Bicêtre, France"	"Le Kremlin-Bicêtre"	"7"	10	10	1982	2.362244	48.810287
+"133"	"Paris"	"Le Peletier, Paris, France"	"Paris, France"	"Le Peletier"	"7"	6	6	1911	2.3402257	48.8749984
+"134"	"Paris"	"Ledru-Rollin, Paris, France"	"Paris, France"	"Ledru-Rollin"	"8"	5	5	1931	2.376099	48.851264
+"135"	"Paris"	"Les Agnettes, Gennevilliers, France"	"Gennevilliers, France"	"Les Agnettes"	"13"	6	14	2000	2.286189	48.923111
+"136"	"Paris"	"Les Gobelins, Paris, France"	"Paris, France"	"Les Gobelins"	"7"	2	15	1930	2.3525275	48.8355325
+"137"	"Paris"	"Les Halles, Paris, France"	"Paris, France"	"Les Halles"	"4"	4	21	1908	2.3447356	48.8623348
+"138"	"Paris"	"Les Sablons, Neuilly-sur-Seine, France"	"Neuilly-sur-Seine, France"	"Les Sablons"	"1"	4	29	1937	2.272485	48.880936
+"139"	"Paris"	"Liberté, Charenton-le-Pont, France"	"Charenton-le-Pont, France"	"Liberté"	"8"	10	5	1942	2.405805	48.82659
+"140"	"Paris"	"Liège, Paris, France"	"Paris, France"	"Liège"	"13"	2	26	1911	2.326989	48.879647
+"141"	"Paris"	"Louis Blanc, Paris, France"	"Paris, France"	"Louis Blanc"	"7, 7bis"	11	23	1910	2.365158	48.881203
+"142"	"Paris"	"Louise Michel, Levallois-Perret, France"	"Levallois-Perret, France"	"Louise Michel"	"3"	9	24	1937	2.288158	48.888646
+"143"	"Paris"	"Lourmel, Paris, France"	"Paris, France"	"Lourmel"	"8"	7	27	1937	2.281981	48.838601
+"144"	"Paris"	"Louvre – Rivoli, Paris, France"	"Paris, France"	"Louvre – Rivoli"	"1"	8	13	1900	2.3409635	48.8607149
+"145"	"Paris"	"Mabillon, Paris, France"	"Paris, France"	"Mabillon"	"10"	3	10	1925	2.335424	48.852886
+"146"	"Paris"	"Madeleine, Paris, France"	"Paris, France"	"Madeleine"	"8, 12, 14"	11	5	1910	2.3189432	48.8705871
+"147"	"Paris"	"Mairie d’Issy, Issy-les-Moulineaux, France"	"Issy-les-Moulineaux, France"	"Mairie d’Issy"	"12"	3	24	1934	2.273248	48.82412
+"148"	"Paris"	"Mairie d’Ivry, Ivry-sur-Seine, France"	"Ivry-sur-Seine, France"	"Mairie d’Ivry"	"7"	5	1	1946	2.384329	48.810517
+"149"	"Paris"	"Mairie de Clichy, Clichy, France"	"Clichy, France"	"Mairie de Clichy"	"13"	5	3	1980	2.305887	48.903387
+"150"	"Paris"	"Mairie de Montreuil, Montreuil, France"	"Montreuil, France"	"Mairie de Montreuil"	"9"	10	14	1937	2.4417907	48.8621222
+"151"	"Paris"	"Mairie de Montrouge, Montrouge, France"	"Montrouge, France"	"Mairie de Montrouge"	"4"	3	23	2013	2.31922	48.817889
+"152"	"Paris"	"Mairie de Saint-Ouen, Saint-Ouen, France"	"Saint-Ouen, France"	"Mairie de Saint-Ouen"	"13"	6	30	1952	2.333844	48.912033
+"153"	"Paris"	"Mairie des Lilas, Les Lilas, France"	"Les Lilas, France"	"Mairie des Lilas"	"11"	2	17	1937	2.416292	48.879792
+"154"	"Paris"	"Maison Blanche, Paris, France"	"Paris, France"	"Maison Blanche"	"7"	3	7	1930	2.3488716	48.8246796
+"155"	"Paris"	"Maisons-Alfort – Les Juilliottes, Maisons-Alfort, France"	"Maisons-Alfort, France"	"Maisons-Alfort – Les Juilliottes"	"8"	4	24	1972	2.429443	48.801148
+"156"	"Paris"	"Maisons-Alfort – Stade, Maisons-Alfort, France"	"Maisons-Alfort, France"	"Maisons-Alfort – Stade"	"8"	9	19	1970	2.429443	48.801148
+"157"	"Paris"	"Malakoff – Plateau de Vanves, Malakoff, France"	"Malakoff, France"	"Malakoff – Plateau de Vanves"	"13"	11	9	1976	2.298522	48.822574
+"158"	"Paris"	"Malakoff – Rue Étienne Dolet, Malakoff, France"	"Malakoff, France"	"Malakoff – Rue Étienne Dolet"	"13"	11	9	1976	2.2977599	48.817275
+"159"	"Paris"	"Malesherbes, Paris, France"	"Paris, France"	"Malesherbes"	"3"	5	23	1910	2.3091142	48.8831237
+"160"	"Paris"	"Maraîchers, Paris, France"	"Paris, France"	"Maraîchers"	"9"	12	10	1933	2.406118	48.852696
+"161"	"Paris"	"Marcadet – Poissonniers, Paris, France"	"Paris, France"	"Marcadet – Poissonniers"	"4, 12"	4	21	1908	2.349594	48.891554
+"162"	"Paris"	"Marcel Sembat, Boulogne-Billancourt, France"	"Boulogne-Billancourt, France"	"Marcel Sembat"	"9"	2	3	1934	2.244819	48.833986
+"163"	"Paris"	"Marx Dormoy, Paris, France"	"Paris, France"	"Marx Dormoy"	"12"	8	23	1916	2.359883	48.890718
+"164"	"Paris"	"Maubert-Mutualité, Paris, France"	"Paris, France"	"Maubert-Mutualité"	"10"	2	15	1930	2.347854	48.8501498
+"165"	"Paris"	"Ménilmontant, Paris, France"	"Paris, France"	"Ménilmontant"	"2"	1	31	1903	2.383286	48.8666797
+"166"	"Paris"	"Michel Bizot, Paris, France"	"Paris, France"	"Michel Bizot"	"8"	5	5	1931	2.4023741	48.8371989
+"167"	"Paris"	"Michel-Ange – Auteuil, Paris, France"	"Paris, France"	"Michel-Ange – Auteuil"	"9, 10"	9	30	1913	2.264208	48.847925
+"168"	"Paris"	"Michel-Ange – Molitor, Paris, France"	"Paris, France"	"Michel-Ange – Molitor"	"9, 10"	9	30	1913	2.2616611	48.8451649
+"169"	"Paris"	"Mirabeau, Paris, France"	"Paris, France"	"Mirabeau"	"10"	9	30	1913	2.272571	48.84706
+"170"	"Paris"	"Miromesnil, Paris, France"	"Paris, France"	"Miromesnil"	"9, 13"	5	27	1923	2.3157762	48.8740138
+"171"	"Paris"	"Monceau, Paris, France"	"Paris, France"	"Monceau"	"2"	10	7	1902	2.309039	48.880294
+"172"	"Paris"	"Montgallet, Paris, France"	"Paris, France"	"Montgallet"	"8"	5	5	1931	2.3900407	48.8443145
+"173"	"Paris"	"Montparnasse – Bienvenüe, Paris, France"	"Paris, France"	"Montparnasse – Bienvenüe"	"4, 6, 12, 13"	4	24	1906	2.322831	48.842944
+"174"	"Paris"	"Mouton-Duvernet, Paris, France"	"Paris, France"	"Mouton-Duvernet"	"4"	10	30	1909	2.3297511	48.8313567
+"175"	"Paris"	"Nation, Paris, France"	"Paris, France"	"Nation"	"1, 2, 6, 9"	4	2	1903	2.3949068	48.8487471
+"176"	"Paris"	"Nationale, Paris, France"	"Paris, France"	"Nationale"	"6"	3	1	1909	2.362718	48.833189
+"177"	"Paris"	"Notre-Dame-de-Lorette, Paris, France"	"Paris, France"	"Notre-Dame-de-Lorette"	"12"	11	5	1910	2.337784	48.87605
+"178"	"Paris"	"Notre-Dame-des-Champs, Paris, France"	"Paris, France"	"Notre-Dame-des-Champs"	"12"	11	5	1910	2.328309	48.8477427
+"179"	"Paris"	"Oberkampf, Paris, France"	"Paris, France"	"Oberkampf"	"5, 9"	1	15	1907	2.368675	48.864588
+"180"	"Paris"	"Odéon, Paris, France"	"Paris, France"	"Odéon"	"4, 10"	1	9	1910	2.3386921	48.8498596
+"181"	"Paris"	"Olympiades, Paris, France"	"Paris, France"	"Olympiades"	"14"	6	26	2007	2.366695	48.827012
+"182"	"Paris"	"Opéra, Paris, France"	"Paris, France"	"Opéra"	"7, 8"	11	5	1910	2.3322168	48.8708714
+"183"	"Paris"	"Ourcq, Paris, France"	"Paris, France"	"Ourcq"	"5"	3	21	1947	2.385749	48.886855
+"184"	"Paris"	"Palais Royal – Musée du Louvre, Paris, France"	"Paris, France"	"Palais Royal – Musée du Louvre"	"1, 7"	7	19	1900	2.33603	48.862926
+"185"	"Paris"	"Parmentier, Paris, France"	"Paris, France"	"Parmentier"	"3"	10	19	1904	2.3745569	48.8654334
+"186"	"Paris"	"Passy, Paris, France"	"Paris, France"	"Passy"	"6"	11	6	1903	2.2855723	48.8577083
+"187"	"Paris"	"Pasteur, Paris, France"	"Paris, France"	"Pasteur"	"6, 12"	4	24	1906	2.312681	48.842843
+"188"	"Paris"	"Pelleport, Paris, France"	"Paris, France"	"Pelleport"	"3bis"	11	27	1921	2.401444	48.86833
+"189"	"Paris"	"Père Lachaise, Paris, France"	"Paris, France"	"Père Lachaise"	"2, 3"	2	25	1903	2.3928087	48.8627872
+"190"	"Paris"	"Pereire, Paris, France"	"Paris, France"	"Pereire"	"3"	5	23	1910	2.2979853	48.885391
+"191"	"Paris"	"Pernety, Paris, France"	"Paris, France"	"Pernety"	"13"	1	21	1937	2.3181455	48.8339568
+"192"	"Paris"	"Philippe Auguste, Paris, France"	"Paris, France"	"Philippe Auguste"	"2"	1	31	1903	2.3902603	48.8582736
+"193"	"Paris"	"Picpus, Paris, France"	"Paris, France"	"Picpus"	"6"	3	1	1909	2.395174	48.8396211
+"194"	"Paris"	"Pierre et Marie Curie, Ivry-sur-Seine, France"	"Ivry-sur-Seine, France"	"Pierre et Marie Curie"	"7"	5	1	1946	2.3773	48.815901
+"195"	"Paris"	"Pigalle, Paris, France"	"Paris, France"	"Pigalle"	"2, 12"	10	7	1902	2.3372805	48.8821898
+"196"	"Paris"	"Place d’Italie, Paris, France"	"Paris, France"	"Place d’Italie"	"5, 6, 7"	4	24	1906	2.3553901	48.830816
+"197"	"Paris"	"Place de Clichy, Paris, France"	"Paris, France"	"Place de Clichy"	"2, 13"	10	7	1902	2.3271952	48.8835876
+"198"	"Paris"	"Place des Fêtes, Paris, France"	"Paris, France"	"Place des Fêtes"	"7bis, 11"	7	18	1911	2.3947305	48.8772254
+"199"	"Paris"	"Place Monge, Paris, France"	"Paris, France"	"Place Monge"	"7"	2	15	1930	2.3520726	48.8431545
+"200"	"Paris"	"Plaisance, Paris, France"	"Paris, France"	"Plaisance"	"13"	1	21	1937	2.3169578	48.8290977
+"201"	"Paris"	"Pointe du Lac, Créteil, France"	"Créteil, France"	"Pointe du Lac"	"8"	10	8	2011	2.455281	48.7680466
+"202"	"Paris"	"Poissonnière, Paris, France"	"Paris, France"	"Poissonnière"	"7"	11	5	1910	2.349057	48.877248
+"203"	"Paris"	"Pont de Levallois – Bécon, Levallois-Perret, France"	"Levallois-Perret, France"	"Pont de Levallois – Bécon"	"3"	9	24	1937	2.280339	48.897236
+"204"	"Paris"	"Pont de Neuilly, Neuilly-sur-Seine, France"	"Neuilly-sur-Seine, France"	"Pont de Neuilly"	"1"	4	29	1937	2.260614	48.884702
+"205"	"Paris"	"Pont de Sèvres, Boulogne-Billancourt, France"	"Boulogne-Billancourt, France"	"Pont de Sèvres"	"9"	2	3	1934	2.2324421	48.8303363
+"206"	"Paris"	"Pont Marie, Paris, France"	"Paris, France"	"Pont Marie"	"7"	4	16	1926	2.3573397	48.8527805
+"207"	"Paris"	"Pont Neuf, Paris, France"	"Paris, France"	"Pont Neuf"	"7"	4	16	1926	2.3415341	48.8572464
+"208"	"Paris"	"Porte d’Auteuil, Paris, France"	"Paris, France"	"Porte d’Auteuil"	"10"	9	30	1913	2.259144	48.847943
+"209"	"Paris"	"Porte d’Italie, Paris, France"	"Paris, France"	"Porte d’Italie"	"7"	3	7	1930	2.360231	48.819067
+"210"	"Paris"	"Porte d’Ivry, Paris, France"	"Paris, France"	"Porte d’Ivry"	"7"	4	26	1931	2.370021	48.821819
+"211"	"Paris"	"Porte d’Orléans, Paris, France"	"Paris, France"	"Porte d’Orléans"	"4"	10	30	1909	2.3522219	48.856614
+"212"	"Paris"	"Porte Dauphine, Paris, France"	"Paris, France"	"Porte Dauphine"	"2"	12	13	1900	2.272776	48.8727631
+"213"	"Paris"	"Porte de Bagnolet, Paris, France"	"Paris, France"	"Porte de Bagnolet"	"3"	4	2	1971	2.407013	48.864568
+"214"	"Paris"	"Porte de Champerret, Paris, France"	"Paris, France"	"Porte de Champerret"	"3"	2	15	1911	2.29375	48.885794
+"215"	"Paris"	"Porte de Charenton, Paris, France"	"Paris, France"	"Porte de Charenton"	"8"	5	5	1931	2.3522219	48.856614
+"216"	"Paris"	"Porte de Choisy, Paris, France"	"Paris, France"	"Porte de Choisy"	"7"	3	7	1930	2.3522219	48.856614
+"217"	"Paris"	"Porte de Clichy, Paris, France"	"Paris, France"	"Porte de Clichy"	"13"	1	20	1912	2.3188421	48.8951436
+"218"	"Paris"	"Porte de Clignancourt, Paris, France"	"Paris, France"	"Porte de Clignancourt"	"4"	4	21	1908	2.3431282	48.899692
+"219"	"Paris"	"Porte de la Chapelle, Paris, France"	"Paris, France"	"Porte de la Chapelle"	"12"	8	23	1916	2.3639939	48.896748
+"220"	"Paris"	"Porte de la Villette, Paris, France"	"Paris, France"	"Porte de la Villette"	"7"	11	5	1910	2.3861153	48.8975116
+"221"	"Paris"	"Porte de Montreuil, Paris, France"	"Paris, France"	"Porte de Montreuil"	"9"	12	10	1933	2.410949	48.853548
+"222"	"Paris"	"Porte de Pantin, Paris, France"	"Paris, France"	"Porte de Pantin"	"5"	10	12	1942	2.3913368	48.8882065
+"223"	"Paris"	"Porte de Saint-Cloud, Paris, France"	"Paris, France"	"Porte de Saint-Cloud"	"9"	9	29	1923	2.2607117	48.835873
+"224"	"Paris"	"Porte de Saint-Ouen, Paris, France"	"Paris, France"	"Porte de Saint-Ouen"	"13"	2	26	1911	2.3268216	48.898132
+"225"	"Paris"	"Porte de Vanves, Paris, France"	"Paris, France"	"Porte de Vanves"	"13"	1	21	1937	2.307701	48.827396
+"226"	"Paris"	"Porte de Versailles, Paris, France"	"Paris, France"	"Porte de Versailles"	"12"	11	5	1910	2.3522219	48.856614
+"227"	"Paris"	"Porte de Vincennes, Paris, France"	"Paris, France"	"Porte de Vincennes"	"1"	7	19	1900	2.4144842	48.8464015
+"228"	"Paris"	"Porte des Lilas, Paris, France"	"Paris, France"	"Porte des Lilas"	"3bis, 11"	11	27	1921	2.3522219	48.856614
+"229"	"Paris"	"Porte Dorée, Paris, France"	"Paris, France"	"Porte Dorée"	"8"	5	5	1931	2.405488	48.834876
+"230"	"Paris"	"Porte Maillot, Paris, France"	"Paris, France"	"Porte Maillot"	"1"	7	19	1900	2.2821311	48.878867
+"231"	"Paris"	"Pré Saint-Gervais, Paris, France"	"Paris, France"	"Pré Saint-Gervais"	"7bis"	1	18	1911	2.40557	48.885063
+"232"	"Paris"	"Pyramides, Paris, France"	"Paris, France"	"Pyramides"	"7, 14"	7	1	1916	2.334361	48.865825
+"233"	"Paris"	"Pyrénées, Paris, France"	"Paris, France"	"Pyrénées"	"11"	4	28	1935	2.38526	48.873878
+"234"	"Paris"	"Quai de la Gare, Paris, France"	"Paris, France"	"Quai de la Gare"	"6"	3	1	1909	2.373067	48.837222
+"235"	"Paris"	"Quai de la Rapée, Paris, France"	"Paris, France"	"Quai de la Rapée"	"5"	7	13	1906	2.365875	48.846559
+"236"	"Paris"	"Quatre-Septembre, Paris, France"	"Paris, France"	"Quatre-Septembre"	"3"	11	3	1904	2.3358375	48.8696059
+"237"	"Paris"	"Rambuteau, Paris, France"	"Paris, France"	"Rambuteau"	"11"	4	28	1935	2.353877	48.861927
+"238"	"Paris"	"Ranelagh, Paris, France"	"Paris, France"	"Ranelagh"	"9"	11	8	1922	2.269624	48.855025
+"239"	"Paris"	"Raspail, Paris, France"	"Paris, France"	"Raspail"	"4, 6"	4	24	1906	2.33073	48.839009
+"240"	"Paris"	"Réaumur – Sébastopol, Paris, France"	"Paris, France"	"Réaumur – Sébastopol"	"3, 4"	10	19	1904	2.352544	48.866227
+"241"	"Paris"	"Rennes, Paris, France"	"Paris, France"	"Rennes"	"12"	11	5	1910	2.327653	48.848576
+"242"	"Paris"	"République, Paris, France"	"Paris, France"	"République"	"3, 5, 8, 9, 11"	10	19	1904	2.363811	48.867503
+"243"	"Paris"	"Reuilly – Diderot, Paris, France"	"Paris, France"	"Reuilly – Diderot"	"1, 8"	8	20	1900	2.386581	48.847318
+"244"	"Paris"	"Richard-Lenoir, Paris, France"	"Paris, France"	"Richard-Lenoir"	"5"	12	17	1906	2.372071	48.860395
+"245"	"Paris"	"Richelieu – Drouot, Paris, France"	"Paris, France"	"Richelieu – Drouot"	"8, 9"	6	30	1928	2.339509	48.872102
+"246"	"Paris"	"Riquet, Paris, France"	"Paris, France"	"Riquet"	"7"	11	5	1910	2.374171	48.888362
+"247"	"Paris"	"Robespierre, Montreuil, France"	"Montreuil, France"	"Robespierre"	"9"	10	14	1937	2.423451	48.855773
+"248"	"Paris"	"Rome, Paris, France"	"Paris, France"	"Rome"	"2"	11	6	1902	2.321986	48.882416
+"249"	"Paris"	"Rue de la Pompe, Paris, France"	"Paris, France"	"Rue de la Pompe"	"9"	11	8	1922	2.2791755	48.8654314
+"250"	"Paris"	"Rue des Boulets, Paris, France"	"Paris, France"	"Rue des Boulets"	"9"	12	10	1933	2.3894332	48.8523613
+"251"	"Paris"	"Rue du Bac, Paris, France"	"Paris, France"	"Rue du Bac"	"12"	11	5	1910	2.324953	48.8553707
+"252"	"Paris"	"Rue Saint-Maur, Paris, France"	"Paris, France"	"Rue Saint-Maur"	"3"	10	19	1904	2.3769526	48.8660921
+"253"	"Paris"	"Saint-Ambroise, Paris, France"	"Paris, France"	"Saint-Ambroise"	"9"	12	10	1933	2.3772575	48.8618494
+"254"	"Paris"	"Saint-Augustin, Paris, France"	"Paris, France"	"Saint-Augustin"	"9"	5	27	1923	2.3359592	48.8688905
+"255"	"Paris"	"Saint-Denis – Porte de Paris, Saint-Denis, France"	"Saint-Denis, France"	"Saint-Denis – Porte de Paris"	"13"	5	26	1976	2.356813	48.929784
+"256"	"Paris"	"Saint-Denis – Université, Saint-Denis, France"	"Saint-Denis, France"	"Saint-Denis – Université"	"13"	5	25	1998	2.364438	48.94623
+"257"	"Paris"	"Saint-Fargeau, Paris, France"	"Paris, France"	"Saint-Fargeau"	"3bis"	11	27	1921	2.4033854	48.87138
+"258"	"Paris"	"Saint-François-Xavier, Paris, France"	"Paris, France"	"Saint-François-Xavier"	"13"	12	30	1923	2.3522219	48.856614
+"259"	"Paris"	"Saint-Germain-des-Prés, Paris, France"	"Paris, France"	"Saint-Germain-des-Prés"	"4"	1	9	1910	2.3333285	48.8537981
+"260"	"Paris"	"Saint-Georges, Paris, France"	"Paris, France"	"Saint-Georges"	"12"	4	8	1911	2.333799	48.8803605
+"261"	"Paris"	"Saint-Jacques, Paris, France"	"Paris, France"	"Saint-Jacques"	"6"	4	24	1906	2.337082	48.832914
+"262"	"Paris"	"Saint-Lazare, Paris, France"	"Paris, France"	"Saint-Lazare"	"3, 12, 13, 14"	10	19	1904	2.3244292	48.874844
+"263"	"Paris"	"Saint-Mandé, Saint-Mandé, France"	"Saint-Mandé, France"	"Saint-Mandé"	"1"	3	24	1934	2.4173165	48.8467027
+"264"	"Paris"	"Saint-Marcel, Paris, France"	"Paris, France"	"Saint-Marcel"	"5"	6	2	1906	2.3570328	48.8384846
+"265"	"Paris"	"Saint-Michel, Paris, France"	"Paris, France"	"Saint-Michel"	"4"	9	9	1910	2.3442096	48.8532211
+"266"	"Paris"	"Saint-Paul, Paris, France"	"Paris, France"	"Saint-Paul"	"1"	8	6	1900	2.360738	48.855209
+"267"	"Paris"	"Saint-Philippe du Roule, Paris, France"	"Paris, France"	"Saint-Philippe du Roule"	"9"	5	27	1923	2.3107325	48.8732695
+"268"	"Paris"	"Saint-Placide, Paris, France"	"Paris, France"	"Saint-Placide"	"4"	1	9	1910	2.3269375	48.8468035
+"269"	"Paris"	"Saint-Sébastien – Froissart, Paris, France"	"Paris, France"	"Saint-Sébastien – Froissart"	"8"	5	5	1931	2.367226	48.860974
+"270"	"Paris"	"Saint-Sulpice, Paris, France"	"Paris, France"	"Saint-Sulpice"	"4"	1	9	1910	2.3336721	48.8505564
+"271"	"Paris"	"Ségur, Paris, France"	"Paris, France"	"Ségur"	"10"	7	29	1937	2.3072944	48.8470338
+"272"	"Paris"	"Sentier, Paris, France"	"Paris, France"	"Sentier"	"3"	11	20	1904	2.3459524	48.8693621
+"273"	"Paris"	"Sèvres – Babylone, Paris, France"	"Paris, France"	"Sèvres – Babylone"	"10, 12"	11	5	1910	2.326516	48.851268
+"274"	"Paris"	"Sèvres – Lecourbe, Paris, France"	"Paris, France"	"Sèvres – Lecourbe"	"6"	4	24	1906	2.3522219	48.856614
+"275"	"Paris"	"Simplon, Paris, France"	"Paris, France"	"Simplon"	"4"	5	14	1908	2.347936	48.893658
+"276"	"Paris"	"Solférino, Paris, France"	"Paris, France"	"Solférino"	"12"	11	5	1910	2.323271	48.858285
+"277"	"Paris"	"Stalingrad, Paris, France"	"Paris, France"	"Stalingrad"	"2, 5, 7"	1	31	1903	2.36846	48.884035
+"278"	"Paris"	"Strasbourg – Saint-Denis, Paris, France"	"Paris, France"	"Strasbourg – Saint-Denis"	"4, 8, 9"	5	5	1908	2.3539716	48.8694942
+"279"	"Paris"	"Sully – Morland, Paris, France"	"Paris, France"	"Sully – Morland"	"7"	6	3	1930	2.361755	48.851721
+"280"	"Paris"	"Télégraphe, Paris, France"	"Paris, France"	"Télégraphe"	"11"	4	28	1935	2.4024646	48.8729729
+"281"	"Paris"	"Temple, Paris, France"	"Paris, France"	"Temple"	"3"	10	19	1904	2.360595	48.866489
+"282"	"Paris"	"Ternes, Paris, France"	"Paris, France"	"Ternes"	"2"	10	7	1902	2.2930101	48.8799177
+"283"	"Paris"	"Tolbiac, Paris, France"	"Paris, France"	"Tolbiac"	"7"	3	7	1930	2.3592576	48.8261533
+"284"	"Paris"	"Trinité – d’Estienne d’Orves, Paris, France"	"Paris, France"	"Trinité – d’Estienne d’Orves"	"12"	11	5	1910	2.3324602	48.8765017
+"285"	"Paris"	"Trocadéro, Paris, France"	"Paris, France"	"Trocadéro"	"6, 9"	10	2	1900	2.2876668	48.8637416
+"286"	"Paris"	"Tuileries, Paris, France"	"Paris, France"	"Tuileries"	"1"	7	19	1900	2.3301324	48.8642871
+"287"	"Paris"	"Vaneau, Paris, France"	"Paris, France"	"Vaneau"	"10"	12	30	1923	2.321558	48.848947
+"288"	"Paris"	"Varenne, Paris, France"	"Paris, France"	"Varenne"	"13"	12	30	1923	2.3152806	48.856888
+"289"	"Paris"	"Vaugirard, Paris, France"	"Paris, France"	"Vaugirard"	"12"	11	5	1910	2.2927665	48.8421616
+"290"	"Paris"	"Vavin, Paris, France"	"Paris, France"	"Vavin"	"4"	1	9	1910	2.3288926	48.8422317
+"291"	"Paris"	"Victor Hugo, Paris, France"	"Paris, France"	"Victor Hugo"	"2"	12	13	1900	2.285929	48.869916
+"292"	"Paris"	"Villejuif – Léo Lagrange, Villejuif, France"	"Villejuif, France"	"Villejuif – Léo Lagrange"	"7"	2	28	1985	2.359279	48.792716
+"293"	"Paris"	"Villejuif – Louis Aragon, Villejuif, France"	"Villejuif, France"	"Villejuif – Louis Aragon"	"7"	2	28	1985	2.3669275	48.7879246
+"294"	"Paris"	"Villejuif – Paul Vaillant-Couturier, Villejuif, France"	"Villejuif, France"	"Villejuif – Paul Vaillant-Couturier"	"7"	2	28	1985	2.359279	48.792716
+"295"	"Paris"	"Villiers, Paris, France"	"Paris, France"	"Villiers"	"2, 3"	10	19	1904	2.315079	48.881146
+"296"	"Paris"	"Volontaires, Paris, France"	"Paris, France"	"Volontaires"	"12"	11	5	1910	2.307907	48.841457
+"297"	"Paris"	"Voltaire, Paris, France"	"Paris, France"	"Voltaire"	"9"	12	10	1933	2.3803084	48.8578076
+"298"	"Paris"	"Wagram, Paris, France"	"Paris, France"	"Wagram"	"3"	5	23	1910	2.303668	48.884057
+"1100"	"Berlin"	"Adenauerplatz, Berlin, Germany"	"Berlin, Germany"	"Adenauerplatz"	"U7"	4	28	1978	13.3070307	52.499987
+"299"	"Berlin"	"Afrikanische Straße, Berlin, Germany"	"Berlin, Germany"	"Afrikanische Straße"	"U6"	5	3	1956	13.3364032	52.5533537
+"310"	"Berlin"	"Alexanderplatz, Berlin, Germany"	"Berlin, Germany"	"Alexanderplatz"	"U2"	7	1	1913	13.4132147	52.5219184
+"410"	"Berlin"	"Alt-Mariendorf, Berlin, Germany"	"Berlin, Germany"	"Alt-Mariendorf"	"U6"	2	28	1966	13.3889927	52.440456
+"510"	"Berlin"	"Alt-Tegel, Berlin, Germany"	"Berlin, Germany"	"Alt-Tegel"	"U6"	5	29	1958	13.2787004	52.5885268
+"610"	"Berlin"	"Alt-Tempelhof, Berlin, Germany"	"Berlin, Germany"	"Alt-Tempelhof"	"U6"	2	28	1966	13.3834952	52.465671
+"710"	"Berlin"	"Altstadt Spandau, Berlin, Germany"	"Berlin, Germany"	"Altstadt Spandau"	"U7"	10	1	1984	13.2048152	52.5371544
+"810"	"Berlin"	"Amrumer Straße, Berlin, Germany"	"Berlin, Germany"	"Amrumer Straße"	"U9"	8	28	1961	13.3471026	52.5438286
+"910"	"Berlin"	"Augsburger Straße, Berlin, Germany"	"Berlin, Germany"	"Augsburger Straße"	"U3"	5	8	1961	13.3354282	52.5014737
+"1010"	"Berlin"	"Bayerischer Platz, Berlin, Germany"	"Berlin, Germany"	"Bayerischer Platz"	"U4"	12	1	1910	13.3401887	52.4883837
+"1110"	"Berlin"	"Berliner Straße, Berlin, Germany"	"Berlin, Germany"	"Berliner Straße"	"U7"	1	29	1971	13.2714864	52.4382694
+"1210"	"Berlin"	"Bernauer Straße, Berlin, Germany"	"Berlin, Germany"	"Bernauer Straße"	"U8"	4	18	1930	13.3960555	52.5383229
+"1310"	"Berlin"	"Biesdorf-Süd, Berlin, Germany"	"Berlin, Germany"	"Biesdorf-Süd"	"U5"	7	1	1988	13.550194	52.483066
+"1410"	"Berlin"	"Birkenstraße, Berlin, Germany"	"Berlin, Germany"	"Birkenstraße"	"U9"	1	28	1961	13.3460008	52.5310994
+"1510"	"Berlin"	"Bismarckstraße, Berlin, Germany"	"Berlin, Germany"	"Bismarckstraße"	"U2"	4	28	1978	13.3093284	52.5118604
+"1610"	"Berlin"	"Blaschkoallee, Berlin, Germany"	"Berlin, Germany"	"Blaschkoallee"	"U7"	9	28	1963	13.4450957	52.4524449
+"1710"	"Berlin"	"Blissestraße, Berlin, Germany"	"Berlin, Germany"	"Blissestraße"	"U7"	1	29	1971	13.3203368	52.4818246
+"1810"	"Berlin"	"Boddinstraße, Berlin, Germany"	"Berlin, Germany"	"Boddinstraße"	"U8"	7	17	1927	13.4297418	52.4803509
+"1910"	"Berlin"	"Borsigwerke, Berlin, Germany"	"Berlin, Germany"	"Borsigwerke"	"U6"	5	31	1958	13.2892862	52.5828447
+"2010"	"Berlin"	"Brandenburger Tor, Berlin, Germany"	"Berlin, Germany"	"Brandenburger Tor"	"U55"	8	8	2009	13.377704	52.5162746
+"2110"	"Berlin"	"Breitenbachplatz, Berlin, Germany"	"Berlin, Germany"	"Breitenbachplatz"	"U3"	10	12	1913	13.3090836	52.4667669
+"2210"	"Berlin"	"Britz-Süd, Britz, Germany"	"Britz, Germany"	"Britz-Süd"	"U7"	9	29	1963	13.4484002	52.4372236
+"2310"	"Berlin"	"Bülowstraße, Berlin, Germany"	"Berlin, Germany"	"Bülowstraße"	"U2"	3	11	1902	13.3616978	52.4977443
+"2410"	"Berlin"	"Bundesplatz, Berlin, Germany"	"Berlin, Germany"	"Bundesplatz"	"U9"	1	29	1971	13.3289333	52.4790182
+"2510"	"Berlin"	"Bundestag, Berlin, Germany"	"Berlin, Germany"	"Bundestag"	"U55"	8	8	2009	13.3728778	52.5196526
+"2610"	"Berlin"	"Cottbusser Platz, Berlin, Germany"	"Berlin, Germany"	"Cottbusser Platz"	"U5"	7	1	1989	13.5948147	52.5354344
+"2710"	"Berlin"	"Dahlem-Dorf, Berlin, Germany"	"Berlin, Germany"	"Dahlem-Dorf"	"U3"	10	12	1913	13.2739434	52.454918
+"2810"	"Berlin"	"Deutsche Oper, Berlin, Germany"	"Berlin, Germany"	"Deutsche Oper"	"U2"	5	14	1906	13.3094413	52.5117845
+"2910"	"Berlin"	"Eberswalder Straße, Berlin, Germany"	"Berlin, Germany"	"Eberswalder Straße"	"U2"	7	27	1913	13.408159	52.5414437
+"301"	"Berlin"	"Eisenacher Straße, Berlin, Germany"	"Berlin, Germany"	"Eisenacher Straße"	"U7"	1	29	1971	13.3493208	52.4922985
+"311"	"Berlin"	"Elsterwerdaer Platz, Berlin, Germany"	"Berlin, Germany"	"Elsterwerdaer Platz"	"U5"	7	21	1988	13.5594812	52.5060477
+"321"	"Berlin"	"Ernst-Reuter-Platz, Berlin, Germany"	"Berlin, Germany"	"Ernst-Reuter-Platz"	"U2"	12	14	1902	13.3208719	52.5128608
+"331"	"Berlin"	"Fehrbelliner Platz, Berlin, Germany"	"Berlin, Germany"	"Fehrbelliner Platz"	"U3"	10	12	1913	13.3142252	52.4904064
+"341"	"Berlin"	"Frankfurter Allee, Berlin, Germany"	"Berlin, Germany"	"Frankfurter Allee"	"U5"	12	21	1930	13.4789916	52.5132237
+"351"	"Berlin"	"Frankfurter Tor, Berlin, Germany"	"Berlin, Germany"	"Frankfurter Tor"	"U5"	12	21	1930	13.4542112	52.5158479
+"361"	"Berlin"	"Franz-Neumann-Platz, Berlin, Germany"	"Berlin, Germany"	"Franz-Neumann-Platz"	"U8"	4	27	1987	13.3638457	52.56431
+"371"	"Berlin"	"Französische Straße, Berlin, Germany"	"Berlin, Germany"	"Französische Straße"	"U6"	1	30	1923	13.3911087	52.5148776
+"381"	"Berlin"	"Friedrich-Wilhelm-Platz, Berlin, Germany"	"Berlin, Germany"	"Friedrich-Wilhelm-Platz"	"U9"	1	29	1971	13.3279047	52.4720462
+"391"	"Berlin"	"Friedrichsfelde, Berlin, Germany"	"Berlin, Germany"	"Friedrichsfelde"	"U5"	12	21	1930	13.52033	52.50188
+"401"	"Berlin"	"Friedrichstraße, Berlin, Germany"	"Berlin, Germany"	"Friedrichstraße"	"U6"	1	30	1923	13.3914649	52.5009271
+"411"	"Berlin"	"Gesundbrunnen, Berlin, Germany"	"Berlin, Germany"	"Gesundbrunnen"	"U8"	4	18	1930	13.3829067	52.5510313
+"421"	"Berlin"	"Gleisdreieck, Berlin, Germany"	"Berlin, Germany"	"Gleisdreieck"	"U1"	11	3	1912	13.374293	52.499587
+"431"	"Berlin"	"Gneisenaustraße, Berlin, Germany"	"Berlin, Germany"	"Gneisenaustraße"	"U7"	4	19	1924	13.3948083	52.4915065
+"441"	"Berlin"	"Görlitzer Bahnhof, Berlin, Germany"	"Berlin, Germany"	"Görlitzer Bahnhof"	"U1"	2	18	1902	13.4277406	52.4992532
+"451"	"Berlin"	"Grenzallee, Berlin, Germany"	"Berlin, Germany"	"Grenzallee"	"U7"	12	21	1930	13.4555582	52.4655949
+"461"	"Berlin"	"Güntzelstraße, Berlin, Germany"	"Berlin, Germany"	"Güntzelstraße"	"U9"	1	29	1971	13.3286811	52.4909152
+"471"	"Berlin"	"Halemweg, Berlin, Germany"	"Berlin, Germany"	"Halemweg"	"U7"	10	1	1980	13.2865278	52.5366456
+"481"	"Berlin"	"Hallesches Tor, Kreuzberg, Germany"	"Kreuzberg, Germany"	"Hallesches Tor"	"U1"	2	18	1902	13.3917987	52.4986049
+"491"	"Berlin"	"Hansaplatz, Berlin, Germany"	"Berlin, Germany"	"Hansaplatz"	"U9"	8	28	1961	13.3422849	52.5185371
+"501"	"Berlin"	"Haselhorst, Berlin, Germany"	"Berlin, Germany"	"Haselhorst"	"U7"	10	1	1984	13.2287378	52.5441878
+"511"	"Berlin"	"Hauptbahnhof, Berlin, Germany"	"Berlin, Germany"	"Hauptbahnhof"	"U55"	8	8	2009	13.5764652	52.4548275
+"521"	"Berlin"	"Hausvogteiplatz, Berlin, Germany"	"Berlin, Germany"	"Hausvogteiplatz"	"U2"	10	1	1908	13.3966778	52.5128029
+"531"	"Berlin"	"Heidelberger Platz, Berlin, Germany"	"Berlin, Germany"	"Heidelberger Platz"	"U3"	10	12	1913	13.3114815	52.4787233
+"541"	"Berlin"	"Heinrich-Heine-Straße, Berlin, Germany"	"Berlin, Germany"	"Heinrich-Heine-Straße"	"U8"	4	6	1928	13.4141298	52.5079941
+"551"	"Berlin"	"Hellersdorf, Berlin, Germany"	"Berlin, Germany"	"Hellersdorf"	"U5"	7	1	1989	13.6049725	52.536107
+"561"	"Berlin"	"Hermannplatz, Berlin, Germany"	"Berlin, Germany"	"Hermannplatz"	"U7"	4	11	1926	13.4250533	52.4870517
+"571"	"Berlin"	"Hermannstraße, Berlin, Germany"	"Berlin, Germany"	"Hermannstraße"	"U8"	7	13	1996	13.4278934	52.4738671
+"581"	"Berlin"	"Hohenzollernplatz, Berlin, Germany"	"Berlin, Germany"	"Hohenzollernplatz"	"U3"	10	12	1913	13.3250476	52.493751
+"591"	"Berlin"	"Holzhauser Straße, Berlin, Germany"	"Berlin, Germany"	"Holzhauser Straße"	"U6"	5	31	1958	13.3066206	52.5825769
+"601"	"Berlin"	"Hönow, Berlin, Germany"	"Berlin, Germany"	"Hönow"	"U5"	7	1	1989	13.6377661	52.5468595
+"611"	"Berlin"	"Innsbrucker Platz, Berlin, Germany"	"Berlin, Germany"	"Innsbrucker Platz"	"U4"	12	1	1910	13.3418849	52.4781264
+"621"	"Berlin"	"Jakob-Kaiser-Platz, Berlin, Germany"	"Berlin, Germany"	"Jakob-Kaiser-Platz"	"U7"	10	1	1980	13.2934905	52.5365639
+"631"	"Berlin"	"Jannowitzbrücke, Berlin, Germany"	"Berlin, Germany"	"Jannowitzbrücke"	"U8"	4	18	1930	13.4178981	52.5143274
+"641"	"Berlin"	"Johannisthaler Chaussee, Berlin, Germany"	"Berlin, Germany"	"Johannisthaler Chaussee"	"U7"	1	2	1970	13.4649175	52.4333309
+"651"	"Berlin"	"Jungfernheide, Berlin, Germany"	"Berlin, Germany"	"Jungfernheide"	"U7"	10	1	1980	13.2861509	52.5444619
+"661"	"Berlin"	"Kaiserdamm, Berlin, Germany"	"Berlin, Germany"	"Kaiserdamm"	"U2"	3	29	1908	13.2853998	52.5103199
+"671"	"Berlin"	"Kaiserin-Augusta-Straße, Berlin, Germany"	"Berlin, Germany"	"Kaiserin-Augusta-Straße"	"U6"	2	28	1966	13.3789869	52.459838
+"681"	"Berlin"	"Karl-Bonhoeffer-Nervenklinik, Berlin, Germany"	"Berlin, Germany"	"Karl-Bonhoeffer-Nervenklinik"	"U8"	9	24	1994	13.3330357	52.5785406
+"691"	"Berlin"	"Karl-Marx-Straße, Berlin, Germany"	"Berlin, Germany"	"Karl-Marx-Straße"	"U7"	4	11	1926	13.4395502	52.4758663
+"701"	"Berlin"	"Kaulsdorf-Nord, Berlin, Germany"	"Berlin, Germany"	"Kaulsdorf-Nord"	"U5"	7	1	1989	13.5561432	52.5123491
+"711"	"Berlin"	"Kleistpark, Berlin, Germany"	"Berlin, Germany"	"Kleistpark"	"U7"	1	29	1971	13.360258	52.4904257
+"721"	"Berlin"	"Klosterstraße, Berlin, Germany"	"Berlin, Germany"	"Klosterstraße"	"U2"	7	1	1913	13.4120387	52.5179639
+"731"	"Berlin"	"Kochstraße, Berlin, Germany"	"Berlin, Germany"	"Kochstraße"	"U6"	1	30	1923	13.3882703	52.5065757
+"741"	"Berlin"	"Konstanzer Straße, Berlin, Germany"	"Berlin, Germany"	"Konstanzer Straße"	"U7"	4	28	1978	13.3100036	52.4940091
+"751"	"Berlin"	"Kottbusser Tor, Berlin, Germany"	"Berlin, Germany"	"Kottbusser Tor"	"U1"	2	18	1902	13.4182473	52.4990628
+"761"	"Berlin"	"Krumme Lanke, Berlin, Germany"	"Berlin, Germany"	"Krumme Lanke"	"U3"	12	22	1929	13.2407698	52.443006
+"771"	"Berlin"	"Kurfürstendamm, Berlin, Germany"	"Berlin, Germany"	"Kurfürstendamm"	"U1"	9	2	1961	13.3101618	52.5002397
+"781"	"Berlin"	"Kurfürstenstraße, Berlin, Germany"	"Berlin, Germany"	"Kurfürstenstraße"	"U1"	10	26	1926	13.3548367	52.5018533
+"791"	"Berlin"	"Kurt-Schumacher-Platz, Reinickendorf, Germany"	"Reinickendorf, Germany"	"Kurt-Schumacher-Platz"	"U6"	5	3	1956	13.2805353	52.5790422
+"801"	"Berlin"	"Leinestraße, Berlin, Germany"	"Berlin, Germany"	"Leinestraße"	"U8"	8	4	1929	13.4244546	52.4730027
+"811"	"Berlin"	"Leopoldplatz, Berlin, Germany"	"Berlin, Germany"	"Leopoldplatz"	"U6"	3	8	1923	13.358831	52.5461888
+"821"	"Berlin"	"Lichtenberg, Berlin, Germany"	"Berlin, Germany"	"Lichtenberg"	"U5"	12	21	1930	13.4998575	52.5335904
+"831"	"Berlin"	"Lindauer Allee, Berlin, Germany"	"Berlin, Germany"	"Lindauer Allee"	"U8"	9	24	1994	13.3459425	52.5745602
+"841"	"Berlin"	"Lipschitzallee, Berlin, Germany"	"Berlin, Germany"	"Lipschitzallee"	"U7"	1	2	1970	13.4669199	52.4270706
+"851"	"Berlin"	"Louis-Lewin-Straße, Berlin, Germany"	"Berlin, Germany"	"Louis-Lewin-Straße"	"U5"	7	1	1989	13.6204945	52.5374233
+"861"	"Berlin"	"Magdalenenstraße, Berlin, Germany"	"Berlin, Germany"	"Magdalenenstraße"	"U5"	12	21	1930	13.4885386	52.5135436
+"871"	"Berlin"	"Märkisches Museum, Berlin, Germany"	"Berlin, Germany"	"Märkisches Museum"	"U2"	7	1	1913	13.4149886	52.513559
+"881"	"Berlin"	"Mehringdamm, Berlin, Germany"	"Berlin, Germany"	"Mehringdamm"	"U6"	4	7	1924	13.387036	52.4913235
+"891"	"Berlin"	"Mendelssohn-Bartholdy-Park, Tiergarten, Germany"	"Tiergarten, Germany"	"Mendelssohn-Bartholdy-Park"	"U2"	10	2	1998	13.374682	52.5034333
+"901"	"Berlin"	"Mierendorffplatz, Berlin, Germany"	"Berlin, Germany"	"Mierendorffplatz"	"U7"	10	1	1980	13.3047459	52.5256982
+"911"	"Berlin"	"Möckernbrücke, Berlin, Germany"	"Berlin, Germany"	"Möckernbrücke"	"U1"	2	18	1902	13.3803941	52.4991061
+"921"	"Berlin"	"Mohrenstraße, Berlin, Germany"	"Berlin, Germany"	"Mohrenstraße"	"U2"	10	1	1908	13.3900487	52.5121034
+"931"	"Berlin"	"Moritzplatz, Berlin, Germany"	"Berlin, Germany"	"Moritzplatz"	"U8"	4	6	1928	13.4105301	52.503824
+"941"	"Berlin"	"Naturkundemuseum, Berlin, Germany"	"Berlin, Germany"	"Naturkundemuseum"	"U6"	1	30	1923	13.3827706	52.5308476
+"951"	"Berlin"	"Nauener Platz, Berlin, Germany"	"Berlin, Germany"	"Nauener Platz"	"U9"	4	30	1976	13.3676514	52.5514269
+"961"	"Berlin"	"Neu-Westend, Berlin, Germany"	"Berlin, Germany"	"Neu-Westend"	"U2"	5	20	1922	13.2604882	52.5160478
+"971"	"Berlin"	"Neue Grottkauer Straße, Berlin, Germany"	"Berlin, Germany"	"Neue Grottkauer Straße"	"U5"	7	1	1989	13.5944325	52.5288569
+"981"	"Berlin"	"Neukölln, Berlin, Germany"	"Berlin, Germany"	"Neukölln"	"U7"	12	21	1930	13.4445071	52.4407709
+"991"	"Berlin"	"Nollendorfplatz, Berlin, Germany"	"Berlin, Germany"	"Nollendorfplatz"	"U2"	3	11	1902	13.3533711	52.4993283
+"1001"	"Berlin"	"Olympia-Stadion, Berlin, Germany"	"Berlin, Germany"	"Olympia-Stadion"	"U2"	6	8	1913	13.2498745	52.5172962
+"1011"	"Berlin"	"Onkel Toms Hütte, Berlin, Germany"	"Berlin, Germany"	"Onkel Toms Hütte"	"U3"	12	22	1929	13.2530553	52.4499127
+"1021"	"Berlin"	"Oranienburger Tor, Berlin, Germany"	"Berlin, Germany"	"Oranienburger Tor"	"U6"	1	30	1923	13.2063213	52.5404056
+"1031"	"Berlin"	"Oskar-Helene-Heim, Berlin, Germany"	"Berlin, Germany"	"Oskar-Helene-Heim"	"U3"	12	22	1929	13.2698796	52.4503064
+"1041"	"Berlin"	"Osloer Straße, Berlin, Germany"	"Berlin, Germany"	"Osloer Straße"	"U8"	10	5	1977	13.3789274	52.5564479
+"1051"	"Berlin"	"Otisstraße, Berlin, Germany"	"Berlin, Germany"	"Otisstraße"	"U6"	5	31	1958	13.303074	52.571122
+"1061"	"Berlin"	"Pankow, Berlin, Germany"	"Berlin, Germany"	"Pankow"	"U2"	8	16	2000	13.4317001	52.5928787
+"1071"	"Berlin"	"Pankstraße, Berlin, Germany"	"Berlin, Germany"	"Pankstraße"	"U8"	10	5	1977	13.375816	52.5486962
+"1081"	"Berlin"	"Paracelsus-Bad, Berlin, Germany"	"Berlin, Germany"	"Paracelsus-Bad"	"U8"	4	30	1987	13.3474633	52.5746336
+"1091"	"Berlin"	"Paradestraße, Berlin, Germany"	"Berlin, Germany"	"Paradestraße"	"U6"	9	10	1927	13.3828081	52.4782292
+"1101"	"Berlin"	"Parchimer Allee, Berlin, Germany"	"Berlin, Germany"	"Parchimer Allee"	"U7"	9	28	1963	13.4514249	52.4456653
+"1111"	"Berlin"	"Paulsternstraße, Berlin, Germany"	"Berlin, Germany"	"Paulsternstraße"	"U7"	10	1	1984	13.2475964	52.5407818
+"1121"	"Berlin"	"Platz der Luftbrücke, Berlin, Germany"	"Berlin, Germany"	"Platz der Luftbrücke"	"U6"	2	14	1926	13.3879151	52.4836316
+"1131"	"Berlin"	"Podbielskiallee, Berlin, Germany"	"Berlin, Germany"	"Podbielskiallee"	"U3"	10	12	1913	13.2967602	52.4645494
+"1141"	"Berlin"	"Potsdamer Platz, Berlin, Germany"	"Berlin, Germany"	"Potsdamer Platz"	"U2"	2	18	1902	13.3757392	52.5093519
+"1151"	"Berlin"	"Prinzenstraße, Berlin, Germany"	"Berlin, Germany"	"Prinzenstraße"	"U1"	8	18	1902	13.4079619	52.5001462
+"1161"	"Berlin"	"Rathaus Neukölln, Berlin, Germany"	"Berlin, Germany"	"Rathaus Neukölln"	"U7"	4	11	1926	13.4445071	52.4407709
+"1171"	"Berlin"	"Rathaus Reinickendorf, Berlin, Germany"	"Berlin, Germany"	"Rathaus Reinickendorf"	"U8"	9	24	1994	13.3312589	52.5844949
+"1181"	"Berlin"	"Rathaus Schöneberg, Berlin, Germany"	"Berlin, Germany"	"Rathaus Schöneberg"	"U4"	12	1	1910	13.3443224	52.4849267
+"1191"	"Berlin"	"Rathaus Spandau, Berlin, Germany"	"Berlin, Germany"	"Rathaus Spandau"	"U7"	10	1	1984	13.1995904	52.5357642
+"1201"	"Berlin"	"Rathaus Steglitz, Berlin, Germany"	"Berlin, Germany"	"Rathaus Steglitz"	"U9"	9	30	1974	13.3225525	52.4555306
+"1211"	"Berlin"	"Rehberge, Berlin, Germany"	"Berlin, Germany"	"Rehberge"	"U6"	5	3	1956	13.1827778	52.5791667
+"1221"	"Berlin"	"Reinickendorfer Straße, Berlin, Germany"	"Berlin, Germany"	"Reinickendorfer Straße"	"U6"	3	8	1923	13.3688254	52.5488862
+"1231"	"Berlin"	"Residenzstraße, Berlin, Germany"	"Berlin, Germany"	"Residenzstraße"	"U8"	4	27	1987	13.3634282	52.5656843
+"1241"	"Berlin"	"Richard-Wagner-Platz, Berlin, Germany"	"Berlin, Germany"	"Richard-Wagner-Platz"	"U7"	5	14	1906	13.306157	52.517366
+"1251"	"Berlin"	"Rohrdamm, Berlin, Germany"	"Berlin, Germany"	"Rohrdamm"	"U7"	10	1	1980	13.2639422	52.5386289
+"1261"	"Berlin"	"Rosa-Luxemburg-Platz, Berlin, Germany"	"Berlin, Germany"	"Rosa-Luxemburg-Platz"	"U2"	7	27	1913	13.4111282	52.5267556
+"1271"	"Berlin"	"Rosenthaler Platz, Berlin, Germany"	"Berlin, Germany"	"Rosenthaler Platz"	"U8"	4	18	1930	13.4029232	52.5299308
+"1281"	"Berlin"	"Rüdesheimer Platz, Berlin, Germany"	"Berlin, Germany"	"Rüdesheimer Platz"	"U3"	10	12	1913	13.3144909	52.4729035
+"1291"	"Berlin"	"Rudow, Berlin, Germany"	"Berlin, Germany"	"Rudow"	"U7"	7	1	1972	13.5026589	52.4177611
+"1301"	"Berlin"	"Ruhleben, Berlin, Germany"	"Berlin, Germany"	"Ruhleben"	"U2"	12	22	1929	13.2410723	52.5257147
+"1311"	"Berlin"	"Samariterstraße, Berlin, Germany"	"Berlin, Germany"	"Samariterstraße"	"U5"	12	21	1930	13.4655646	52.5173158
+"1321"	"Berlin"	"Scharnweberstraße, Berlin, Germany"	"Berlin, Germany"	"Scharnweberstraße"	"U6"	5	31	1958	13.3202343	52.5659171
+"1331"	"Berlin"	"Schillingstraße, Berlin, Germany"	"Berlin, Germany"	"Schillingstraße"	"U5"	12	21	1930	13.4208807	52.5182917
+"1341"	"Berlin"	"Schlesisches Tor, Berlin, Germany"	"Berlin, Germany"	"Schlesisches Tor"	"U1"	2	18	1902	13.4416037	52.5008186
+"1351"	"Berlin"	"Schloßstraße, Berlin, Germany"	"Berlin, Germany"	"Schloßstraße"	"U9"	9	30	1974	13.3221363	52.4584588
+"1361"	"Berlin"	"Schönhauser Allee, Berlin, Germany"	"Berlin, Germany"	"Schönhauser Allee"	"U2"	7	27	1913	13.412362	52.5416289
+"1371"	"Berlin"	"Schönleinstraße, Berlin, Germany"	"Berlin, Germany"	"Schönleinstraße"	"U8"	7	17	1927	13.4221445	52.4926961
+"1381"	"Berlin"	"Schwartzkopffstraße, Berlin, Germany"	"Berlin, Germany"	"Schwartzkopffstraße"	"U6"	3	8	1923	13.3800286	52.5348943
+"1391"	"Berlin"	"Seestraße, Berlin, Germany"	"Berlin, Germany"	"Seestraße"	"U6"	3	8	1923	13.3463837	52.5477196
+"1401"	"Berlin"	"Senefelderplatz, Berlin, Germany"	"Berlin, Germany"	"Senefelderplatz"	"U2"	7	27	1913	13.4127872	52.5329104
+"1411"	"Berlin"	"Siemensdamm, Berlin, Germany"	"Berlin, Germany"	"Siemensdamm"	"U7"	10	1	1980	13.2824361	52.5339162
+"1421"	"Berlin"	"Sophie-Charlotte-Platz, Berlin, Germany"	"Berlin, Germany"	"Sophie-Charlotte-Platz"	"U2"	3	29	1908	13.2961461	52.5117354
+"1431"	"Berlin"	"Spichernstraße, Berlin, Germany"	"Berlin, Germany"	"Spichernstraße"	"U3"	6	2	1959	13.3327769	52.4973181
+"1441"	"Berlin"	"Spittelmarkt, Berlin, Germany"	"Berlin, Germany"	"Spittelmarkt"	"U2"	10	1	1908	13.4022041	52.5117278
+"1451"	"Berlin"	"Stadtmitte, Berlin, Germany"	"Berlin, Germany"	"Stadtmitte"	"U2"	10	1	1908	13.3898622	52.5105478
+"1461"	"Berlin"	"Strausberger Platz, Berlin, Germany"	"Berlin, Germany"	"Strausberger Platz"	"U5"	12	21	1930	13.4275825	52.518716
+"1471"	"Berlin"	"Südstern, Berlin, Germany"	"Berlin, Germany"	"Südstern"	"U7"	12	14	1924	13.4066114	52.489459
+"1481"	"Berlin"	"Tempelhof, Berlin, Germany"	"Berlin, Germany"	"Tempelhof"	"U6"	12	22	1929	13.3911032	52.4575526
+"1491"	"Berlin"	"Theodor-Heuss-Platz, Berlin, Germany"	"Berlin, Germany"	"Theodor-Heuss-Platz"	"U2"	3	29	1908	13.2725759	52.5099532
+"1501"	"Berlin"	"Thielplatz, Berlin, Germany"	"Berlin, Germany"	"Thielplatz"	"U3"	10	12	1913	13.281651	52.451
+"1511"	"Berlin"	"Tierpark, Friedrichsfelde, Germany"	"Friedrichsfelde, Germany"	"Tierpark"	"U5"	6	25	1973	13.52033	52.50188
+"1521"	"Berlin"	"Turmstraße, Berlin, Germany"	"Berlin, Germany"	"Turmstraße"	"U9"	8	28	1961	13.3416858	52.526401
+"1531"	"Berlin"	"Uhlandstraße, Berlin, Germany"	"Berlin, Germany"	"Uhlandstraße"	"U1"	10	12	1913	13.3240168	52.4961007
+"1541"	"Berlin"	"Ullsteinstraße, Berlin, Germany"	"Berlin, Germany"	"Ullsteinstraße"	"U6"	2	28	1966	13.3915474	52.4529708
+"1551"	"Berlin"	"Viktoria-Luise-Platz, Berlin, Germany"	"Berlin, Germany"	"Viktoria-Luise-Platz"	"U4"	12	1	1910	13.3416371	52.4960839
+"1561"	"Berlin"	"Vinetastraße, Berlin, Germany"	"Berlin, Germany"	"Vinetastraße"	"U2"	6	29	1930	13.4207342	52.5587355
+"1571"	"Berlin"	"Voltastraße, Berlin, Germany"	"Berlin, Germany"	"Voltastraße"	"U8"	4	18	1930	13.3895637	52.5415629
+"1581"	"Berlin"	"Walther-Schreiber-Platz, Berlin, Germany"	"Berlin, Germany"	"Walther-Schreiber-Platz"	"U9"	1	29	1971	13.3281989	52.4650444
+"1591"	"Berlin"	"Warschauer Straße, Berlin, Germany"	"Berlin, Germany"	"Warschauer Straße"	"U1"	8	17	1902	13.4508643	52.5091442
+"1601"	"Berlin"	"Weberwiese, Berlin, Germany"	"Berlin, Germany"	"Weberwiese"	"U5"	12	21	1930	13.4448715	52.5167279
+"1611"	"Berlin"	"Wedding, Berlin, Germany"	"Berlin, Germany"	"Wedding"	"U6"	3	8	1923	13.338931	52.5560732
+"1621"	"Berlin"	"Weinmeisterstraße, Berlin, Germany"	"Berlin, Germany"	"Weinmeisterstraße"	"U8"	4	18	1930	13.405281	52.5253669
+"1631"	"Berlin"	"Westhafen, An der Putlitz Bridge, Berlin, Germany"	"An der Putlitz Bridge, Berlin, Germany"	"Westhafen"	"U9"	8	28	1961	13.3441534	52.5362456
+"1641"	"Berlin"	"Westphalweg, Berlin, Germany"	"Berlin, Germany"	"Westphalweg"	"U6"	2	28	1966	13.3908001	52.4455691
+"1651"	"Berlin"	"Wilmersdorfer Straße, Berlin, Germany"	"Berlin, Germany"	"Wilmersdorfer Straße"	"U7"	4	28	1978	13.3058592	52.5094081
+"1661"	"Berlin"	"Wittenau, Berlin, Germany"	"Berlin, Germany"	"Wittenau"	"U8"	9	24	1994	13.3296942	52.592455
+"1671"	"Berlin"	"Wittenbergplatz, Berlin, Germany"	"Berlin, Germany"	"Wittenbergplatz"	"U1"	3	11	1902	13.3429854	52.5018313
+"1681"	"Berlin"	"Wuhletal, Berlin, Germany"	"Berlin, Germany"	"Wuhletal"	"U5"	7	1	1989	13.5722725	52.5035642
+"1691"	"Berlin"	"Wutzkyallee, Berlin, Germany"	"Berlin, Germany"	"Wutzkyallee"	"U7"	1	2	1970	13.4746826	52.4232291
+"1701"	"Berlin"	"Yorckstraße, Berlin, Germany"	"Berlin, Germany"	"Yorckstraße"	"U7"	1	29	1971	13.369075	52.4928352
+"1711"	"Berlin"	"Zitadelle, Berlin, Germany"	"Berlin, Germany"	"Zitadelle"	"U7"	10	1	1984	13.2182563	52.5371913
+"1721"	"Berlin"	"Zoologischer Garten, Berlin, Germany"	"Berlin, Germany"	"Zoologischer Garten"	"U2"	3	11	1902	13.3323672	52.5073337
+"1731"	"Berlin"	"Zwickauer Damm, Berlin, Germany"	"Berlin, Germany"	"Zwickauer Damm"	"U7"	1	2	1970	13.4785542	52.4182869
+"1102"	"Barcelona"	"Aeroport T1 Station, Barelona, Spain"	"Barelona, Spain"	"Aeroport T1 Station"	"L9"	NA	NA	2016	2.0711452	41.288762
+"2100"	"Barcelona"	"Aeroport T2 Station, Barelona, Spain"	"Barelona, Spain"	"Aeroport T2 Station"	"L9"	NA	NA	2016	2.0733168	41.3042347
+"312"	"Barcelona"	"Alfons X, Barelona, Spain"	"Barelona, Spain"	"Alfons X"	"L4"	NA	NA	1974	2.1663821	41.4123764
+"412"	"Barcelona"	"Almeda, Barelona, Spain"	"Barelona, Spain"	"Almeda"	"L8"	NA	NA	1985	2.0902406	41.3544211
+"512"	"Barcelona"	"Arc de Triomf, Barelona, Spain"	"Barelona, Spain"	"Arc de Triomf"	"L1"	NA	NA	1932	2.1806615	41.391033
+"612"	"Barcelona"	"Artigues-Sant Adrià, Barelona, Spain"	"Barelona, Spain"	"Artigues-Sant Adrià"	"L2"	NA	NA	1985	2.2185879	41.4334102
+"712"	"Barcelona"	"Avinguda Carrilet, Barelona, Spain"	"Barelona, Spain"	"Avinguda Carrilet"	"L1, L8"	NA	NA	1987	2.1352342	41.3661277
+"812"	"Barcelona"	"Avinguda Tibidabo, Barelona, Spain"	"Barelona, Spain"	"Avinguda Tibidabo"	"L7"	NA	NA	1953	2.1371628	41.409648
+"912"	"Barcelona"	"Bac de Roda, Barelona, Spain"	"Barelona, Spain"	"Bac de Roda"	"L2"	NA	NA	1997	2.195503	41.415162
+"1012"	"Barcelona"	"Badal, Barelona, Spain"	"Barelona, Spain"	"Badal"	"L5"	NA	NA	1969	2.127424	41.37558
+"1112"	"Barcelona"	"Badalona Pompeu Fabra, Barelona, Spain"	"Barelona, Spain"	"Badalona Pompeu Fabra"	"L2"	NA	NA	2010	2.2568001	41.4579228
+"1212"	"Barcelona"	"Barceloneta, Barelona, Spain"	"Barelona, Spain"	"Barceloneta"	"L4"	NA	NA	1976	2.1893853	41.3808941
+"1312"	"Barcelona"	"Baró de Viver, Barelona, Spain"	"Barelona, Spain"	"Baró de Viver"	"L1"	NA	NA	1983	2.1978471	41.4440989
+"1412"	"Barcelona"	"Bellvitge, Barelona, Spain"	"Barelona, Spain"	"Bellvitge"	"L1"	NA	NA	1989	2.1087691	41.3520453
+"1512"	"Barcelona"	"Besòs, Barelona, Spain"	"Barelona, Spain"	"Besòs"	"L4"	NA	NA	1982	2.210213	41.4199181
+"1612"	"Barcelona"	"Besòs Mar, Barelona, Spain"	"Barelona, Spain"	"Besòs Mar"	"L4"	NA	NA	1982	2.216082	41.415099
+"1712"	"Barcelona"	"Bogatell, Barelona, Spain"	"Barelona, Spain"	"Bogatell"	"L4"	NA	NA	1977	2.1915714	41.3948909
+"1811"	"Barcelona"	"Bon Pastor, Barelona, Spain"	"Barelona, Spain"	"Bon Pastor"	"L9, L10"	NA	NA	2010	2.199783	41.4365208
+"1911"	"Barcelona"	"Camp de l’Arpa, Barelona, Spain"	"Barelona, Spain"	"Camp de l’Arpa"	"L5"	NA	NA	1970	2.1814971	41.4150581
+"2011"	"Barcelona"	"Can Boixeres, Barelona, Spain"	"Barelona, Spain"	"Can Boixeres"	"L5"	NA	NA	1976	2.0927302	41.3701783
+"2111"	"Barcelona"	"Can Cuiàs, Barelona, Spain"	"Barelona, Spain"	"Can Cuiàs"	"L11"	NA	NA	2003	2.17305	41.462422
+"2211"	"Barcelona"	"Can Peixauet, Barelona, Spain"	"Barelona, Spain"	"Can Peixauet"	"L9"	NA	NA	2009	2.210027	41.443985
+"2311"	"Barcelona"	"Can Serra, L’Hospitalet de Llobregat, Spain"	"L’Hospitalet de Llobregat, Spain"	"Can Serra"	"L1"	NA	NA	1987	2.0956469	41.3664813
+"2411"	"Barcelona"	"Can Tries - Gornal, Barelona, Spain"	"Barelona, Spain"	"Can Tries - Gornal"	"L9"	NA	NA	2016	2.1199742	41.3578234
+"2511"	"Barcelona"	"Can Vidalet, Barelona, Spain"	"Barelona, Spain"	"Can Vidalet"	"L5"	NA	NA	1986	2.0964929	41.3731384
+"2611"	"Barcelona"	"Can Zam, Barelona, Spain"	"Barelona, Spain"	"Can Zam"	"L9"	NA	NA	2009	2.1984031	41.457577
+"2711"	"Barcelona"	"Canyelles Station, Barelona, Spain"	"Barelona, Spain"	"Canyelles Station"	"L3"	NA	NA	2001	2.166388	41.4417534
+"2811"	"Barcelona"	"Casa de l’Aigua, Barelona, Spain"	"Barelona, Spain"	"Casa de l’Aigua"	"L11"	NA	NA	2003	2.18484	41.4512787
+"2911"	"Barcelona"	"Plaça Catalunya, Barelona, Spain"	"Barelona, Spain"	"Plaça Catalunya"	"L1, L3, L6, L7"	NA	NA	1926	2.16952	41.3874638
+"302"	"Barcelona"	"Cèntric, Barelona, Spain"	"Barelona, Spain"	"Cèntric"	"L9"	NA	NA	2016	2.0938088	41.3218949
+"313"	"Barcelona"	"Ciutadella-Vila Olímpica, Barelona, Spain"	"Barelona, Spain"	"Ciutadella-Vila Olímpica"	"L4"	NA	NA	1977	2.191922	41.387614
+"322"	"Barcelona"	"Ciutat Meridiana, Barelona, Spain"	"Barelona, Spain"	"Ciutat Meridiana"	"L11"	NA	NA	2003	2.1757278	41.4620238
+"332"	"Barcelona"	"Clot, Barelona, Spain"	"Barelona, Spain"	"Clot"	"L1, L2"	NA	NA	1997	2.1892366	41.4097037
+"342"	"Barcelona"	"Collblanc, Barelona, Spain"	"Barelona, Spain"	"Collblanc"	"L5, L9"	NA	NA	1969	2.1162377	41.3726581
+"352"	"Barcelona"	"Congrés, Barelona, Spain"	"Barelona, Spain"	"Congrés"	"L5"	NA	NA	1959	2.181186	41.423439
+"362"	"Barcelona"	"Cornellà Centre, Barelona, Spain"	"Barelona, Spain"	"Cornellà Centre"	"L5"	NA	NA	1983	2.0688846	41.3569217
+"372"	"Barcelona"	"Cornellà Riera, Barelona, Spain"	"Barelona, Spain"	"Cornellà Riera"	"L8"	NA	NA	1985	2.073196	41.3514183
+"382"	"Barcelona"	"Diagonal, Barelona, Spain"	"Barelona, Spain"	"Diagonal"	"L3, L5"	NA	NA	1924	2.1600767	41.3962442
+"392"	"Barcelona"	"Drassanes, Barelona, Spain"	"Barelona, Spain"	"Drassanes"	"L3"	NA	NA	1968	2.175664	41.376538
+"402"	"Barcelona"	"El Carmel, Barelona, Spain"	"Barelona, Spain"	"El Carmel"	"L5"	NA	NA	2010	2.1560753	41.422371
+"413"	"Barcelona"	"El Coll - La Teixonera, Barelona, Spain"	"Barelona, Spain"	"El Coll - La Teixonera"	"L5"	NA	NA	2010	2.1502735	41.4209341
+"422"	"Barcelona"	"El Maresme-Fòrum, Barelona, Spain"	"Barelona, Spain"	"El Maresme-Fòrum"	"L4"	NA	NA	2003	2.216692	41.4117813
+"432"	"Barcelona"	"El Prat Estació, Barelona, Spain"	"Barelona, Spain"	"El Prat Estació"	"L9"	NA	NA	2016	2.0900347	41.331486
+"442"	"Barcelona"	"El Putxet, Barelona, Spain"	"Barelona, Spain"	"El Putxet"	"L7"	NA	NA	1953	2.1391515	41.4058257
+"452"	"Barcelona"	"Encants, Barelona, Spain"	"Barelona, Spain"	"Encants"	"L2"	NA	NA	1997	2.1827	41.407236
+"462"	"Barcelona"	"Entença, Barelona, Spain"	"Barelona, Spain"	"Entença"	"L5"	NA	NA	1969	2.145619	41.384467
+"472"	"Barcelona"	"Ernest Lluch, Barelona, Spain"	"Barelona, Spain"	"Ernest Lluch"	"L5"	NA	NA	2009	2.1108259	41.3766832
+"482"	"Barcelona"	"Església Major, Barelona, Spain"	"Barelona, Spain"	"Església Major"	"L9"	NA	NA	2009	2.212177	41.4547958
+"492"	"Barcelona"	"Plaça Espanya, Barelona, Spain"	"Barelona, Spain"	"Plaça Espanya"	"L3, L1, L8"	NA	NA	1929	2.1492347	41.3750138
+"502"	"Barcelona"	"Europa-Fira, Barelona, Spain"	"Barelona, Spain"	"Europa-Fira"	"L8, L9"	NA	NA	2007	2.1306444	41.3520718
+"513"	"Barcelona"	"Fabra i Puig, Barelona, Spain"	"Barelona, Spain"	"Fabra i Puig"	"L1"	NA	NA	1954	2.183873	41.429359
+"522"	"Barcelona"	"Fira, Barelona, Spain"	"Barelona, Spain"	"Fira"	"L9"	NA	NA	2016	2.1306444	41.3520718
+"532"	"Barcelona"	"Florida, Barelona, Spain"	"Barelona, Spain"	"Florida"	"L1"	NA	NA	1987	2.110001	41.368316
+"542"	"Barcelona"	"Fondo, Barelona, Spain"	"Barelona, Spain"	"Fondo"	"L1, L9"	NA	NA	1992	2.2184349	41.4514435
+"552"	"Barcelona"	"Fontana, Barelona, Spain"	"Barelona, Spain"	"Fontana"	"L3"	NA	NA	1924	2.1527302	41.402626
+"562"	"Barcelona"	"Gavarra, Barelona, Spain"	"Barelona, Spain"	"Gavarra"	"L5"	NA	NA	1983	2.079273	41.357995
+"572"	"Barcelona"	"Girona Station, Barelona, Spain"	"Barelona, Spain"	"Girona Station"	"L4"	NA	NA	1973	2.170825	41.39492
+"582"	"Barcelona"	"Glòries, Barelona, Spain"	"Barelona, Spain"	"Glòries"	"L1"	NA	NA	1951	2.186897	41.401681
+"592"	"Barcelona"	"Gorg, Barelona, Spain"	"Barelona, Spain"	"Gorg"	"L2, L10"	NA	NA	1985	2.2337931	41.4401418
+"602"	"Barcelona"	"Gornal, Barelona, Spain"	"Barelona, Spain"	"Gornal"	"L8"	NA	NA	1987	2.1176693	41.3560411
+"613"	"Barcelona"	"Gràcia, Barelona, Spain"	"Barelona, Spain"	"Gràcia"	"L6, L7"	NA	NA	1929	2.1539202	41.4097751
+"622"	"Barcelona"	"Guinardó – Hospital de Sant Pau, Barelona, Spain"	"Barelona, Spain"	"Guinardó – Hospital de Sant Pau"	"L4"	NA	NA	1974	2.173989	41.415962
+"632"	"Barcelona"	"Horta, Barelona, Spain"	"Barelona, Spain"	"Horta"	"L5"	NA	NA	1967	2.155286	41.4333025
+"642"	"Barcelona"	"Hospital Clínic, Barelona, Spain"	"Barelona, Spain"	"Hospital Clínic"	"L5"	NA	NA	1969	2.1511	41.388619
+"652"	"Barcelona"	"Hospital de Bellvitge, Barelona, Spain"	"Barelona, Spain"	"Hospital de Bellvitge"	"L1"	NA	NA	1989	2.107242	41.344677
+"662"	"Barcelona"	"Hostafrancs, Barelona, Spain"	"Barelona, Spain"	"Hostafrancs"	"L1"	NA	NA	1926	2.1451349	41.3752223
+"672"	"Barcelona"	"Ildefons Cerdà, Barelona, Spain"	"Barelona, Spain"	"Ildefons Cerdà"	"L8"	NA	NA	1987	2.1301723	41.3611533
+"682"	"Barcelona"	"Jaume I, Barelona, Spain"	"Barelona, Spain"	"Jaume I"	"L4"	NA	NA	1926	2.1784181	41.3838488
+"692"	"Barcelona"	"Joanic, Barelona, Spain"	"Barelona, Spain"	"Joanic"	"L4"	NA	NA	1973	2.163217	41.4066577
+"702"	"Barcelona"	"La Bonanova, Barelona, Spain"	"Barelona, Spain"	"La Bonanova"	"L6"	NA	NA	1952	2.1254914	41.4076694
+"713"	"Barcelona"	"La Pau, Barelona, Spain"	"Barelona, Spain"	"La Pau"	"L2, L4"	NA	NA	1982	2.2056079	41.4240341
+"722"	"Barcelona"	"La Salut, Barelona, Spain"	"Barelona, Spain"	"La Salut"	"L10"	NA	NA	2010	2.1536193	41.4124069
+"732"	"Barcelona"	"Les Corts, Barelona, Spain"	"Barelona, Spain"	"Les Corts"	"L3"	NA	NA	1975	2.1167971	41.3834895
+"742"	"Barcelona"	"Les Moreres, Barelona, Spain"	"Barelona, Spain"	"Les Moreres"	"L9"	NA	NA	2016	2.103133	41.3291758
+"752"	"Barcelona"	"Les Tres Torres, Barelona, Spain"	"Barelona, Spain"	"Les Tres Torres"	"L6"	NA	NA	1952	2.1315217	41.3977987
+"762"	"Barcelona"	"Lesseps, Barelona, Spain"	"Barelona, Spain"	"Lesseps"	"L3"	NA	NA	1924	2.150407	41.405738
+"772"	"Barcelona"	"Liceu, Barelona, Spain"	"Barelona, Spain"	"Liceu"	"L3"	NA	NA	1925	2.17303	41.381445
+"782"	"Barcelona"	"Llacuna, Barelona, Spain"	"Barelona, Spain"	"Llacuna"	"L4"	NA	NA	1977	2.197712	41.399425
+"792"	"Barcelona"	"Llefià, Barelona, Spain"	"Barelona, Spain"	"Llefià"	"L10"	NA	NA	2010	2.216307	41.4409851
+"802"	"Barcelona"	"Llucmajor, Barelona, Spain"	"Barelona, Spain"	"Llucmajor"	"L4"	NA	NA	1982	2.1733415	41.4369901
+"813"	"Barcelona"	"Magòria-La Campana, Barelona, Spain"	"Barelona, Spain"	"Magòria-La Campana"	"L8"	NA	NA	1997	2.1388794	41.3674877
+"822"	"Barcelona"	"Maragall, Barelona, Spain"	"Barelona, Spain"	"Maragall"	"L4, L5"	NA	NA	1982	2.177413	41.424129
+"832"	"Barcelona"	"Maria Cristina, Barelona, Spain"	"Barelona, Spain"	"Maria Cristina"	"L3"	NA	NA	1975	2.126508	41.387972
+"842"	"Barcelona"	"Marina, Barelona, Spain"	"Barelona, Spain"	"Marina"	"L1"	NA	NA	1933	2.268139	41.4608769
+"852"	"Barcelona"	"Mas Blau, Barelona, Spain"	"Barelona, Spain"	"Mas Blau"	"L9"	NA	NA	2016	2.0735008	41.31159
+"862"	"Barcelona"	"Mercabarna, Barelona, Spain"	"Barelona, Spain"	"Mercabarna"	"L9"	NA	NA	2016	2.1155443	41.3311312
+"872"	"Barcelona"	"Mercat Nou, Barelona, Spain"	"Barelona, Spain"	"Mercat Nou"	"L1"	NA	NA	1926	2.1335361	41.3730011
+"882"	"Barcelona"	"Molí Nou-Ciutat Cooperativa, Barelona, Spain"	"Barelona, Spain"	"Molí Nou-Ciutat Cooperativa"	"L8"	NA	NA	2002	2.035091	41.3578343
+"892"	"Barcelona"	"Montbau, Barelona, Spain"	"Barelona, Spain"	"Montbau"	"L3"	NA	NA	1985	2.1438689	41.4304873
+"902"	"Barcelona"	"Monumental, Barelona, Spain"	"Barelona, Spain"	"Monumental"	"L2"	NA	NA	1995	2.179462	41.400524
+"913"	"Barcelona"	"Mundet, Barelona, Spain"	"Barelona, Spain"	"Mundet"	"L3"	NA	NA	2001	2.148472	41.435645
+"922"	"Barcelona"	"Muntaner, Barelona, Spain"	"Barelona, Spain"	"Muntaner"	"L6"	NA	NA	1929	2.0521928	41.3708252
+"932"	"Barcelona"	"Navas Station, Barelona, Spain"	"Barelona, Spain"	"Navas Station"	"L1"	NA	NA	1953	2.187057	41.416187
+"942"	"Barcelona"	"Onze de Setembre, Barelona, Spain"	"Barelona, Spain"	"Onze de Setembre"	"L9, L10"	NA	NA	2010	2.1935639	41.4295578
+"952"	"Barcelona"	"Pàdua, Barelona, Spain"	"Barelona, Spain"	"Pàdua"	"L7"	NA	NA	1953	2.1427591	41.4035107
+"962"	"Barcelona"	"Palau Reial, Barelona, Spain"	"Barelona, Spain"	"Palau Reial"	"L3"	NA	NA	1975	2.118461	41.385919
+"972"	"Barcelona"	"Paral·lel, Barelona, Spain"	"Barelona, Spain"	"Paral·lel"	"L2, L3"	NA	NA	1970	2.1700247	41.3748271
+"982"	"Barcelona"	"Parc de Montjuïc, Barelona, Spain"	"Barelona, Spain"	"Parc de Montjuïc"	"Funicular de Montjuïc"	NA	NA	1928	2.1573033	41.3635139
+"992"	"Barcelona"	"Parc Logístic, Barelona, Spain"	"Barelona, Spain"	"Parc Logístic"	"L9"	NA	NA	2016	2.1276444	41.341621
+"1002"	"Barcelona"	"Parc Nou, Barelona, Spain"	"Barelona, Spain"	"Parc Nou"	"L9"	NA	NA	2016	2.0925549	41.3147968
+"1013"	"Barcelona"	"Passeig de Gràcia, Barelona, Spain"	"Barelona, Spain"	"Passeig de Gràcia"	"L2, L3, L4"	NA	NA	1924	2.1650284	41.3922576
+"1022"	"Barcelona"	"Penitents, Barelona, Spain"	"Barelona, Spain"	"Penitents"	"L3"	NA	NA	1985	2.140972	41.418279
+"1032"	"Barcelona"	"Pep Ventura, Barelona, Spain"	"Barelona, Spain"	"Pep Ventura"	"L2"	NA	NA	1985	2.237959	41.443905
+"1042"	"Barcelona"	"Plaça de Sants, Barelona, Spain"	"Barelona, Spain"	"Plaça de Sants"	"L1, L5"	NA	NA	1926	2.1355568	41.3759069
+"1052"	"Barcelona"	"Plaça del Centre, Barelona, Spain"	"Barelona, Spain"	"Plaça del Centre"	"L3"	NA	NA	1975	2.1356698	41.3815142
+"1062"	"Barcelona"	"Plaça Molina, Barelona, Spain"	"Barelona, Spain"	"Plaça Molina"	"L7"	NA	NA	1953	2.1470003	41.400746
+"1072"	"Barcelona"	"Poble Sec, Barelona, Spain"	"Barelona, Spain"	"Poble Sec"	"L3"	NA	NA	1975	2.1628778	41.3724303
+"1082"	"Barcelona"	"Poblenou, Barelona, Spain"	"Barelona, Spain"	"Poblenou"	"L4"	NA	NA	1977	2.2015347	41.3977365
+"1092"	"Barcelona"	"Provença, Barelona, Spain"	"Barelona, Spain"	"Provença"	"L6, L7"	NA	NA	1929	2.1580309	41.3928143
+"1103"	"Barcelona"	"Pubilla Cases, Barelona, Spain"	"Barelona, Spain"	"Pubilla Cases"	"L5"	NA	NA	1973	2.1027658	41.3714011
+"1113"	"Barcelona"	"Rambla Just Oliveras, Barelona, Spain"	"Barelona, Spain"	"Rambla Just Oliveras"	"L1"	NA	NA	1987	2.100841	41.361999
+"1122"	"Barcelona"	"Reina Elisenda, Barelona, Spain"	"Barelona, Spain"	"Reina Elisenda"	"L6"	NA	NA	1976	2.1189323	41.398746
+"1132"	"Barcelona"	"Rocafort Station, Barelona, Spain"	"Barelona, Spain"	"Rocafort Station"	"L1"	NA	NA	1926	2.154562	41.379232
+"1142"	"Barcelona"	"Roquetes Station, Barelona, Spain"	"Barelona, Spain"	"Roquetes Station"	"L3"	NA	NA	2008	2.1771696	41.4481138
+"1152"	"Barcelona"	"Sagrada Família, Barelona, Spain"	"Barelona, Spain"	"Sagrada Família"	"L2, L5"	NA	NA	1970	2.1742896	41.4044991
+"1162"	"Barcelona"	"Sagrera, Barelona, Spain"	"Barelona, Spain"	"Sagrera"	"L1, L5, L4, L9, L10"	NA	NA	1954	2.1911616	41.4223248
+"1172"	"Barcelona"	"Sant Andreu, Barelona, Spain"	"Barelona, Spain"	"Sant Andreu"	"L1"	NA	NA	1968	2.1857902	41.4336754
+"1182"	"Barcelona"	"Sant Antoni, Barelona, Spain"	"Barelona, Spain"	"Sant Antoni"	"L2"	NA	NA	1995	2.1585314	41.3772662
+"1192"	"Barcelona"	"Sant Boi, Barelona, Spain"	"Barelona, Spain"	"Sant Boi"	"L8"	NA	NA	1912	2.0350751	41.3458447
+"1202"	"Barcelona"	"Sant Gervasi, Barelona, Spain"	"Barelona, Spain"	"Sant Gervasi"	"L6"	NA	NA	1929	2.1376668	41.4053111
+"1213"	"Barcelona"	"Sant Ildefons, Barelona, Spain"	"Barelona, Spain"	"Sant Ildefons"	"L5"	NA	NA	1976	2.0828561	41.3644288
+"1222"	"Barcelona"	"Sant Josep, Barelona, Spain"	"Barelona, Spain"	"Sant Josep"	"L8"	NA	NA	1985	2.1068748	41.3620921
+"1232"	"Barcelona"	"Sant Martí, Barelona, Spain"	"Barelona, Spain"	"Sant Martí"	"L2"	NA	NA	1997	2.1994514	41.4031368
+"1242"	"Barcelona"	"Sant Pau – Dos de Maig, Barelona, Spain"	"Barelona, Spain"	"Sant Pau – Dos de Maig"	"L5"	NA	NA	1970	2.1760161	41.4107513
+"1252"	"Barcelona"	"Sant Roc, Barelona, Spain"	"Barelona, Spain"	"Sant Roc"	"L2"	NA	NA	1985	2.225798	41.4350685
+"1262"	"Barcelona"	"Santa Coloma, Barelona, Spain"	"Barelona, Spain"	"Santa Coloma"	"L1"	NA	NA	1983	2.2103217	41.4445879
+"1272"	"Barcelona"	"Santa Eulàlia, Barelona, Spain"	"Barelona, Spain"	"Santa Eulàlia"	"L1"	NA	NA	1983	2.1221467	41.3653982
+"1282"	"Barcelona"	"Santa Rosa, Santa Coloma de Gramenet, Spain"	"Santa Coloma de Gramenet, Spain"	"Santa Rosa"	"L9"	NA	NA	2011	2.2158091	41.4468498
+"1292"	"Barcelona"	"Sants Estació, Barelona, Spain"	"Barelona, Spain"	"Sants Estació"	"L3, L5"	NA	NA	1969	2.1417513	41.3808152
+"1302"	"Barcelona"	"Sarrià, Barelona, Spain"	"Barelona, Spain"	"Sarrià"	"L6"	NA	NA	1929	2.1203894	41.3969043
+"1313"	"Barcelona"	"Selva de Mar, Barelona, Spain"	"Barelona, Spain"	"Selva de Mar"	"L4"	NA	NA	1977	2.2059335	41.411206
+"1322"	"Barcelona"	"Singuerlín, Barelona, Spain"	"Barelona, Spain"	"Singuerlín"	"L9"	NA	NA	2009	2.197115	41.4626148
+"1332"	"Barcelona"	"Tetuan, Barelona, Spain"	"Barelona, Spain"	"Tetuan"	"L2"	NA	NA	1995	2.175559	41.394887
+"1342"	"Barcelona"	"Torras i Bages, Barelona, Spain"	"Barelona, Spain"	"Torras i Bages"	"L1"	NA	NA	1968	2.1908198	41.4440656
+"1352"	"Barcelona"	"Torrassa, Barelona, Spain"	"Barelona, Spain"	"Torrassa"	"L1, L9"	NA	NA	1983	2.1166433	41.3683294
+"1362"	"Barcelona"	"Torre Baró-Vallbona, Barelona, Spain"	"Barelona, Spain"	"Torre Baró-Vallbona"	"L11"	NA	NA	2003	2.179925	41.459199
+"1372"	"Barcelona"	"Trinitat Nova, Barelona, Spain"	"Barelona, Spain"	"Trinitat Nova"	"L3, L4, L11"	NA	NA	1999	2.1855573	41.4518355
+"1382"	"Barcelona"	"Trinitat Vella, Barelona, Spain"	"Barelona, Spain"	"Trinitat Vella"	"L1"	NA	NA	1983	2.1929308	41.4516956
+"1392"	"Barcelona"	"Universitat, Barelona, Spain"	"Barelona, Spain"	"Universitat"	"L1, L2"	NA	NA	1926	2.1637625	41.3854455
+"1402"	"Barcelona"	"Urgell, Barelona, Spain"	"Barelona, Spain"	"Urgell"	"L1"	NA	NA	1926	2.158891	41.382487
+"1413"	"Barcelona"	"Urquinaona, Barelona, Spain"	"Barelona, Spain"	"Urquinaona"	"L1, L4"	NA	NA	1926	2.173668	41.388847
+"1422"	"Barcelona"	"Vall d’Hebron, Barelona, Spain"	"Barelona, Spain"	"Vall d’Hebron"	"L3, L5"	NA	NA	1985	2.142565	41.4252815
+"1432"	"Barcelona"	"Valldaura, Barelona, Spain"	"Barelona, Spain"	"Valldaura"	"L3"	NA	NA	2001	2.156878	41.437996
+"1442"	"Barcelona"	"Verdaguer, Barelona, Spain"	"Barelona, Spain"	"Verdaguer"	"L4, L5"	NA	NA	1970	2.1686721	41.3999445
+"1452"	"Barcelona"	"Verneda, Barelona, Spain"	"Barelona, Spain"	"Verneda"	"L2"	NA	NA	1985	2.209883	41.430004
+"1462"	"Barcelona"	"Via Júlia, Barelona, Spain"	"Barelona, Spain"	"Via Júlia"	"L4"	NA	NA	1982	2.1776724	41.4419931
+"1472"	"Barcelona"	"Vilapicina, Barelona, Spain"	"Barelona, Spain"	"Vilapicina"	"L5"	NA	NA	1959	2.166443	41.4284747
+"1482"	"Barcelona"	"Virrei Amat, Barelona, Spain"	"Barelona, Spain"	"Virrei Amat"	"L5"	NA	NA	1959	2.1746833	41.4302556
+"1492"	"Barcelona"	"Zona Universitària, Barelona, Spain"	"Barelona, Spain"	"Zona Universitària"	"L3, L9"	NA	NA	1975	2.114436	41.384267
+"1104"	"Prague"	"Anděl, Prague, Czech Republic"	"Prague, Czech Republic"	"Anděl"	"B"	11	2	1985	14.405319	50.0711351
+"2101"	"Prague"	"Bořislavka, Prague, Czech Republic"	"Prague, Czech Republic"	"Bořislavka"	"A"	4	6	2015	14.3640838	50.0985075
+"314"	"Prague"	"Budějovická, Prague, Czech Republic"	"Prague, Czech Republic"	"Budějovická"	"C"	5	9	1974	14.447893	50.044987
+"414"	"Prague"	"Černý Most, Prague, Czech Republic"	"Prague, Czech Republic"	"Černý Most"	"B"	11	8	1998	14.5744479	50.1064489
+"514"	"Prague"	"Českomoravská, Prague, Czech Republic"	"Prague, Czech Republic"	"Českomoravská"	"B"	11	22	1990	14.4924665	50.1031752
+"614"	"Prague"	"Chodov, Prague, Czech Republic"	"Prague, Czech Republic"	"Chodov"	"C"	11	11	1980	14.508483	50.036257
+"714"	"Prague"	"Dejvická, Prague, Czech Republic"	"Prague, Czech Republic"	"Dejvická"	"A"	8	12	1978	14.3998712	50.0986594
+"814"	"Prague"	"Depo Hostivař, Prague, Czech Republic"	"Prague, Czech Republic"	"Depo Hostivař"	"A"	5	26	2006	14.5161567	50.0750952
+"914"	"Prague"	"Flora, Prague, Czech Republic"	"Prague, Czech Republic"	"Flora"	"A"	12	19	1980	14.4617886	50.0766457
+"1014"	"Prague"	"Florenc, Prague, Czech Republic"	"Prague, Czech Republic"	"Florenc"	"B, C"	5	9	1974	14.4387111	50.0911697
+"1114"	"Prague"	"Háje, Prague, Czech Republic"	"Prague, Czech Republic"	"Háje"	"C"	11	11	1980	14.5249987	50.0368321
+"1214"	"Prague"	"Hlavní nádraží, Prague, Czech Republic"	"Prague, Czech Republic"	"Hlavní nádraží"	"C"	5	9	1974	14.434138	50.083505
+"1314"	"Prague"	"Hloubětín, Prague, Czech Republic"	"Prague, Czech Republic"	"Hloubětín"	"B"	6	8	1999	14.537925	50.1059288
+"1414"	"Prague"	"Hradčanská, Prague, Czech Republic"	"Prague, Czech Republic"	"Hradčanská"	"A"	8	12	1978	14.4044797	50.0975109
+"1513"	"Prague"	"Hůrka, Prague, Czech Republic"	"Prague, Czech Republic"	"Hůrka"	"B"	11	11	1994	14.341537	50.050848
+"1613"	"Prague"	"I.P.Pavlova, Prague, Czech Republic"	"Prague, Czech Republic"	"I.P.Pavlova"	"C"	5	9	1974	14.428981	50.074962
+"1713"	"Prague"	"Invalidovna, Prague, Czech Republic"	"Prague, Czech Republic"	"Invalidovna"	"B"	11	22	1990	14.4654898	50.094988
+"1812"	"Prague"	"Jinonice, Prague, Czech Republic"	"Prague, Czech Republic"	"Jinonice"	"B"	10	26	1988	14.3636338	50.0543302
+"1912"	"Prague"	"Jiřího z Poděbrad, Prague, Czech Republic"	"Prague, Czech Republic"	"Jiřího z Poděbrad"	"A"	12	19	1980	14.4490173	50.0775742
+"2012"	"Prague"	"Kačerov, Prague, Czech Republic"	"Prague, Czech Republic"	"Kačerov"	"C"	5	9	1974	14.4631421	50.0489201
+"2112"	"Prague"	"Karlovo náměstí, Prague, Czech Republic"	"Prague, Czech Republic"	"Karlovo náměstí"	"B"	11	2	1985	14.419752	50.0757536
+"2212"	"Prague"	"Kobylisy, Prague, Czech Republic"	"Prague, Czech Republic"	"Kobylisy"	"C"	6	26	2004	14.4547405	50.1295679
+"2312"	"Prague"	"Kolbenova, Prague, Czech Republic"	"Prague, Czech Republic"	"Kolbenova"	"B"	6	26	2001	14.5277479	50.1101027
+"2412"	"Prague"	"Křižíkova, Prague, Czech Republic"	"Prague, Czech Republic"	"Křižíkova"	"B"	11	22	1990	14.4520442	50.0930646
+"2512"	"Prague"	"Ládví, Prague, Czech Republic"	"Prague, Czech Republic"	"Ládví"	"C"	6	26	2004	14.4644972	50.1367802
+"2612"	"Prague"	"Letňany, Prague, Czech Republic"	"Prague, Czech Republic"	"Letňany"	"C"	5	8	2008	14.5147525	50.136703
+"2712"	"Prague"	"Luka, Prague, Czech Republic"	"Prague, Czech Republic"	"Luka"	"B"	11	11	1994	14.3203233	50.045552
+"2812"	"Prague"	"Lužiny, Prague, Czech Republic"	"Prague, Czech Republic"	"Lužiny"	"B"	11	11	1994	14.3260502	50.0437788
+"2912"	"Prague"	"Malostranská, Prague, Czech Republic"	"Prague, Czech Republic"	"Malostranská"	"A"	8	12	1978	14.4100176	50.0909617
+"303"	"Prague"	"Můstek, Prague, Czech Republic"	"Prague, Czech Republic"	"Můstek"	"A, A"	8	12	1978	14.4236157	50.0842283
+"315"	"Prague"	"Muzeum, Prague, Czech Republic"	"Prague, Czech Republic"	"Muzeum"	"A, C"	5	9	1974	14.432475	50.078799
+"323"	"Prague"	"Nádraží Holešovice, Prague, Czech Republic"	"Prague, Czech Republic"	"Nádraží Holešovice"	"C"	11	3	1984	14.4397742	50.1094884
+"333"	"Prague"	"Nádraží Veleslavín, Prague, Czech Republic"	"Prague, Czech Republic"	"Nádraží Veleslavín"	"A"	4	6	2015	14.346919	50.0953722
+"343"	"Prague"	"Náměstí Míru, Prague, Czech Republic"	"Prague, Czech Republic"	"Náměstí Míru"	"A"	8	12	1978	14.4351885	50.0754214
+"353"	"Prague"	"Náměstí Republiky, Prague, Czech Republic"	"Prague, Czech Republic"	"Náměstí Republiky"	"B"	11	2	1985	14.4287909	50.0883326
+"363"	"Prague"	"Národní třída, Prague, Czech Republic"	"Prague, Czech Republic"	"Národní třída"	"B"	11	2	1985	14.417611	50.0819913
+"373"	"Prague"	"Nemocnice Motol, Prague, Czech Republic"	"Prague, Czech Republic"	"Nemocnice Motol"	"A"	4	6	2015	14.3408446	50.0751749
+"383"	"Prague"	"Nové Butovice, Prague, Czech Republic"	"Prague, Czech Republic"	"Nové Butovice"	"B"	10	26	1988	14.3507608	50.0516681
+"393"	"Prague"	"Opatov, Prague, Czech Republic"	"Prague, Czech Republic"	"Opatov"	"C"	11	11	1980	14.5169186	50.0257215
+"403"	"Prague"	"Palmovka, Prague, Czech Republic"	"Prague, Czech Republic"	"Palmovka"	"B"	11	22	1990	14.4740936	50.1043913
+"415"	"Prague"	"Pankrác, Prague, Czech Republic"	"Prague, Czech Republic"	"Pankrác"	"C"	5	9	1974	14.439683	50.051028
+"423"	"Prague"	"Petřiny, Prague, Czech Republic"	"Prague, Czech Republic"	"Petřiny"	"A"	4	6	2015	14.344236	50.0882817
+"433"	"Prague"	"Pražského povstání, Prague, Czech Republic"	"Prague, Czech Republic"	"Pražského povstání"	"C"	5	9	1974	14.4739914	50.013983
+"443"	"Prague"	"Prosek, Prague, Czech Republic"	"Prague, Czech Republic"	"Prosek"	"C"	5	8	2008	14.4982421	50.1194763
+"453"	"Prague"	"Radlická, Prague, Czech Republic"	"Prague, Czech Republic"	"Radlická"	"B"	10	26	1988	14.3810114	50.0563443
+"463"	"Prague"	"Rajská zahrada, Prague, Czech Republic"	"Prague, Czech Republic"	"Rajská zahrada"	"B"	11	8	1998	14.559618	50.106281
+"473"	"Prague"	"Roztyly, Prague, Czech Republic"	"Prague, Czech Republic"	"Roztyly"	"C"	11	11	1980	14.478668	50.037757
+"483"	"Prague"	"Skalka, Prague, Czech Republic"	"Prague, Czech Republic"	"Skalka"	"A"	11	4	1990	14.363806	50.0714589
+"493"	"Prague"	"Smíchovské nádraží, Prague, Czech Republic"	"Prague, Czech Republic"	"Smíchovské nádraží"	"B"	11	2	1985	14.408889	50.061768
+"503"	"Prague"	"Staroměstská, Prague, Czech Republic"	"Prague, Czech Republic"	"Staroměstská"	"A"	8	12	1978	14.4162338	50.0885978
+"515"	"Prague"	"Stodůlky, Prague, Czech Republic"	"Prague, Czech Republic"	"Stodůlky"	"B"	11	11	1994	14.3167979	50.0492395
+"523"	"Prague"	"Strašnická, Prague, Czech Republic"	"Prague, Czech Republic"	"Strašnická"	"A"	11	11	1987	14.4911943	50.072815
+"533"	"Prague"	"Střížkov, Prague, Czech Republic"	"Prague, Czech Republic"	"Střížkov"	"C"	5	8	2008	14.485417	50.1313607
+"543"	"Prague"	"Vltavská, Prague, Czech Republic"	"Prague, Czech Republic"	"Vltavská"	"C"	11	3	1984	14.4073835	50.0697828
+"553"	"Prague"	"Vyšehrad, Prague, Czech Republic"	"Prague, Czech Republic"	"Vyšehrad"	"C"	5	9	1974	14.4173906	50.0673811
+"563"	"Prague"	"Vysočanská, Prague, Czech Republic"	"Prague, Czech Republic"	"Vysočanská"	"B"	11	8	1998	14.4956539	50.1210095
+"573"	"Prague"	"Želivského, Prague, Czech Republic"	"Prague, Czech Republic"	"Želivského"	"A"	12	19	1980	14.4709729	50.0840022
+"583"	"Prague"	"Zličín, Prague, Czech Republic"	"Prague, Czech Republic"	"Zličín"	"B"	11	11	1994	14.2946616	50.0597507
